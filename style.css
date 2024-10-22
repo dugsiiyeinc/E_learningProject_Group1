@@ -10,6 +10,10 @@ body{
     font-family: "Inter", sans-serif;
     padding: 0;
     margin: 0;
+    background-color: #000000;
+}
+.container{
+    width: 1280px;
 }
 
 header{
@@ -85,7 +89,7 @@ header{
     }
 
     #signIn:hover{
-        color: yellow;
+        color: #f3d03f;
         font-weight: bold;
     }
 
@@ -95,7 +99,7 @@ header{
         font-size: 16px;
         font-weight: bold;
         padding: 10px 30px;
-        background-color: yellow;
+        background-color: #f3d03f;
         border: none;
         border-radius: 10px;
         cursor: pointer;
@@ -141,7 +145,7 @@ header{
    #getstarted-btn{
     text-decoration: none;
     color: #1f1f1f;
-    background-color: yellow;
+    background-color: #f3d03f;
     padding: 10px 30px;
     border: none;
     border-radius: 10px;
@@ -174,7 +178,7 @@ header{
     font-weight: 800;
    }
    .hero-title #skilled{
-    color: yellow;
+    color: #f3d03f;
     font-size: 4rem;
     font-weight: 800;
    }  
