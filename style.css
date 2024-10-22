@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.navbar{
+    display: flex;
+  
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li a{
+        color: rgb(214, 211, 211);
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 20px;
+        font-weight: bold;
+    }
+
+    ul li a:hover{
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .logo{
+     position: relative;
+       top: 55px;
+    } 
+
+    .logo img{
+        
+        font-size: 2rem;
+        width: 200px;
+    }
+
+    .logo-Online{
+        color: white;
+    }
+
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 20%;
+    
+       
+    }
+
+    #signIn{
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #signIn:hover{
+        color: yellow;
+        font-weight: bold;
+    }
+
+    #signUp{
+        text-decoration: none;
+        color: #1f1f1f;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 30px;
+        background-color: yellow;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        
+    }
+
+    #signUp:hover{
+        background-color: rgba(255, 255, 0, 0.726);
+
+    }
+    .contents{
+        position: relative;
+        top: 70px;
+       
+    }
+
+    .hero{
+      
+        width: 100%;
+        height: 92vh;
+   
+    }
+    .hero img{
+       width: 100%;
+       height: 92vh;
+    }
+
+    .over-hero{
+        background: linear-gradient(to bottom, rgba(0, 0, 0.8), rgba(247, 243, 3, 0.5));
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      justify-content: center;
+        width: 100%;
+        height: 92vh;
+        position: absolute;
+        top: 0px;
+
+       
+    }
+
+   #getstarted-btn{
+    text-decoration: none;
+    color: #1f1f1f;
+    background-color: yellow;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+
+   }
+    .hero-contents{
+        position: relative;
+        text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 100px;
+   
+    }
+ 
+   .hero-title{
+
+    display: flex;
+    gap: 10px;
+    color: rgb(253, 253, 253);
+        font-size: 4rem;
+        font-weight: 800;
+   }
+   .hero-title #let{
+    color: rgb(249, 249, 249);
+    font-size: 4rem;
+    font-weight: 800;
+   }
+   .hero-title #skilled{
+    color: yellow;
+    font-size: 4rem;
+    font-weight: 800;
+   }  
+    .hero-contents p{
+        line-height: 30px;
+        text-align: center;
+        font-weight: 2rem;
+        color: white;
+        margin-bottom: 20px;
+    } 
+   
