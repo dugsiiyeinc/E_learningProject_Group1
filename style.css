@@ -1047,4 +1047,58 @@ color: white;
 
 }
 
+/* courses page */
 
+.fram-video{
+  width: 1216px;
+  height: 684px;
+  margin-top: 50px;
+}
+.fram-video iframe{
+  width: 100%;
+  height: 100%;
+}
+.frame-video-isdiw h1{
+  width: 672px;
+  height: 80px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #111827;
+  align-items: center;
+  text-align: center;
+}
+.iska-diwan button{
+  border-radius: 0px;
+}
+.btn-one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 44px;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: start;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+
+}
+.btn-one:hover{
+  background-color: #807f7f;
+}
+.btn-two{
+  display: flex;
+  justify-content: flex-start;
+  background-color: transparent;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid #333;
+  width: 159px;
+  height: 44px;
+  padding: 10px 14px;
+  text-align: center;
+  cursor: pointer;
+
+}
