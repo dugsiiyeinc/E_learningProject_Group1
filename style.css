@@ -338,3 +338,130 @@ header{
      
       max-width: 100%;
     }
+
+    #contact-section{
+       
+        padding-top: 100px;
+              width: 1150px;
+              margin: 0 auto;
+              height: 140vh;
+              margin-bottom: 200px;
+          }
+      
+          .getIntouch{ 
+             
+               box-sizing: border-box;
+              width: 1100px;
+              height: 100vh;
+              display: grid;
+              grid-template-columns: repeat(3,1fr);
+              grid-column: 1 / span 2;
+              gap: 30px;
+              color: white;
+           box-shadow: 0 2px 10px rgba(240, 240, 238, 0.3);
+          }
+      
+      
+      
+          .contactUs{
+              box-shadow: 0 2px 10px rgba(211, 211, 209, 0.3);
+             
+              width:500px;
+            display: flex;
+            flex-direction: column;
+            line-height: 40px;
+            background-color: #1f1f1f;
+           
+            color: white;
+            padding: 30px;
+              
+          }
+      
+          .contact-form{
+            background-color: white;
+            color: black;
+              display: flex;
+              flex-direction: column;
+             height: 100%;
+             width: 100%;
+             padding: 20px;
+             gap: 30px;
+            
+           
+          }
+      
+      
+      
+          .person-name{
+              display: flex;
+             gap: 30px;
+      
+          }
+          .person-name input{
+              padding: 10px 40px;
+          }
+          .person-contact{
+              display: flex;
+              gap: 30px;
+          }
+      
+          .person-contact input{
+              padding: 10px 40px;
+          }
+      
+          .leaveMessage{
+              display: flex;
+              flex-direction: column;
+              gap: 30px;
+          }
+      
+          .leave{
+              display: flex;
+              flex-direction: column;
+          }
+      
+          .leaveMessage input{
+              padding: 10px 40px;
+          }
+          .message{
+              display: flex;
+              flex-direction: column;
+          }
+          #submit{
+              border: none;
+              background-color: #1f1f1f;
+              color: yellow;
+              font-size: 1.5rem;
+              width: 50%;
+              border-radius: 10px;
+              padding: 10px 30px;
+              cursor: pointer;
+          }
+      
+          .footer-contents{
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              margin-top: 100px;
+              padding: 50px 0;
+              background-color: #1f1f1f;
+              color: rgb(204, 198, 198);
+          }
+      
+          .footer-contents ul {
+              display: flex;
+              gap: 20px;
+          }
+      
+          .footer-contents ul li {
+              list-style-type: none;
+              color: white;
+              text-decoration: none;
+          }
+      
+          .footer-contents ul li a:hover {
+              color: yellow;
+          }
+      
+      
+      
