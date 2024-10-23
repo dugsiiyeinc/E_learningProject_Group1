@@ -273,3 +273,68 @@ header{
 
     }
    
+
+    
+    #about{
+       
+        max-width: 100%;
+        margin: 0 auto;
+     
+        margin-bottom: 100px;
+        margin-top: 150px;
+        padding-top: 100px;
+        color: white;
+        display: grid;
+       
+
+    }
+
+
+
+    .aboutUs{
+      
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+     width: 60%;
+     margin: 0 auto;
+     
+    }
+
+    #about-title{
+    padding-top: 0;
+        margin-bottom: 30px;
+    }
+
+    #about-intro{
+        margin-bottom: 30px;
+    }
+
+    #about p{
+        margin-bottom: 30px;
+    }
+
+    .about-goals{
+        margin-bottom: 30px;
+    }
+
+    .about-image1{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .about-right-images{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .about-img{
+     
+      max-width: 100%;
+    }
