@@ -1117,10 +1117,10 @@ color: black;
 }
 
 
-#course-php{
-  display: block;
-}
+/* #course-php{
+  display: none;
+} */
 
 #course-Js{
-  display: none;
+  display: block;
 }
