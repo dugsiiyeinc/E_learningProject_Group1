@@ -183,9 +183,11 @@ ul li a:hover {
 
 .sect-languages {
   margin: 0 auto;
+  width: 1250px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  /* gap: 20px; */
+  /* background-color: #a8a6a6; */
 }
 .sec-1 {
   padding: 20px;
@@ -234,26 +236,28 @@ ul li a:hover {
 }
 
 .sec-2 {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+  gap: 1px;
 }
 
 .icons {
   /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-  width: 100%;
+  width: 295px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1px;
   background-color: #f9fafb;
 }
 
 .icons .svg {
   max-width: 100%;
-
+  color: #f3d03f;
   font-size: 5rem;
-  padding: 30px;
+  padding: 20px;
 }
 
 .cour-best-seller {
@@ -281,6 +285,7 @@ ul li a:hover {
   font-size: 16px;
   font-weight: 600;
   line-height: 32px;
+  color: #f3d03f;
 }
 .tit-cou h1 {
   font-size: 32px;
@@ -305,7 +310,7 @@ ul li a:hover {
   flex-wrap: wrap;
 }
 .box-cou {
-  width: 333.03px;
+  width: 400.03px;
   height: 450.86px;
   /* height: 45%; */
   border-radius: 10px;
@@ -374,7 +379,7 @@ ul li a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 336px;
+  width: 400px;
   height: 260px;
   border-radius: 10px;
   background-color: #ededec;
@@ -413,10 +418,10 @@ ul li a:hover {
   background-color: #f3d03f;
   position: absolute;
   top: -10px;
-  left: 150px;
+  left: 190px;
   right: 155px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   padding: 3px;
   border-radius: 5px;
 }
