@@ -80,7 +80,7 @@ function switchAuthForm() {
             password.value = '';
             authSwitch.innerHTML = 
             ` New to LearnOnline?  
-            <a href="#" id="switchForm" style="color: yellow;">Register now</a>`
+            <a href="#" id="switchForm" style="color: 118411;">Register now</a>`
                     
         }else{
             authButton.textContent = 'Sing Up';
@@ -89,7 +89,7 @@ function switchAuthForm() {
             confirmPassword.style.display = "block";
             authSwitch.innerHTML = 
             `Already have an account?  
-            <a href="#" id="switchForm" style="color: yellow;">Sing In</a>`
+            <a href="#" id="switchForm" style="color: #118411;">Sing In</a>`
 
 
 
