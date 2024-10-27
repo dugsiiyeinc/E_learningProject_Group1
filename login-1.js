@@ -35,6 +35,7 @@ authForm.addEventListener('submit', (e)=>{
 
         if(existingUser){
             localStorage.setItem("onlineUser", JSON.stringify(existingUser));
+            window.location.href='StudentDashboard.html'
         }else{
             alert("Invalid username and password")
             return
