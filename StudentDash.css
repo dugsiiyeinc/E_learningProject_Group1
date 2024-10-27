@@ -101,6 +101,17 @@
     justify-content: space-around;
     width: 20%;
   }
+  #Logout {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: #11e811;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
   
   #signIn {
     color: #1f1f1f;
