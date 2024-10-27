@@ -6,6 +6,7 @@
     <title>E learning Project</title>
     
     <link rel="stylesheet" href="StudentDash.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,10 +24,12 @@
           <li><a href="aboutUs.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
-  
+        
         <div class="btn">
-          <a href="#" id="signIn">My user</a>
-          <a href="#" id="signUp">Logout</a>
+          <h4 id="user-dash">aki</h4>
+          <a href="login.html" id="signIn">Sign In</a>
+          <a href="#" id="signUp">Sign Up</a>
+          <a href="#" id="Logout" style="display: none;">Logout</a>
         </div>
       
       </header>
@@ -48,6 +51,14 @@
 </section>
 
 </div>
+  <script>
+   function unOnlineUser(){
+    const onlineUser = JSON.parse(localStorage.getItem("onlineUser")) || null;
+    if (!onlineUser) return (window.location.href = "login.html");
+   }
+    unOnlineUser();
+  </script>
+  <script src="main.js"></script>
    <script src="script.js"></script>
 </body>
 </html>

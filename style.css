@@ -99,6 +99,13 @@ a{
   justify-content: space-around;
   width: 20%;
 }
+#user-dash{
+  display: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 32px;
+  cursor: pointer;
+}
 
 #signIn {
   color: white;
@@ -126,6 +133,18 @@ a{
   border-radius: 10px;
   cursor: pointer;
 }
+#Logout {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: #11e811;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 
 #signUp:hover {
   background-color: #75ee75;
