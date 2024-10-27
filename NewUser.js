@@ -20,27 +20,16 @@ const authForm = document.querySelector("#authForm");
 authForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     const user = {
-        username: signIn ? undefined: username.value,
+        username: username.value,
         email: email.value,
         password: password.value,
     };
 
-    if(signIn){
-        
-        const users = JSON.parse(localStorage.getItem("users")) || [];
 
-        const existingUser = users.find(
-            (user)=> user.email == email.value && user.password == password.value
-        );
+    
 
-        if(existingUser){
-            localStorage.setItem("onlineUser", JSON.stringify(existingUser));
-            window.location.href='index.html'
-        }else{
-            alert("Invalid username and password")
-            return
-        }
-    }else{
+    
+  
         const users = JSON.parse(localStorage.getItem("users")) || [];
 
         const existingUser = users.find(
@@ -60,8 +49,9 @@ authForm.addEventListener('submit', (e)=>{
         users.push(user);
         localStorage.setItem('users', JSON.stringify(users));
         alert("Register Successfuly")
+        window.location.href='login.html'
         switchAuthForm();
-    }
+
     
     
 })

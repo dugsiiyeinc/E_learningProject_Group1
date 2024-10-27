@@ -12,6 +12,7 @@ userDash.addEventListener('click', ()=>{
 Logout.addEventListener('click', ()=>{
     localStorage.removeItem("onlineUser");
     window.location.href = "login.html"
+  
 })
 
 function setIndex(){
