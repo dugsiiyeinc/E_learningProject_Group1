@@ -47,27 +47,27 @@
 
     </nav>
 
-    <nav  class="Mobile-menu">
+    <div class="mobile-menu">
       <div class="logo">
-        <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
-         <img src="images/leanOnline.png" alt="">
-      </div>
-      <ul class="navbar">
-        <li><a href="#">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="aboutUs.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-
-      <div class="btn">
-        <div id="user-dash">aki</div>
-        <a href="login.html"  id="signIn">Sign In</a>
-        <a href="newUser.html" id="signUp" >Sign Up</a>
-        <a href="#" id="Logout" style="display: none;">Logout</a>
+        <a href="/index.html">
+          <img src="images/leanOnline.png" alt="">
+        </a>
       </div>
 
-    </nav>
-    
+        
+        <!-- right menu -->
+        <div class="menu-link" data-visible="false">
+          <div class="menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+     
+    </div>
+    </div>
+  </div>
     </header>
 
     <div class="contents">
@@ -411,6 +411,33 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".menu-link");
+    const icons = document.querySelectorAll("i");
+    console.log('hamburger',hamburger);
+    hamburger.addEventListener("click", function (event) {
+console.log('event :',event)
+        const isVisible = mobileMenu.getAttribute('data-visible');
+        
+        if (isVisible == "true") {
+
+            // qari hiding
+            mobileMenu.setAttribute('data-visible', "false");
+            icons[0].setAttribute('data-visible', "true");
+            icons[1].setAttribute('data-visible', "false");
+        } else {
+            // soo bandhig showing
+            mobileMenu.setAttribute('data-visible', "true");
+            icons[0].setAttribute('data-visible', "false");
+            icons[1].setAttribute('data-visible', "true");
+        }
+    });
+
+
+</script>
+
    <script src="main.js"></script>
   
     <script src="script.js"></script>
