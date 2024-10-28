@@ -1341,7 +1341,27 @@ border: none;
   border-radius: 10px;
   cursor: pointer;
 }
+
+#page-title{
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
  
+}
+
+
+.hero-title span{
+  display: flex;
+  gap: 10px;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
 
 }
 
