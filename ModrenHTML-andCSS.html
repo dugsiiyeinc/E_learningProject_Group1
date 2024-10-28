@@ -13,25 +13,61 @@
   
     <header>
 
-        <div class="logo">
-          <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+        <!-- Humburger -->
+        <div class="hamburger">
+         <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+           <i class="fa-solid fa-xmark" data-visible="false"></i>
+       </div>
+ <nav  class="desktop-menu">
+       <div class="logo">
+         <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+          <img src="images/leanOnline.png" alt="">
+       </div>
+       <ul class="navbar">
+         <li><a href="#">Home</a></li>
+         <li><a href="courses.html">Courses</a></li>
+         <li><a href="aboutUs.html">About Us</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+       </ul>
+ 
+       <div class="btn">
+         <div id="user-dash">aki</div>
+         <a href="login.html"  id="signIn">Sign In</a>
+         <a href="newUser.html" id="signUp" >Sign Up</a>
+         <a href="#" id="Logout" style="display: none;">Logout</a>
+       </div>
+ 
+     </nav>
+ 
+     <div class="mobile-menu">
+       <div class="logo">
+         <a href="/index.html">
            <img src="images/leanOnline.png" alt="">
-        </div>
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-  
-        <div class="btn">
-            <h4 id="user-dash">aki</h4>
-            <a href="login.html" id="signIn">Sign In</a>
-            <a href="#" id="signUp">Sign Up</a>
-            <a href="#" id="Logout" style="display: none;">Logout</a>
-          </div>
+         </a>
+       </div>
+ 
+         
+         <!-- right menu -->
+         <div class="menu-link" data-visible="false">
+           <div class="menu">
+             <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="courses.html">Courses</a></li>
+               <li><a href="aboutUs.html">About Us</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+             </ul>
+ 
+             <div class="btn">
+               <div id="user-dash">aki</div>
+               <a href="login.html"  id="sign-in">Sign In</a>
+               <a href="newUser.html" id="signUp" >Sign Up</a>
+               <a href="#" id="Logout" style="display: none;">Logout</a>
+             </div>
       
-      </header>
+     </div>
+     </div>
+   </div>
+     </header>
 
 <div id="course-php">
    <section class="hero-course-details">
