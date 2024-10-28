@@ -32,7 +32,7 @@
          <img src="images/leanOnline.png" alt="">
       </div>
       <ul class="navbar">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="aboutUs.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
@@ -418,33 +418,7 @@
       </ul>
     </div>
   </footer>
-
-  <script>
-    const hamburger = document.querySelector(".hamburger");
-    const mobileMenu = document.querySelector(".menu-link");
-    const icons = document.querySelectorAll("i");
-    console.log('hamburger',hamburger);
-    hamburger.addEventListener("click", function (event) {
-console.log('event :',event)
-        const isVisible = mobileMenu.getAttribute('data-visible');
-        
-        if (isVisible == "true") {
-
-            // qari hiding
-            mobileMenu.setAttribute('data-visible', "false");
-            icons[0].setAttribute('data-visible', "true");
-            icons[1].setAttribute('data-visible', "false");
-        } else {
-            // soo bandhig showing
-            mobileMenu.setAttribute('data-visible', "true");
-            icons[0].setAttribute('data-visible', "false");
-            icons[1].setAttribute('data-visible', "true");
-        }
-    });
-
-
-</script>
-
+<script src="menu.js"></script>
    <script src="main.js"></script>
   
     <script src="script.js"></script>
