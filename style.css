@@ -74,11 +74,12 @@ ul li a:hover {
 .logo {
   position: relative;
   top: 55px;
+  
 }
 
 .logo img {
   font-size: 2rem;
-  width: 200px;
+  width: 100%;
 }
 
 .logo-Online {
@@ -1231,11 +1232,13 @@ header {
   .logo {
     position: absolute;
     top: 0;
+   
+
   }
   
   .logo img {
     font-size: 2rem;
-    width: 200px;
+    max-width: 200px;
   }
 
   .menu-link {
@@ -1273,18 +1276,71 @@ header {
 
     font-weight: bold;
     width: 100%;
-    border: 1px solid rgb(231, 231, 231);
-    background-color: #fff;
+    border-bottom: 1px solid rgba(231, 231, 231,0.3);
+    background: linear-gradient(to bottom, transparent,#11e811);
     text-align: center;
   }
+
 
   .menu ul li:hover {
     background-color: #f4f4f4;
     color: #e64a19 !important;
   }
+
+  .menu ul li a{
+    color: #111827;
+  }
   .menu li a:hover {
     color: #e64a19;
   }
+
+.btn{
+  display: flex;
+  width: 100%;
+  padding: 5px;
+ 
+  background: linear-gradient(to bottom, transparent,#1f1);
+}
+
+#user-dash{
+  display: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 32px;
+  cursor: pointer;
+}
+
+#sign-in {
+
+ 
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+  background: linear-gradient(to top, #11e811, black);
+border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#signIn:hover {
+  color: #11e811;
+  font-weight: bold;
+}
+
+#signUp {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+
+  background: linear-gradient(to bottom, #11e811, black);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
  
 
 }
