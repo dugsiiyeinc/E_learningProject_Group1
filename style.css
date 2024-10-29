@@ -1233,6 +1233,26 @@ color: black;
   padding-bottom: 5px;
   text-transform: uppercase;
 }
+.inputBox.local-payment dd{
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center ;
+}
+.inputBox.local-payment input{
+  height: 15px;
+  width: 20px;
+}
+.inputBox .images{
+ display: flex;
+ flex-direction: row;
+ width: 100%;
+ align-items: center;
+gap: 20px;
+}
+.inputBox .images img{
+  cursor: pointer;
+}
 .modal-content form .row .col .inputBox{
   margin:15px 0;
 }
@@ -1241,6 +1261,13 @@ color: black;
   display: block;
 }
 .modal-content form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+.modal-content form .row .col .inputBox select{
   width: 100%;
   border:1px solid #ccc;
   padding:10px 15px;
