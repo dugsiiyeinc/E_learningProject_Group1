@@ -20,8 +20,6 @@ Logout.addEventListener('click', ()=>{
 
 function setIndex(){
   const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
- 
- 
   if(onlineUser){
     userDash.textContent = onlineUser.username
     signIn.style.display = "none"
@@ -29,19 +27,36 @@ function setIndex(){
     userDash.style.display = "block"
     Logout.style.display = "block"
     enrolButton.textContent = "Enroll"
-  }else{
-    enrolButton.addEventListener('click', ()=>{
-      
-      window.location.href = "login.html";
-      modalClose()
-  })
   }
+  else{
+
+  }
+  
   
 }
 setIndex();
 
-enrolButton.addEventListener('click', ()=>{
+
+function enrollBtn(){
+  
+}
+
+enrolButton.addEventListener('click', (e)=>{
+  if(enrolButton.textContent == "Enroll"){
+  
     modal.style.display = 'block'
+
+  }
+  else{
+    e.preventDefault();
+    modalClose();
+        window.location.href='login.html'
+      
+  }
+
+
+
+   
 })
 // closeModal.addEventListener('click', ()=>{
 //     modal.style.display = 'none'
