@@ -6,37 +6,74 @@
     <title>E learning Project</title>
     
     <link rel="stylesheet" href="StudentDash.css">
+    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+   <header>
 
-        <div class="logo">
-          <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
-           <img src="images/logoooooooooooooo.png" alt="">
-        </div>
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="aboutUs.html">AboutUs</a></li>
-          <li><a href="contact.html">ContactUs</a></li>
-        </ul>
-        
-        <div class="btn">
-          <h4 id="user-dash">aki</h4>
-          <a href="login.html" id="signIn">Sign In</a>
-          <a href="#" id="signUp">Sign Up</a>
-          <a href="#" id="Logout" style="display: none;">Logout</a>
-        </div>
+        <!-- Humburger -->
+        <div class="hamburger">
+         <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+           <i class="fa-solid fa-xmark" data-visible="false"></i>
+       </div>
+ <nav  class="desktop-menu">
+       <div class="logo">
+         <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+         <img src="images/logoooooooooooooo.png" alt="">
+       </div>
+       <ul class="navbar">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="courses.html">Courses</a></li>
+         <li><a href="aboutUs.html">AboutUs</a></li>
+         <li><a href="contact.html">ContactUs</a></li>
+       </ul>
+ 
+       <div class="btn">
+         <div id="user-dash">aki</div>
+         <a href="login.html"  id="signIn">Sign In</a>
+         <a href="newUser.html" id="signUp" >Sign Up</a>
+         <a href="#" id="Logout" style="display: none;">Logout</a>
+       </div>
+ 
+     </nav>
+ 
+     <div class="mobile-menu">
+       <div class="logo">
+         <a href="/index.html">
+          <img src="images/logoooooooooooooo.png" alt="">
+         </a>
+       </div>
+ 
+         
+         <!-- right menu -->
+         <div class="menu-link" data-visible="false">
+           <div class="menu">
+             <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="courses.html">Courses</a></li>
+               <li><a href="aboutUs.html">About Us</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+             </ul>
+ 
+             <div class="btn">
+               <div id="user-dash">aki</div>
+               <a href="login.html"  id="sign-in">Sign In</a>
+               <a href="newUser.html" id="signUp" >Sign Up</a>
+               <a href="#" id="Logout" style="display: none;">Logout</a>
+             </div>
       
-      </header>
+     </div>
+     </div>
+   </div>
+     </header>
 
       <div class="dashcontainer">
 
-<section class="dashboard">
+<div class="dashboard">
         <ul>
          
             <li><a href="#">My Courses</a></li>
@@ -44,11 +81,105 @@
             <li><a href="#">My Account</a></li>
             <li><a href="#">Help</a></li>
         </ul>
-</section>
-<section class="dashDisplay">
+      </div>
+<div class="dashDisplay">
     
-   
+  <section class="cour-best-seller">
+    <div class="tit-cou">
+     
+        <h1>Enrolled courses</h1>
+       
+    </div>
+    <div class="cour-boxses">
+        <a href="phpCourse.html">
+        <div class="box-cou">
+            <img src="images/php.jpg" alt="">
+            <div class="box-cou-texts">
+                <span class="categ-cour">
+                    Web Development
+                </span>
+                <span class="t-c">Php For Professionals</span>
+                <span class="lacgta">
+                    USD 30.00 For Life Time Access
+                </span>
+            </div>
+        </div>
+    </a>
+    <a href="JavaScriptCourse.html">
+        <div class="box-cou">
+          <img src="images/JavaScript-logo.png" alt="">
+          <div class="box-cou-texts">
+              <span class="categ-cour">
+                  Web Development
+              </span>
+              <span class="t-c">Modern JavaScript For Beginners</span>
+              <span class="lacgta">
+                  USD 25.00 For Life Time Access
+              </span>
+          </div>
+      </div>
+    </a>
+    <a href="Flutter-Mobile-App-Development.html">
+        <div class="box-cou">
+            <img src="images/MobileDev.jpeg" alt="">
+            <div class="box-cou-texts">
+                <span class="categ-cour">
+                    Web Development
+                </span>
+                <span class="t-c">Flutter Mobile App Development</span>
+                <span class="lacgta">
+                    USD 30.00 For Life Time Access
+                </span>
+            </div>
+        </div>
+    </a>
+    <a href="ModrenHTML-andCSS.html">
+        <div class="box-cou">
+            <img src="images/HTML-and-CSS-code-for-Website.jpg" alt="">
+            <div class="box-cou-texts">
+                <span class="categ-cour">
+                    Web Development
+                </span>
+                <span class="t-c">Modren HTML and CSS For Beginners</span>
+                <span class="lacgta">
+                    USD 25.00 For Life Time Access
+                </span>
+            </div>
+        </div>
+    </a>
+    <a href="ReactMasterClass.html">
+        <div class="box-cou">
+            <img src="images/react-native-blog.jpg" alt="">
+            <div class="box-cou-texts">
+                <span class="categ-cour">
+                    Web Development
+                </span>
+                <span class="t-c">React Master Class with Redux, Hooks, Firebase, Tailwind css, GraphQL</span>
+                <span class="lacgta">
+                    USD 30.00 For Life Time Access
+                </span>
+            </div>
+        </div>
+    </a>
+    <a href="AI-Powered-SaaSwithNextjs.html">
+        <div class="box-cou">
+            <img src="images/saas.png" alt="">
+            <div class="box-cou-texts">
+                <span class="categ-cour">
+                    Web Development
+                </span>
+                <span class="t-c">AI-Powered SaaS with Next.js, Typescript, Prisma & OpenAI</span>
+                <span class="lacgta">
+                    USD 25.00 For Life Time Access
+                </span>
+            </div>
+        </div>
+       
+    </a>
+    </div>
 </section>
+   
+</div>
 
 </div>
   <script>
@@ -58,6 +189,7 @@
    }
     unOnlineUser();
   </script>
+  <script src="menu.js"></script>
   <script src="main.js"></script>
   <script src="newUserMain.js"></script>
    <script src="script.js"></script>
