@@ -270,10 +270,10 @@ a{
   line-height: 32px;
 }
 .btn-sec-lan {
-  /* width: 151.18px;
-        height: 57.78px; */
+ 
+    
   background-color: #11e811;
-
+width: 200px;
   border: none;
   border-radius: 10px;
   font-size: 16px;
@@ -283,10 +283,11 @@ a{
   margin-top: 20px;
 }
 .buttons-sec {
+
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
@@ -1144,39 +1145,50 @@ color: black;
 }
 .iska-diwan button{
   border-radius: 0px;
+  
 }
 .btn-one{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 260px;
+  width: 180px;
   height: 44px;
   font-weight: 800;
   padding: 10px 14px;
   text-align: start;
-  background-color: #333;
+  background-color: #11e811;
   color: rgb(5, 54, 5);
   cursor: pointer;
 
 }
 .btn-one:hover{
-  background-color: #807f7f;
+  border: 2px solid #333;
+  background-color: #63ee63;
+  color: #333;
 }
 .btn-two{
+  background-color: white;
   display: flex;
   justify-content: flex-start;
   background-color: transparent;
   gap: 5px;
   align-items: center;
-  border: 1px solid #333;
+  border: 2px solid #333;
   width: 159px;
   height: 44px;
   padding: 10px 14px;
   text-align: center;
   cursor: pointer;
+  font-weight: bold;
+  color: #11e811;
 
 }
 
+
+.btn-two:hover{
+  background-color: #63ee63;
+  color: #333;
+}
 
 /* Modal Payment */
 .modal{
@@ -1773,6 +1785,30 @@ padding: 20px;
   align-items: center;
   text-align: center;
   margin-bottom: 120px;
+}
+
+.btn-two{
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  background-color: transparent;
+  gap: 5px;
+  align-items: center;
+  border: 2px solid #333;
+  width: 135px;
+  height: 44px;
+  padding: 10px 14px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #11e811;
+
+}
+
+
+.btn-two:hover{
+  background-color: #63ee63;
+  color: #333;
 }
 
 .about-container{
