@@ -13,25 +13,61 @@
    
     <header>
 
-        <div class="logo">
-          <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+        <!-- Humburger -->
+        <div class="hamburger">
+         <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+           <i class="fa-solid fa-xmark" data-visible="false"></i>
+       </div>
+ <nav  class="desktop-menu">
+       <div class="logo">
+         <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+          <img src="images/leanOnline.png" alt="">
+       </div>
+       <ul class="navbar">
+         <li><a href="#">Home</a></li>
+         <li><a href="courses.html">Courses</a></li>
+         <li><a href="aboutUs.html">About Us</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+       </ul>
+ 
+       <div class="btn">
+         <div id="user-dash">aki</div>
+         <a href="login.html"  id="signIn">Sign In</a>
+         <a href="newUser.html" id="signUp" >Sign Up</a>
+         <a href="#" id="Logout" style="display: none;">Logout</a>
+       </div>
+ 
+     </nav>
+ 
+     <div class="mobile-menu">
+       <div class="logo">
+         <a href="/index.html">
            <img src="images/leanOnline.png" alt="">
-        </div>
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-  
-        <div class="btn">
-            <h4 id="user-dash">aki</h4>
-            <a href="login.html" id="signIn">Sign In</a>
-            <a href="#" id="signUp">Sign Up</a>
-            <a href="#" id="Logout" style="display: none;">Logout</a>
-          </div>
+         </a>
+       </div>
+ 
+         
+         <!-- right menu -->
+         <div class="menu-link" data-visible="false">
+           <div class="menu">
+             <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="courses.html">Courses</a></li>
+               <li><a href="aboutUs.html">About Us</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+             </ul>
+ 
+             <div class="btn">
+               <div id="user-dash">aki</div>
+               <a href="login.html"  id="sign-in">Sign In</a>
+               <a href="newUser.html" id="signUp" >Sign Up</a>
+               <a href="#" id="Logout" style="display: none;">Logout</a>
+             </div>
       
-      </header>
+     </div>
+     </div>
+   </div>
+     </header>
 
 
 <div id="course-php">
@@ -268,6 +304,120 @@
 
 </div>
 
+<div id="modal-payment" class="modal">
+    <div class="modal-content">
+     <span id="close-model">&times;</span>
+     <form action="">
+ 
+         <div class="row">
+ 
+             <div class="col">
+ 
+                 <h3 class="title">Billing address</h3>
+ 
+                 <div class="inputBox">
+                     <span>Full name :</span>
+                     <input type="text" placeholder="Abdulahi Awil">
+                 </div>
+                 <div class="inputBox">
+                     <span>Email :</span>
+                     <input type="email" placeholder="example@example.com">
+                 </div>
+                 <div class="inputBox">
+                     <span>State :</span>
+                     <input type="text" placeholder="Puntland">
+                 </div>
+                 <div class="inputBox">
+                     <span>City :</span>
+                     <input type="text" placeholder="Garowe">
+                 </div>
+ 
+                 <div class="flex">
+                     <div class="inputBox">
+                         <span>Country :</span>
+                         <input type="text" placeholder="Somalia">
+                     </div>
+                     <div class="inputBox">
+                         <span>Zip code :</span>
+                         <input type="text" placeholder="+252">
+                     </div>
+                 </div>
+ 
+             </div>
+ 
+             <div class="col">
+ 
+                 <h3 class="title">Payment</h3>
+ 
+                 <div class="inputBox local-payment">
+                     <span>Cards accepted :</span>
+                     <img id="cards" src="images/card_img.png" alt="" style="cursor: pointer;">
+                     
+                      
+                 </div>
+                 <div id="localPayment" class="inputBox images">
+                     <span>Name on card :</span>
+ 
+                     <div class="images">
+                         <img id="golis" src="images/Golis.webp" alt="">
+                     <img id="hormood" src="images/hormud.webp" alt="">
+                     <img id="somtel" src="images/somtel.png" alt="">
+                     <img id="telesom" src="images/Telesom_logo.png" alt="">
+                     </div>
+                    
+                      <!-- <select name="" id="selectCards">
+                         <option id="golis" value="">Golis</option>
+                         <option id="hormood" value="">Hormood</option>
+                         <option id="somtel">Somtel</option>
+                         <option id="telesom">Telesom</option>
+                      </select> -->
+                 </div>
+                 
+                 <div id="creditCardNumber" class="inputBox">
+                     <span>Credit card number :</span>
+                     <input type="number" placeholder="1111-2222-3333-4444">
+                 </div>
+                 <div id="golisNumber" class="inputBox" style="display: none;">
+                     <span>Golis card number :</span>
+                     <input type="number" placeholder="25290">
+                 </div>
+                 <div id="hormoodNumber" class="inputBox" style="display: none;">
+                     <span>Hormood card number :</span>
+                     <input type="number" placeholder="252062">
+                 </div>
+                 <div id="somtelNumber" class="inputBox" style="display: none;">
+                     <span>Somtel card number :</span>
+                     <input type="number" placeholder="252661">
+                 </div>
+                 <div id="telesomeNumber" class="inputBox" style="display: none;">
+                     <span>Telesom card number :</span>
+                     <input type="number" placeholder="252062">
+                 </div>
+                 <div id="expMonth" class="inputBox">
+                     <span>Exp month :</span>
+                     <input type="text" placeholder="january">
+                 </div>
+ 
+                 <div id="expYear" class="flex">
+                     <div class="inputBox">
+                         <span>Exp year :</span>
+                         <input type="number" placeholder="2022">
+                     </div>
+                     <div id="cVv" class="inputBox">
+                         <span>CVV :</span>
+                         <input type="text" placeholder="1234">
+                     </div>
+                 </div>
+ 
+             </div>
+     
+         </div>
+ 
+         <input type="submit" value="proceed to checkout" class="submit-btn">
+ 
+     </form>
+    </div>
+  </div>
 
 
 <footer class="footer">
@@ -280,6 +430,8 @@
         <li><a href="#" class="fa fa-youtube"></a></li>
     </ul>
 </div>
+
+
 </footer>
         </div>
        
