@@ -14,7 +14,15 @@ hamburger.addEventListener("click", function (event) {
         icons[0].setAttribute('data-visible', "true");
         icons[1].setAttribute('data-visible', "false");
     
-        
+        const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
+        if(onlineUser){
+          userDash.textContent = onlineUser.username
+          signIn.style.display = "none"
+          signUp.style.display = "none"
+          userDash.style.display = "block"
+          Logout.style.display = "block"
+          enrolButton.textContent = "Enroll"
+        }
 
         
 
