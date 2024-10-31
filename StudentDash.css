@@ -71,7 +71,7 @@ ul li a {
 }
 
 ul li a:hover {
-  color: white;
+  color: #1f1f1f;
   font-size: 1rem;
   text-decoration: none;
   padding: 20px;
