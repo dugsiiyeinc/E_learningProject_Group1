@@ -2350,3 +2350,65 @@ textarea {
     cursor: pointer;
   }
 }
+
+
+.course {
+  position: relative;
+  top: 100px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  overflow: hidden;
+  
+}
+.course-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.course-thumbnail {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.course-info {
+  flex: 1;
+}
+.course-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
+.course-description {
+  color: #666;
+}
+.expand-btn {
+  padding: 8px 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.video-list {
+  margin-top: 10px;
+  display: none;
+}
+.video-item {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+.video-thumbnail {
+  width: 80px;
+  margin-right: 10px;
+}
+.video-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+.video-item a:hover {
+  text-decoration: underline;
+}
