@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-learning website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/coursedisplay.css" />
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+ 
+    <header>
+
+      <!-- Humburger --> 
+      <div class="hamburger">
+       <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+         <i class="fa-solid fa-xmark" data-visible="false"></i>
+     </div>
+  <nav  class="desktop-menu">
+     <div class="logo">
+       <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+        <img src="images/leanOnline.png" alt="">
+     </div>
+     <ul class="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="aboutUs.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+     </ul>
+  
+     <div class="btn">
+       <div id="user-dash">aki</div>
+       <a href="login.html"  id="signIn">Sign In</a>
+       <a href="newUser.html" id="signUp" >Sign Up</a>
+       <a href="#" id="Logout" style="display: none;">Logout</a>
+     </div>
+  
+   </nav>
+  
+   <div class="mobile-menu">
+     <div class="logo">
+       <a href="index.html">
+         <img src="images/leanOnline.png" alt="">
+       </a>
+     </div>
+  
+       
+       <!-- right menu -->
+       <div class="menu-link" data-visible="false">
+         <div class="menu">
+           <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="courses.html">Courses</a></li>
+             <li><a href="aboutUs.html">AboutUs</a></li>
+             <li><a href="contact.html">ContactUs</a></li>
+           </ul>
+  
+           <div class="btn">
+             <div id="user-dash">aki</div>
+             <a href="login.html"  id="sign-in">Sign In</a>
+             <a href="newUser.html" id="signUp" >Sign Up</a>
+             <a href="#" id="Logout" style="display: none;">Logout</a>
+           </div>
+    
+   </div>
+   </div>
+  </div>
+   </header>
+    <main>
+      <div class="coursesdetail">
+        <div class="right-description">
+          <div class="card">
+          <a href=".image-container">Introction</a>
+          <a href="#">Lesson 1</a>
+          <a href="#">lesson 2</a>
+          <a href="#">Lesson 3</a>
+          <a href="#">Lesson 4</a>
+          <a href="#">Lesson 5</a>
+          <a href="#">Lesson 6</a>
+          <a href="#">Lesson 7</a>
+          <a href="#">Lesson 8</a>
+          </div>
+        </div>
+        <div class="left-Description">
+          <h5 class="titleplay">
+        
+          </h5>
+          <div class="image-container">
+            <iframe
+              style="border: none"
+              class="playvideo"
+              allowfullscreen
+              width="98%"
+              height="600"
+              src="https://www.youtube.com/embed/OuoyXiP8E5Y"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; Team dugsiiye</p>
+    </footer>
+
+    <script>
+      let accountinfo = document.querySelector(".account-info");
+      let account = document.querySelector(".account");
+      let allbtn = document.querySelectorAll(".allbtn");
+      let card = document.querySelector(".card");
+      let imagecontainer = document.querySelector(".playvideo");
+      let courseName = document.querySelector(".courseName");
+      let userdata = JSON.parse(localStorage.getItem("currentUser"));
+      let logout = document.querySelector(".logout");
+      let myaccount = document.querySelector(".myaccount");
+
+      if (userdata) {
+        let currentusername = document.querySelector(".currentusername")
+        currentusername.innerText = userdata.fullname
+        account.innerText = userdata.fullname.charAt(0);
+        allbtn.forEach((element) => {
+          element.classList.add("hide");
+
+          account.classList.remove("hide");
+        });
+      } else {
+        allbtn.forEach((element) => {
+          element.classList.remove("hide");
+
+          account.classList.add("hide");
+        });
+      }
+
+      account.addEventListener("click", function () {
+        accountinfo.classList.toggle("hide");
+      });
+
+      const urldata = new URLSearchParams(window.location.search);
+
+      let courses = urldata.get("selectedcourses");
+
+      let decodeddata = JSON.parse(decodeURIComponent(courses));
+      let duration = decodeddata.lessons.reduce(
+        function (acc, value) {
+          if (!acc.includes(value.duration)) {
+            acc.push(value.duration);
+          }
+
+          return acc;
+        },
+        [0]
+      );
+      let d = duration.map((element) => {
+        return parseFloat(element);
+      });
+
+      let lastdata = d.reduce(function (acc, val) {
+        return acc + val;
+      });
+
+      decodeddata.lessons.forEach((Element) => {
+        card.innerHTML += `<div class="video">
+              <div class="title">
+                <i class="fa-solid fa-circle-play"></i>
+                <div class="displaycontent"> 
+                  <h5  class="videodisplay">
+                 ${Element.content}
+                </h5>
+                     <p class="description">  ${Element.duration}</p> 
+                  </div>
+              </div>
+              <a
+                class="url"
+                href="${Element.video}"
+              ></a>
+            </div>`;
+
+            courseName.innerText = Element.title
+         
+
+      });
+
+      let VIDEO = document.querySelectorAll(".video");
+
+
+      VIDEO.forEach((element) => {
+        element.addEventListener("click", (event) => {
+          if (event.target.classList.contains("videodisplay")) {
+            let url =
+              event.target.parentElement.parentElement.parentElement.querySelector(
+                ".url"
+              );
+            let titleplay = document.querySelector(".titleplay");
+        
+            let title =
+              event.target.textContent;
+              titleplay.textContent=title
+            imagecontainer.src = url;
+          }
+        });
+      });
+
+      myaccount.addEventListener("click",()=>{
+                window.location.href="userAccount.html"
+              })
+              logout.addEventListener("click",()=>{
+                localStorage.removeItem("currentUser");
+
+
+                window.location.href="index.html"
+              })
+
+              let bars = document.querySelector(".bars i");
+      let left = document.querySelector(".left");
+              bars.onclick=()=>{
+                bars.classList.toggle("fa-xmark")
+               left.classList.toggle("open")
+              }
+
+
+          
+    </script>
+  </body>
+</html>
