@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-learning website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="registration.css" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+
+      <!-- Humburger -->
+      <div class="hamburger">
+       <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+         <i class="fa-solid fa-xmark" data-visible="false"></i>
+     </div>
+<nav  class="desktop-menu">
+     <div class="logo">
+       <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+        <img src="images/leanOnline.png" alt="">
+     </div>
+     <ul class="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="aboutUs.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+     </ul>
+
+     <div class="btn">
+       <div id="user-dash">aki</div>
+       <a href="login.html"  id="signIn">Sign In</a>
+       <a href="newUser.html" id="signUp" >Sign Up</a>
+       <a href="#" id="Logout" style="display: none;">Logout</a>
+     </div>
+
+   </nav>
+
+   <div class="mobile-menu">
+     <div class="logo">
+       <a href="/index.html">
+         <img src="images/leanOnline.png" alt="">
+       </a>
+     </div>
+
+       
+       <!-- right menu -->
+       <div class="menu-link" data-visible="false">
+         <div class="menu">
+           <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="courses.html">Courses</a></li>
+             <li><a href="aboutUs.html">About Us</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+           </ul>
+
+           <div class="btn">
+             <div id="user-dash" >aki</div>
+             <a href="login.html"  id="sign-in" >Sign In</a>
+             <a href="newUser.html" id="signUp" >Sign Up</a>
+             <a href="#" id="Logout" >Logout</a>
+           </div>
+    
+   </div>
+   </div>
+   
+ </div>
+   </header>
+    <section>
+      <div class="container">
+        <h2>Registration Form</h2>
+        <div class="signUP">
+          <img src="images/insert-image-file_22110-499.avif" />
+
+          <form>
+            <label>Full name</label>
+            <input type="text" class="fullname" placeholder="Enter full Name" required />
+
+            <label>Email</label>
+            <input type="email" class="email" placeholder="Enter Email" required />
+
+            <label>password</label>
+            <input
+              type="password"
+              class="password" required
+              placeholder="Enter your password"
+            />
+
+            <label>confirm password</label>
+            <input
+              type="password" required
+              class="confirm-password" 
+              placeholder="confirm password"
+            />
+            <button class="submit" type="submit">Submit</button>
+            <p>I have an account <span class="span">sign in</span></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; Team dugsiiye</p>
+    </footer>
+
+    <script>
+      const submitbtn = document.querySelector(".submit");
+      let accountinfo = document.querySelector(".account-info");
+      let account = document.querySelector(".account");
+      let allbtn = document.querySelectorAll(".allbtn");
+      const fullname = document.querySelector(".fullname");
+      const span = document.querySelector(".span");
+      const email = document.querySelector(".email");
+      const password = document.querySelector(".password");
+      const confirmpassword = document.querySelector(".confirm-password");
+
+      submitbtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        function isValidEmail(email) {
+          // Regular expression to match email format
+          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          // Check if the email matches the regular expression
+          return regex.test(email);
+        }
+        const emailval = email.value;
+        let validemail;
+        const isValid = isValidEmail(emailval);
+        validemail=emailval
+
+        if (
+          fullname.value == "" ||
+          email.value == "" ||
+          confirmpassword.value == "" ||
+          password.value == ""
+        ) {
+          Swal.fire({
+            title: "Please enter full informatin",
+            // icon: 'question',
+            // iconHtml: '؟',
+            confirmButtonText: "ok"
+          });
+ 
+     
+        } 
+        else if(isValid !==true){
+          Swal.fire({
+              title: "Please enter correct email",
+              // icon: 'question',
+              // iconHtml: '؟',
+              confirmButtonText: "ok"
+            });
+        }
+        else if (password.value !== confirmpassword.value) {
+          Swal.fire({
+            title: "plz match passwords",
+            // icon: 'question',
+            // iconHtml: '؟',
+            confirmButtonText: "ok"
+          });
+    
+       
+        } else {
+          let myData = {
+            fullname: fullname.value,
+            email: validemail,
+            password: password.value,
+            confirmpassword: confirmpassword.value,
+            enrolledCourses: []
+          };
+
+          let data = [];
+          data = JSON.parse(localStorage.getItem("users")) || [];
+
+          if (
+            data.some((data) => {
+              return data.email == email.value;
+            })
+          ) {
+            Swal.fire({
+              title: "duplicate data",
+              // icon: 'question',
+              // iconHtml: '؟',
+              confirmButtonText: "ok"
+            });
+          } else {
+            data.push(myData);
+            localStorage.setItem("users", JSON.stringify(data));
+
+            window.location.href = "login.html";
+          }
+        }
+      });
+      span.addEventListener("click", () => {
+        window.location.href = "login.html";
+      });
+
+      let userdata = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (userdata) {
+        let currentusername = document.querySelector(".currentusername");
+        currentusername.innerText = userdata.fullname;
+        account.innerText = userdata.fullname.charAt(0);
+        allbtn.forEach((element) => {
+          element.classList.add("hide");
+
+          account.classList.remove("hide");
+        });
+      } else {
+        allbtn.forEach((element) => {
+          element.classList.remove("hide");
+
+          account.classList.add("hide");
+        });
+      }
+      account.addEventListener("click", function () {
+        accountinfo.classList.toggle("hide");
+      });
+
+      let bars = document.querySelector(".bars i");
+      let left = document.querySelector(".left");
+      bars.onclick = () => {
+        bars.classList.toggle("fa-xmark");
+        left.classList.toggle("open");
+      };
+    </script>
+  </body>
+</html>

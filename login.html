@@ -3,41 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auth - Login & Register</title>
-    <link rel="stylesheet" href="/css/Login.css" />
+    <title>E-learning website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="layout">
-      <div class="auth-container">
-        <h1 id="form-title">Sign In</h1>
-        <form id="authForm">
-          <input type="text" id="username" placeholder="Enter your username" style="display: none;"/>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-          />
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-            required
-          />
-          <input
-            type="password"
-            id="confirmPassword"
-            placeholder="Confirm your password"
-            style="display: none"
-          />
-          <button type="submit" id="authButton">Sign In</button>
-        </form>
-        <p id="authSwitch">
-          New to LearnOnline?  <a href="#" id="switchForm" style="color: #118111;">Register now</a>
-        </p>
-      </div>
-    </div>
+    <header>
 
-  <script src="/js/login-1.js"></script>
+      <!-- Humburger -->
+      <div class="hamburger">
+       <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+         <i class="fa-solid fa-xmark" data-visible="false"></i>
+     </div>
+<nav  class="desktop-menu">
+     <div class="logo">
+       <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+        <img src="images/leanOnline.png" alt="">
+     </div>
+     <ul class="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="aboutUs.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+     </ul>
+
+     <div class="btn">
+       <div id="user-dash">aki</div>
+       <a href="login.html"  id="signIn">Sign In</a>
+       <a href="newUser.html" id="signUp" >Sign Up</a>
+       <a href="#" id="Logout" style="display: none;">Logout</a>
+     </div>
+
+   </nav>
+
+   <div class="mobile-menu">
+     <div class="logo">
+       <a href="/index.html">
+         <img src="images/leanOnline.png" alt="">
+       </a>
+     </div>
+
+       
+       <!-- right menu -->
+       <div class="menu-link" data-visible="false">
+         <div class="menu">
+           <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="courses.html">Courses</a></li>
+             <li><a href="aboutUs.html">About Us</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+           </ul>
+
+           <div class="btn">
+             <div id="user-dash" >aki</div>
+             <a href="login.html"  id="sign-in" >Sign In</a>
+             <a href="newUser.html" id="signUp" >Sign Up</a>
+             <a href="#" id="Logout" >Logout</a>
+           </div>
+    
+   </div>
+   </div>
+   
+ </div>
+   </header>
+    <section>
+      <div class="container">
+        <h2>Login Form</h2>
+        <div class="signUP">
+          <img src="images/insert-image-file_22110-499.avif" />
+          <form>
+            <label>Email</label>
+            <input type="email" class="email" placeholder="Enter Email" />
+  
+            <label>password</label>
+            <input
+              type="password"
+              class="password"
+              placeholder="Enter your password"
+            />
+            <button class="submit" type="submit">Submit</button>
+            <p>I don't have an account <span class="span" >sign up</span></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; Team dugsiiye</p>
+    </footer>
+
+    <script>
+        const email = document.querySelector(".email");
+        const password = document.querySelector(".password");
+        const submitbtn = document.querySelector(".submit");
+        const span = document.querySelector(".span");
+
+        let accountinfo = document.querySelector(".account-info")
+      let account = document.querySelector(".account")
+      let allbtn = document.querySelectorAll(".allbtn")
+        submitbtn.addEventListener("click", function (e) {
+          e.preventDefault()
+          if (email.value == "" || password.value == "") {
+            Swal.fire({
+              title: "Please enter email and password",
+              // icon: 'question',
+              // iconHtml: '؟',
+              confirmButtonText: "ok"
+            });
+          } else {
+            let data=[]
+            data= JSON.parse( localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")) :[]
+  
+            if(data.some((f)=>{
+             return f.email==email.value && f.password==password.value
+            })){
+              Swal.fire({
+              title: "login successfull",
+              // icon: 'question',
+              // iconHtml: '؟',
+              confirmButtonText: "ok"
+            });
+              let currentUser=data.filter((current)=>{
+                return current.email==email.value && current.password==password.value
+
+                
+              })[0];
+         
+  
+          
+  
+              localStorage.setItem('currentUser',JSON.stringify(currentUser ));
+              window.location.href="courses.html"
+            }else{
+              Swal.fire({
+              title: "Please Correct Email and Password",
+              // icon: 'question',
+              // iconHtml: '؟',
+              confirmButtonText: "ok"
+            });
+            }
+          }
+        });
+        span.addEventListener("click",()=>{
+          window.location.href='registration.html'
+  
+        });
+        let userdata = JSON.parse(localStorage.getItem('currentUser'));
+
+if(userdata){
+  let currentusername = document.querySelector(".currentusername")
+        currentusername.innerText = userdata.fullname
+        account.innerText = userdata.fullname.charAt(0);
+  allbtn.forEach(element=>{
+element.classList.add("hide")
+
+account.classList.remove("hide")
+  })
+
+}else{
+  allbtn.forEach(element=>{
+element.classList.remove("hide")
+
+account.classList.add("hide")
+  })
+
+}
+
+        account.addEventListener("click", function() {
+        accountinfo.classList.toggle("hide")
+
+
+      })
+
+      let bars = document.querySelector(".bars i");
+      let left = document.querySelector(".left");
+              bars.onclick=()=>{
+                bars.classList.toggle("fa-xmark")
+               left.classList.toggle("open")
+      }
+
+    
+      </script>
   </body>
 </html>
