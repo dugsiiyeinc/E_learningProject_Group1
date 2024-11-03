@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-learning website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="useraccount.css" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+
+      <!-- Humburger -->
+      <div class="hamburger">
+       <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+         <i class="fa-solid fa-xmark" data-visible="false"></i>
+     </div>
+<nav  class="desktop-menu">
+     <div class="logo">
+       <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+        <img src="images/leanOnline.png" alt="">
+     </div>
+     <ul class="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="aboutUs.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+     </ul>
+
+     <div class="btn">
+       <div id="user-dash">aki</div>
+       <a href="login.html"  id="signIn">Sign In</a>
+       <a href="newUser.html" id="signUp" >Sign Up</a>
+       <a href="#" id="Logout" style="display: none;">Logout</a>
+     </div>
+
+   </nav>
+
+   <div class="mobile-menu">
+     <div class="logo">
+       <a href="/index.html">
+         <img src="images/leanOnline.png" alt="">
+       </a>
+     </div>
+
+       
+       <!-- right menu -->
+       <div class="menu-link" data-visible="false">
+         <div class="menu">
+           <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="courses.html">Courses</a></li>
+             <li><a href="aboutUs.html">About Us</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+           </ul>
+
+           <div class="btn">
+             <div id="user-dash" >aki</div>
+             <a href="login.html"  id="sign-in" >Sign In</a>
+             <a href="newUser.html" id="signUp" >Sign Up</a>
+             <a href="#" id="Logout" >Logout</a>
+           </div>
+    
+   </div>
+   </div>
+   
+ </div>
+   </header>
+    <section>
+        <div class="orderdetails">
+            <h4>my courses</h4>
+            <h6>A list of all the courses that you have enrolled in</h6>
+            <div class="ordercards">
+             
+             
+        
+              
+            </div>
+        </div>
+    </section>
+
+    <footer>
+      <p>&copy; Team dugsiiye</p>
+    </footer>
+
+    <script>
+      let accountinfo = document.querySelector(".account-info");
+      let account = document.querySelector(".account");
+      let allbtn = document.querySelectorAll(".allbtn");
+      let ordercards = document.querySelector(".ordercards");
+      let logout = document.querySelector(".logout");
+      let myaccount = document.querySelector(".myaccount");
+      myaccount.addEventListener("click",()=>{
+                window.location.href="userAccount.html"
+              })
+              logout.addEventListener("click",()=>{
+                localStorage.removeItem("currentUser");
+
+
+                window.location.href="index.html"
+              })
+      account.addEventListener("click", function () {
+        accountinfo.classList.toggle("hide");
+      });
+
+      let userdata = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (userdata) {
+        let currentusername = document.querySelector(".currentusername")
+        currentusername.innerText = userdata.fullname
+        account.innerText = userdata.fullname.charAt(0);
+        allbtn.forEach((element) => {
+          element.classList.add("hide");
+
+          account.classList.remove("hide");
+        });
+      } else {
+        allbtn.forEach((element) => {
+          element.classList.remove("hide");
+
+          account.classList.add("hide");
+        });
+      }
+
+
+
+      let users = JSON.parse(localStorage.getItem("users"))
+      let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
+      let foundeduser=users.find(user=>user.email===currentUser.email)
+
+      foundeduser.enrolledCourses.forEach((course) => {
+
+        
+        ordercards.innerHTML +=`  <div class="ordercard">
+                    <div class="ordername">${course.title}</div>
+                    <div class="ordercontent">
+                        <div class="imgwithname">
+                           <div class="img">  <img src="${course.photo}" alt=""></div>
+                            <p>${course.description}</p>
+                        </div>
+                        <div class="watchbtn"  ><button data-courseid="${course.id}">watch Now</button></div>
+                    </div>
+                </div>`
+
+
+      })
+
+      const watchbtn=document.querySelectorAll(".watchbtn")
+      watchbtn.forEach(element=>{
+        element.addEventListener("click",(event)=>{
+        let courseid= event.target.dataset.courseid
+    
+        let data=  foundeduser.enrolledCourses.find(c => c.id == courseid)
+     
+
+        let selectedcourse = JSON.stringify(data);
+            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+              selectedcourse
+            )}`;
+   
+
+      
+      })
+      })
+
+      let bars = document.querySelector(".bars i");
+      let left = document.querySelector(".left");
+              bars.onclick=()=>{
+                bars.classList.toggle("fa-xmark")
+               left.classList.toggle("open")
+      }
+
+   
+    </script>
+  </body>
+</html>
