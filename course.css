@@ -186,7 +186,7 @@ footer > p {
 /* courses */
 
 .courses {
-
+margin-top: 100px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
