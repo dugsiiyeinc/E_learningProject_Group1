@@ -215,7 +215,7 @@ footer > p {
 /* courses */
 
 .coursesdetail {
-  margin-top: 50px;
+  margin-top: 60px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 17px;
