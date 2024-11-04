@@ -20,7 +20,7 @@ body{
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-border-top: 1px solid #7c7878;
+border-bottom: 1px solid #7c7878;
   padding-bottom: 5px;
   color: #1f1f1f;
 }
