@@ -178,6 +178,7 @@ section {
   margin-right: 10px;
   margin-top: 70px;
   color: white;
+  z-index: 1111;
 }
 .left-content > h4 {
   font-size: 20px;
