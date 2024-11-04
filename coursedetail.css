@@ -26,11 +26,11 @@ border-bottom: 1px solid #eee;
 .title >i{
   margin-right: 10px;
   font-size: 30px;
-  color: aqua;
+  color: #1f1f1f;
  
 }
 .video {
-  border: 1px solid #ccc;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   padding: 10px;
   cursor: pointer;
   margin-bottom: 10px;
