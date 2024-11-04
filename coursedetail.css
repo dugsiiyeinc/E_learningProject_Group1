@@ -20,8 +20,9 @@ body{
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-border-bottom: 1px solid #eee;
+border-bottom: 2px solid #7c7878;
   padding-bottom: 5px;
+  color: #1f1f1f;
 }
 .title >i{
   margin-right: 10px;
@@ -30,7 +31,7 @@ border-bottom: 1px solid #eee;
  
 }
 .video {
- box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
   padding: 10px;
   cursor: pointer;
   margin-bottom: 10px;
