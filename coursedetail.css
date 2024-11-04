@@ -264,6 +264,7 @@ footer > p {
 }
 
 .course_description {
+  border-bottom: 1px solid #eee;
   font-size: 18px;
   padding: 10px 0 25px 0px;
 }
