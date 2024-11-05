@@ -13,13 +13,14 @@ body {
 }
 .header {
   /* margin: 0 15%; */
-  background-color: rgb(238, 251, 243);
+  /* background-color: rgb(238, 251, 243); */
+  background-color: burlywood;
 }
 .top-header {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  background-color: rgb(4, 50, 59);
+  /* background-color: rgb(4, 50, 59); */
 }
 .top-header h3 {
   color: rgb(195, 194, 194);
@@ -40,6 +41,7 @@ body {
 
 section {
   padding: 18px 15%;
+  /* background-color: #007bff; */
 }
 .menu {
   border-radius: 5px;
@@ -171,17 +173,7 @@ section {
 
 /* popuiral courses */
 
-footer {
-  background-color: #f8f9fa;
-  padding: 20px;
-  text-align: center;
-}
 
-footer > p {
-  font-size: 14px;
-  color: #6c757d;
-  margin: 0;
-}
 
 /* courses */
 
@@ -211,7 +203,9 @@ display: flex;
   /*display: flex;
   justify-content: space-between;
   align-items: center;
-  */background-color: rgb(214, 241, 223);
+  */
+  /* background-color: rgb(214, 241, 223); */
+  background-color: black;
   padding: 20px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -220,6 +214,7 @@ display: flex;
   -o-border-radius: 5px;
 }
 .search {
+  /* display: none; */
   max-width: 100%;
   min-width: 250px;
   width: 100%;
@@ -238,6 +233,7 @@ display: flex;
   font-size: 20px;
 }
 .search input {
+  /* display: none; */
   height: 100%;
   width: 100%;
   outline: none;
@@ -301,7 +297,15 @@ word-wrap:break-word;
   height: 100%;
 }
 .card-course {
-  background-color: #ffffff;
+  width: 350px;
+  height: 450.86px;
+  /* height: 45%; */
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  /* background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   border-radius: 10px;
@@ -310,7 +314,7 @@ word-wrap:break-word;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
  max-width: 450px;
-  width: 100%;
+  width: 100%; */
 }
 .card-course .image-container img:hover {
   transform: scale(1.1);
@@ -318,7 +322,7 @@ word-wrap:break-word;
 }
 .card-course .image-container {
   overflow: hidden;
-  height: 200px;
+  height: 256px;
   width: 100%;
   border-radius: 10px 10px 0px 0;
   -webkit-border-radius: 10px 10px 0px 0;
@@ -350,8 +354,15 @@ word-wrap:break-word;
 
 .horizontal {
   display: flex;
-  justify-content: space-between;
-  margin: 0 10px 20px 10px;
+  flex-direction: column;
+  width: 80%;
+  gap: 10px;
+  /* background-color: #007bff; */
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  margin: 0px 10px 20px 30px;
+  font-size: 18px;
 }
 
 .start-time i,
