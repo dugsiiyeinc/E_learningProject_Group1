@@ -3,8 +3,8 @@ let coursedisplay=document.querySelector(".coursedisplay")
 let accountinfo = document.querySelector(".account-info")
 let account = document.querySelector(".account")
 let allbtn = document.querySelectorAll(".allbtn")
-let logout = document.querySelector(".logout");
-let myaccount = document.querySelector(".myaccount");
+// let logout = document.querySelector(".logout");
+// let myaccount = document.querySelector(".myaccount");
 let search = document.querySelector(".search input");
 
 
