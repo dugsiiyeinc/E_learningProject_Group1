@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"name": "John Doe",
+		"name": "Eng Bashir",
 		"email": "john.doe@example.com",
 		"role": "admin",
 		"enrolledCourses": [1, 2]
