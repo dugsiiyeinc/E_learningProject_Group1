@@ -1,92 +1,188 @@
-const apiUrl = 'https://youtube-v3-alternative.p.rapidapi.com/playlist';
+let gategory=document.querySelector(".subcat")
+let coursedisplay=document.querySelector(".coursedisplay")
+let accountinfo = document.querySelector(".account-info")
+let account = document.querySelector(".account")
+let allbtn = document.querySelectorAll(".allbtn")
+let logout = document.querySelector(".logout");
+let myaccount = document.querySelector(".myaccount");
+let search = document.querySelector(".search input");
 
-async function fetchPlaylistVideos(playlistId) {
-  try {
-    const response = await fetch(`${apiUrl}?id=${playlistId}`, {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '8e119f3017msh255fbb053b268bbp115f95jsnbe6dc0fa5480', // Replace with your actual RapidAPI key
-        'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
-      }
-    });
 
-    const data = await response.json();
+fetchData =async()=>{
+let url="elearning/courses.json"
 
-    if (data.data) {
-      displayCourses(data.data);
-    } else {
-      console.error("No videos found.");
+let response = await fetch(url)
+
+let getdatafromlocal = await response.json()
+
+let data = JSON.parse(localStorage.getItem("courses")) || (function() {
+let defaultData = getdatafromlocal;
+localStorage.setItem("courses", JSON.stringify(defaultData));
+return defaultData;
+})();
+
+
+
+
+
+
+diplaygategories=()=>{
+let mygategory=data.reduce(function(acc, element){
+if(!acc.includes(element.category)){
+      acc.push(element.category)
     }
-  } catch (error) {
-    console.error("Error fetching playlist videos:", error);
+   return acc
+  },['all courses'])
+  mygategory.map(element => {
+
+    gategory.innerHTML +=`<div class="cat" data-id="${element}" >${element}</div>`
+  });
+
+
+let filterdata=document.querySelectorAll('.cat');
+filterdata.forEach((element,index) => {
+  if (index === 0) {
+    element.classList.add('active');
+}
+  element.addEventListener('click',function(e) {
+
+    filterdata.forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+
+    let filter=e.currentTarget.dataset.id;
+const newGategory=data.filter(function(item){
+  if(item.category===filter){
+    return item
   }
+});
+
+if(filter === "all courses"){
+  displaycourses(data)
+}else{
+  displaycourses(newGategory)
 }
 
-function displayCourses(videos) {
-  const courseContainer = document.querySelector(".course-id");
-  courseContainer.innerHTML = '';
+  });
+});
+    }
+    search.addEventListener("keyup", (event) => {
+const searchValue = event.target.value.trim().toLowerCase();
+const filteredData = data.filter((item) => {
+return item.title.toLowerCase().includes(searchValue);
+});
+displaycourses(filteredData);
+});
 
-  videos.forEach(video => {
-    const courseElement = document.createElement("div");
-    courseElement.classList.add("course");
 
-    // Course structure with click-to-expand feature
-    courseElement.innerHTML = `
-      <div class="course-header" data-video-id="${video.videoId}">
-        <img src="${video.thumbnail[0].url}" alt="${video.title}" class="course-thumbnail">
-        <div class="course-info">
-          <h3 class="course-title">${video.title}</h3>
-          <p class="course-description">${video.description || "No description available."}</p>
-        </div>
-        <button class="expand-btn">View Videos</button>
-      </div>
-      <div class="video-list" style="display: none;">
-        <p>Loading videos...</p>
-      </div>
-    `;
 
-    // Add click event to the course header to expand and fetch videos
-    courseElement.querySelector('.expand-btn').addEventListener('click', function() {
-      const videoList = courseElement.querySelector('.video-list');
-      videoList.style.display = videoList.style.display === 'none' ? 'block' : 'none';
-      videoList.innerHTML = ''; // Clear existing videos before loading new ones
-      displayVideos(videoList, video.videoId);
-    });
 
-    courseContainer.appendChild(courseElement);
+  
+displaycourses=(item)=>{
+  coursedisplay.innerHTML=''
+item.forEach(element => {
+  // console.log(element)
+  coursedisplay.innerHTML+=`
+  <div class="card-course">
+          <div class="image-container">
+          
+            <img src="${element.photo}"  class="img" data-courseid="${element.id}"/>
+          </div>
+          <div class="course-content">
+            <p class="description">
+              ${element.title}
+            </p>
+
+            <div class="horizontal">
+              <div class="enroll"><i class="fa-solid fa-users"></i>Enroll:   ${element.enrollmentCount}</div>
+              <div class="lessons">
+                <i class="fa-solid fa-book"></i>    ${element.lessons.length} lessons
+              </div>
+              <div class="start-time">
+                <i class="fa-regular fa-clock"></i><span>Start Date:</span>   ${element.start_date}
+              </div>
+            </div>
+          </div>
+        </div>`
+
+  
+});
+}
+
+displaycoursedetail=()=>{
+  coursedisplay.addEventListener('click',(e)=>{
+
+    if(e.target.classList.contains("img")){
+        const courseID=e.target.dataset.courseid
+     
+const datafinded= data.find(newdata => newdata.id==courseID)
+
+let selectedcourse=JSON.stringify(datafinded)
+
+
+window.location.href=`courseDetails.html?selectedcourses=${encodeURIComponent(selectedcourse)}`
+
+
+
+    }
+    
+
+
+
+
   });
 }
+    
+      
+    
+displaycoursedetail()
+  displaycourses(data)
+  
+    diplaygategories()
 
-async function displayVideos(videoList, videoId) {
-  try {
-    const response = await fetch(`${apiUrl}?id=${videoId}`, {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY', // Replace with your actual RapidAPI key
-        'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
-      }
-    });
+let userdata = JSON.parse(localStorage.getItem('currentUser')) ;
 
-    const data = await response.json();
+if(userdata){
+let currentusername = document.querySelector(".currentusername")
+  currentusername.innerText = userdata.fullname
+  account.innerText = userdata.fullname.charAt(0);
+allbtn.forEach(element=>{
+element.classList.add("hide")
 
-    if (data.data) {
-      data.data.forEach(video => {
-        const videoElement = document.createElement('div');
-        videoElement.classList.add('video-item');
-        videoElement.innerHTML = `
-          <img src="${video.thumbnail[0].url}" alt="${video.title}" class="video-thumbnail">
-          <a href="https://www.youtube.com/watch?v=${video.videoId}" target="_blank">${video.title}</a>
-        `;
-        videoList.appendChild(videoElement);
-      });
-    } else {
-      videoList.innerHTML = '<p>No videos found.</p>';
-    }
-  } catch (error) {
-    console.error("Error fetching video list:", error);
-    videoList.innerHTML = '<p>Error loading videos.</p>';
-  }
+account.classList.remove("hide")
+})
+
+}else{
+allbtn.forEach(element=>{
+element.classList.remove("hide")
+
+account.classList.add("hide")
+})
+
 }
 
-// Initialize with a specific playlist ID
-document.addEventListener("DOMContentLoaded", () => fetchPlaylistVideos('PL7usCIRV1hCPA7cH3MV41SPrDoal7qFOk'));
+account.addEventListener("click", function() {
+  accountinfo.classList.toggle("hide")
+
+
+})
+      }
+
+      window.addEventListener('load', fetchData);
+     
+      myaccount.addEventListener("click",()=>{
+          window.location.href="userAccount.html"
+        })
+        logout.addEventListener("click",()=>{
+          localStorage.removeItem("currentUser");
+
+
+          window.location.href="index.html"
+        })
+
+        let bars = document.querySelector(".bars i");
+let left = document.querySelector(".left");
+        bars.onclick=()=>{
+          bars.classList.toggle("fa-xmark")
+         left.classList.toggle("open")
+}
+
