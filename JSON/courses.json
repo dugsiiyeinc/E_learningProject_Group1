@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "HTML & CSS",
+        "category": "Web Development",
+        "duration": "3 months",
+        "price": "79 dollars",
+        "description": [
+            {
+                "id": 1,
+                "Subject": "Modren HTML-andCSS For Professionals",
+                "content": "Baro Php Adiga Oo Dhisaya Project Real Life Kaasi oo Kuu Sahlaya in Aad Dhisto Any Project oo aad u baahantahay."
+            }
+        ],
+        "Course-outlines": [
+            {
+                "id": 1,
+                "about_course": "What You Will Learn?",
+                "outline1": "Learn HTML",
+                "outline2": "Learn CSS",
+                "outline3": "Learn HTML",
+                "outline4": "Learn CSS"
+            }
+        ],
+        "Curriculum":[
+            {
+                "id": 1,
+                "section1":"introduction to the sucject",
+                "section1-Content":[{
+                        "id": 1,
+                        "lesson1":"lesson 1",
+                        "lesson2":"lesson 2",
+                        "lesson3":"lesson 3",
+                        "lesson4":"lesson 4"
+
+                }],
+                "section2-Content":[{
+                        "id": 1,
+                        "lesson1":"lesson 1",
+                        "lesson2":"lesson 2",
+                        "lesson3":"lesson 3",
+                        "lesson4":"lesson 4"
+
+                }],
+                "section2":"HTML Basics",
+                "section3":"CSS Basics",
+                "section4":"HTML and CSS Advanced Topics"
+            }
+        ]
+    }
+   
+]
