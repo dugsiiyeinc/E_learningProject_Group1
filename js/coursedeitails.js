@@ -57,111 +57,121 @@ let mainContainer = document.querySelector(".coursesdetail");
                 <h5 >${element.content}  <p class="description">${element.title} </p></h5>
               </div>`;
       });
-      let userdata = JSON.parse(localStorage.getItem("currentUser"));
 
-      if (userdata) {
-        let currentusername = document.querySelector(".currentusername")
-        currentusername.innerText = userdata.fullname
-        account.innerText = userdata.fullname.charAt(0);
-        allbtn.forEach((element) => {
-          element.classList.add("hide");
 
-          account.classList.remove("hide");
-        });
-      } else {
-        allbtn.forEach((element) => {
-          element.classList.remove("hide");
+    //   let userdata = JSON.parse(localStorage.getItem("currentUser"));
 
-          account.classList.add("hide");
-        });
-      }
+    //   if (userdata) {
+    //     let currentusername = document.querySelector(".currentusername")
+    //     currentusername.innerText = userdata.fullname
+    //     account.innerText = userdata.fullname.charAt(0);
+    //     allbtn.forEach((element) => {
+    //       element.classList.add("hide");
 
-      displaycoursedetail = () => {
-        let users = JSON.parse(localStorage.getItem("users"))|| []
-            let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
-            let foundeduser=users.find(user=>user.email===currentUser.email)
+    //       account.classList.remove("hide");
+    //     });
+    //   } else {
+    //     allbtn.forEach((element) => {
+    //       element.classList.remove("hide");
 
-        orderbtn.addEventListener("click", (e) => {
+    //       account.classList.add("hide");
+    //     });
+    //   }
+
+    //   displaycoursedetail = () => {
+    //     let users = JSON.parse(localStorage.getItem("users"))|| []
+    //         let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
+    //         let foundeduser=users.find(user=>user.email===currentUser.email)
+
+    //     orderbtn.addEventListener("click", (e) => {
           
-          if (!userdata) {
-            Swal.fire({
-              title: "before order the course make login",
+    //       if (!userdata) {
+    //         Swal.fire({
+    //           title: "please login first",
            
-              confirmButtonText: "ok"
-            });
-          }
+    //           confirmButtonText: "ok"
+    //         });
+    //       }
+    //       else{
+    //         Swal.fire({
+    //           title: "done successfully",
+           
+    //           confirmButtonText: "ok"
+    //         });
+
+    //       }
           
-          if (foundeduser) {
+    //       if (foundeduser) {
 
-            if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
-              let selectedcourse = JSON.stringify(decodeddata);
-            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-              selectedcourse
-            )}`;
+    //         if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+    //           let selectedcourse = JSON.stringify(decodeddata);
+    //         window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    //           selectedcourse
+    //         )}`;
 
 
-              }else{
-                foundeduser.enrolledCourses.push(decodeddata)
+    //           }else{
+    //             foundeduser.enrolledCourses.push(decodeddata)
           
 
-                let storagecourses=JSON.parse(localStorage.getItem("courses"))
+    //             let storagecourses=JSON.parse(localStorage.getItem("courses"))
                 
              
 
-              let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
+    //           let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
 
 
-           foundeddourse.enrollmentCount ++
-           console.log(foundeddourse)
+    //        foundeddourse.enrollmentCount ++
+    //        console.log(foundeddourse)
 
 
-           localStorage.setItem("courses" ,JSON.stringify(storagecourses))
+    //        localStorage.setItem("courses" ,JSON.stringify(storagecourses))
 
        
 
 
-                localStorage.setItem("users", JSON.stringify(users))
-              let selectedcourse = JSON.stringify(decodeddata);
-            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-              selectedcourse
-            )}`;
+    //             localStorage.setItem("users", JSON.stringify(users))
+    //           let selectedcourse = JSON.stringify(decodeddata);
+    //         window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    //           selectedcourse
+    //         )}`;
 
 
-              }
+    //           }
               
-              }else {
-            console.log("user not found")
+    //           }else {
+    //         console.log("user not found")
 
 
 
-          }
+    //       }
 
         
-          } )
+    //       } )
       
 
-     if(foundeduser){
-      if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
-                button.textContent ="continue learning"
+    //  if(foundeduser){
+    //   if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+    //             button.textContent ="continue learning"
 
 
-              }
-     }else{
-      return
-     }
+    //           }
+    //  }else{
+    //   return
+    //  }
        
    
-              myaccount.addEventListener("click",()=>{
-                window.location.href="userAccount.html"
-              })
-              logout.addEventListener("click",()=>{
-                localStorage.removeItem("currentUser");
+    //           myaccount.addEventListener("click",()=>{
+    //             window.location.href="userAccount.html"
+    //           })
+    //           logout.addEventListener("click",()=>{
+    //             localStorage.removeItem("currentUser");
 
 
-                window.location.href="index.html"
-              })
-      };
-      displaycoursedetail();
+    //             window.location.href="index.html"
+    //           })
+    //   };
+    //   displaycoursedetail();
 
 
       let bars = document.querySelector(".bars i");
