@@ -20,12 +20,6 @@ let defaultData = getdatafromlocal;
 localStorage.setItem("courses", JSON.stringify(defaultData));
 return defaultData;
 })();
-
-
-
-
-
-
 diplaygategories=()=>{
 let mygategory=data.reduce(function(acc, element){
 if(!acc.includes(element.category)){
