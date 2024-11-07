@@ -123,9 +123,16 @@ main {
 .content {
   display: flex;
   margin-top: 30px;
-  justify-content: space-between;
+  justify-content: center;
+  background-image: url('https://dugsiiye.com/_next/image?url=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F4939658%2Fpexels-photo-4939658.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D2%26w%3D500&w=1080&q=75');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+
   /* align-items: center; */
 }
+
 .right-content {
   max-width: 300px;
   align-items: end;
@@ -156,17 +163,27 @@ main {
 .left-content {
   margin-right: 10px;
   margin-top: 70px;
+  
+}
+
+.overlay{
+  background: rgba(0, 0, 0, 0.8);
+  width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 .left-content > h4 {
   font-size: 20px;
   text-transform: capitalize;
-  color: rgb(48, 146, 85);
+  color: white;
   margin-bottom: 25px;
 }
 .left-content > p {
   font-size: 35px;
   text-transform: capitalize;
-  color: rgb(48, 146, 85);
+  color: #11e811;
   margin-bottom: 20px;
 }
 .left-content > h5 {
@@ -207,17 +224,18 @@ footer > p {
 /* courses */
 
 .coursesdetail {
-  margin-top: 100px;
+ 
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 17px;
-  box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75);
+  box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.4);
   -webkit-box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75);
   -moz-box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75);
-  padding: 10px;
+  padding: 20px;
 }
 .left-Description .image-container {
   position: relative;
+  
 }
 .left-Description .image-container img {
   width: 100%;
@@ -234,8 +252,11 @@ footer > p {
 .title >i{
   margin-right: 10px;
   font-size: 30px;
-  color: aqua;
+  color: #11e811;
  
+}
+.description{
+  color: #11e811;
 }
 .title .description{
   margin-left: 10px;
@@ -346,7 +367,7 @@ flex-direction: column;
   }
   }
 h5{
-  color: rgb(5, 143, 136);
+  color: black;
   margin-left: 10px;
 }
 h4,h5{
@@ -366,8 +387,8 @@ h4,h5{
   display: none;
 }
 .bars i {
-  font-size: 25px;
-  color: rgb(5, 143, 136);
+  font-size: 25px; 
+  color: #11e811;
 }
 
 /* media quey navbar */
