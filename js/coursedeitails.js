@@ -1,6 +1,6 @@
 let mainContainer = document.querySelector(".coursesdetail");
       let logout = document.querySelector(".logout");
-      let myaccount = document.querySelector(".myaccount");
+      // let myaccount = document.querySelector(".myaccount");
       let button = document.querySelector(".orderbtn button");
       let couesanamedetail = document.querySelector(".couesanamedetail");
       let course_description = document.querySelector(".course_description p");

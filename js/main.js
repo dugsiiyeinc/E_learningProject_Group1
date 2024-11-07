@@ -20,6 +20,7 @@ const cVv = document.getElementById('cVv');
 const cards = document.getElementById('cards');
 const selectCards = document.getElementById('selectCards');
 const localPayment = document.getElementById('localPayment');
+const proceed = document.getElementById('proceed')
 
 userDash.addEventListener('click', ()=>{
     window.location.href = 'StudentDashboard.html';
