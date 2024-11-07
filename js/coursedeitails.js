@@ -5,11 +5,12 @@ let mainContainer = document.querySelector(".coursesdetail");
       let couesanamedetail = document.querySelector(".couesanamedetail");
       let course_description = document.querySelector(".course_description p");
       let coursename = document.querySelector(".coursename");
-      let imagecontainer = document.querySelector(".image-container img");
+      let videoContainer = document.querySelector(".video-container iframe");
       let instructor = document.querySelector(".content-detail h5");
       let dura = document.querySelector(".content-detail .dura");
       let video = document.querySelector(".video");
       let orderbtn = document.querySelector(".orderbtn button");
+      let courseImg = document.querySelector(".course-img");
      
 
       let accountinfo = document.querySelector(".account-info");
@@ -45,7 +46,8 @@ let mainContainer = document.querySelector(".coursesdetail");
 
       // console.log(courseduration)
       couesanamedetail.innerText = decodeddata.title;
-      imagecontainer.setAttribute("src", decodeddata.photo);
+      courseImg.setAttribute("src", decodeddata.photo);
+      videoContainer.setAttribute("src", decodeddata.trailer_video);
       course_description.innerText = decodeddata.description;
       coursename.innerText = decodeddata.title;
       instructor.innerText = decodeddata.instructor;
