@@ -71,13 +71,7 @@ section {
   font-size: 20px;
   text-transform: capitalize;
 }
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo img {
-  width: 70px;
-}
+
 .regitration {
   display: flex;
 }
