@@ -23,7 +23,7 @@ const localPayment = document.getElementById('localPayment');
 const proceed = document.getElementById('proceed')
 
 userDash.addEventListener('click', ()=>{
-    window.location.href = 'StudentDashboard.html';
+    window.location.href = 'userAccount.html';
     
 })
 
@@ -184,10 +184,49 @@ setTimeout(()=>{
     selectedcourse
   )}`;
 },3000);
- 
- 
+
+
+  if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+    let selectedcourse = JSON.stringify(decodeddata);
+  window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    selectedcourse
+  )}`;
+
+
+    }else{
+      foundeduser.enrolledCourses.push(decodeddata)
+
+
+      let storagecourses=JSON.parse(localStorage.getItem("courses"))
+      
+   
+
+    let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
+
+
+ foundeddourse.enrollmentCount ++
+ console.log(foundeddourse)
+
+
+ localStorage.setItem("courses" ,JSON.stringify(storagecourses))
+
+
+
+
+      localStorage.setItem("users", JSON.stringify(users))
+    let selectedcourse = JSON.stringify(decodeddata);
+  window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    selectedcourse
+  )}`;
+
+
+    }
+
+
 
 })
+
+
 // closeModal.addEventListener('click', ()=>{
 //     modal.style.display = 'none'
 // })
@@ -269,3 +308,35 @@ cards.addEventListener('click', ()=>{
   
 })
 
+
+if (foundeduser) {
+
+  
+    
+    }else {
+  console.log("user not found")
+
+
+
+}
+
+
+ // Select the proceed button
+ const proceedButton = document.getElementById("proceed");
+
+ // Add event listener to the proceed button
+ proceedButton.addEventListener("click", (e) => {
+     e.preventDefault(); // Prevent default behavior
+ 
+     // Store the selected course information in `localStorage`
+     let selectedCourse = JSON.stringify(decodeddata);  // Assuming `decodeddata` contains the course data
+     let enrolledCourses = JSON.parse(localStorage.getItem("onlineUser")) || [];
+     enrolledCourses.push(selectedCourse);  // Add the new course to the array
+     localStorage.setItem("onlineUser", JSON.stringify(enrolledCourses));  // Save back to `localStorage`
+ 
+     // // Show success message or redirect if needed
+     // alert("Course enrolled successfully!");
+ 
+     // // Redirect to user account page (or stay on the same page if you prefer)
+     // window.location.href = "userAccount.html";
+ });

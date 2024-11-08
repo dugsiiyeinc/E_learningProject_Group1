@@ -174,3 +174,6 @@ let mainContainer = document.querySelector(".coursesdetail");
                 bars.classList.toggle("fa-xmark")
                left.classList.toggle("open")
       }
+
+     
+
