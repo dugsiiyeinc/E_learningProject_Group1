@@ -83,10 +83,7 @@ displaycoursedetail = () => {
   orderbtn.addEventListener("click", (e) => {
     
     if (!userdata) {
-      let selectedcourse = JSON.stringify(decodeddata);
-      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-        selectedcourse
-      )}`;
+      
       // Swal.fire({
       //   title: "before order the course make login",
      
