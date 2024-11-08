@@ -310,7 +310,29 @@ footer > p {
   align-items: center;
   border-radius: 10px;
 }
+.content-course-detail-page{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #007bff;
 
+
+}
+.couesanamedetail{
+  /* position: absolute; */
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  left: 250px;
+
+}
+.couesaparagraphdetail{
+  position: absolute;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  left: 250px;
+}
 .coursedetail {
   font-size: 18px;
   width: 100%;

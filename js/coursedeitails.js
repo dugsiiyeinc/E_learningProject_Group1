@@ -2,8 +2,9 @@ let mainContainer = document.querySelector(".coursesdetail");
       let logout = document.querySelector(".logout");
       // let myaccount = document.querySelector(".myaccount");
       let button = document.querySelector(".orderbtn button");
-      let couesanamedetail = document.querySelector(".couesanamedetail");
-      let course_description = document.querySelector(".course_description p");
+      let couesanamedetail = document.querySelector(".course-title");
+      let course_description = document.querySelector(".c-p");
+      let engName = document.querySelector(".ENG");
       let coursename = document.querySelector(".coursename");
       let videoContainer = document.querySelector(".video-container iframe");
       let instructor = document.querySelector(".content-detail h5");
@@ -49,8 +50,9 @@ let mainContainer = document.querySelector(".coursesdetail");
       courseImg.setAttribute("src", decodeddata.photo);
       videoContainer.setAttribute("src", decodeddata.trailer_video);
       course_description.innerText = decodeddata.description;
-      coursename.innerText = decodeddata.title;
+      // coursename.innerText = decodeddata.title;
       instructor.innerText = decodeddata.instructor;
+      engName.innerText = decodeddata.instructor;
       dura.innerText = `${lastdata} hours`;
 
       decodeddata.lessons.forEach((element) => {
