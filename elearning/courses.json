@@ -9,49 +9,49 @@
 		"start_date": "2024-11-05",
 		"price": "30 DOLLARS",
 		"end_date": "2025-09-15",
-		"trailer_video":"https://www.youtube.com/embed/z0kwRU8yCCU?si=5sasAGBM8ZOtPxhR",
+		"trailer_video":"https://youtu.be/qoSksQ4s_hg?si=RWIZ1H8ZU2uowNER",
 		"photo": "https://tse4.mm.bing.net/th?id=OIP.DN7ToydkJZEdVaJVK_NhvwHaHa&pid=Api&P=0&h=220",
 		"lessons": [
 			{
 				"id": 1,
-				"title": "JavaScript Variables.",
+				"title": "JavaScript Tutorial For Beginners 01",
 				"duration": "1 hour",
-				"video": "https://www.youtube.com/embed/l6isMLkTgSI",
+				"video": "https://youtu.be/qoSksQ4s_hg?si=RWIZ1H8ZU2uowNER",
 				"content": "In this lesson, you will learn about JavaScript Variables."
 			},
 			{
 				"id": 2,
-				"title": "JavaScript Data Types.",
+				"title": "JavaScript Tutorial For Beginners 02",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/UmSpfdxu3ro",
+				"video": "https://youtu.be/VB7y0yxZjro?si=CBRTcr6iiDm8ZM3W",
 				"content": "This lesson covers JavaScript Data Types.."
 			},
 			{
 				"id": 3,
-				"title": "JavaScript Operators",
+				"title": "JavaScript Tutorial For Beginners 03",
 				"duration": "1 hour",
-				"video": "https://www.youtube.com/embed/FZzyij43A54",
+				"video": "https://youtu.be/ranSYb-EhrU?si=UgIiFSFdnaYiJNK0",
 				"content": "In this lesson, you will learn about JavaScript Operators."
 			},
 			{
 				"id": 4,
-				"title": "JavaScript If Statement",
+				"title": "JavaScript Tutorial For Beginners 04",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/IsG4Xd6LlsM",
+				"video": "https://youtu.be/GCcfKNswi4c?si=HTTvHBEUVFf8BmH0",
 				"content": "This lesson covers JavaScript If Statement."
 			},
 			{
 				"id": 5,
-				"title": "JavaScript Switch",
+				"title": "JavaScript Tutorial For Beginners 05",
 				"duration": "1 hour",
-				"video": "https://www.youtube.com/embed/fM5qnyasUYI",
+				"video": "https://youtu.be/czlwRUeTCgw?si=QWM6vlvrde2T7jH9",
 				"content": "In this lesson, you will learn about JavaScript Switch.."
 			},
 			{
 				"id": 6,
-				"title": "JavaScript Loop",
+				"title": "JavaScript Tutorial For Beginners 06",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/s9wW2PpJsmQ",
+				"video": "https://youtu.be/JzZFccCEgGA?si=4PY-JRfi2sRlxdps",
 				"content": "This lesson covers JavaScript Loop.."
 			}
 		]
@@ -66,8 +66,8 @@
 		"enrollmentCount": 30,
 		"category": "web development",
 		"start_date": "2023-09-01",
-		"end_date": "2023-12-15",
-		"trailer_video":"https://www.youtube.com/embed/z0kwRU8yCCU?si=5sasAGBM8ZOtPxhR",
+		"end_date": "2024-12-15",
+		"trailer_video":"https://youtu.be/gQojMIhELvM?si=7V9PJx_kMdbUHbdi",
 		"lessons": [
 			{
 				"id": 1,
@@ -114,6 +114,7 @@
 		"instructor": "Emily Davis",
 		"enrollmentCount": 40,
 		"category": "software development",
+		"trailer_video":"https://www.youtube.com/embed/Muo0UdwESn4",
 		"start_date": "2023-08-15",
 		"end_date": "2023-10-30",
 		"lessons": [
@@ -162,6 +163,7 @@
 		"instructor": "Michael Johnson",
 		"enrollmentCount": 35,
 		"category": "Data science",
+		"trailer_video":"https://www.youtube.com/embed/tA42nHmmEKw",
 		"start_date": "2023-09-15",
 		"end_date": "2023-12-31",
 		"lessons": [
@@ -218,6 +220,7 @@
 		"enrollmentCount": 25,
 		"start_date": "2023-10-01",
 		"category": "web development",
+		"trailer_video":"https://www.youtube.com/embed/yNDgFK2Jj1E",
 		"end_date": "2023-12-15",
 		"lessons": [
 			{
@@ -266,6 +269,7 @@
 		"enrollmentCount": 30,
 		"start_date": "2023-08-01",
 		"category": "mobile app development",
+		"trailer_video":"https://youtu.be/NLvaOL6Cm48?si=vu8W8uQxmKR1uOjW",
 		"end_date": "2023-09-15",
 		"lessons": [
 			{
@@ -300,6 +304,7 @@
 		"enrollmentCount": 45,
 		"start_date": "2023-09-01",
 		"category": "Data science",
+		"trailer_video":"https://youtu.be/fxmF4P_O_2c?si=EWyOlc3LMkQWCZ9a",
 		"end_date": "2023-12-15",
 		"lessons": [
 			{
@@ -384,6 +389,7 @@
 		"start_date": "2023-10-15",
 		"end_date": "2023-12-31",
 		"category": "web development",
+		"trailer_video":"https://youtu.be/He-1O8Pa4SE?si=TqZG7oFoU4E_5gYY",
 		"lessons": [
 			{
 				"id": 1,
@@ -440,6 +446,7 @@
 		"start_date": "2023-08-15",
 		"end_date": "2023-10-30",
 		"category": "software development",
+		"trailer_video":"https://youtu.be/r59xYe3Vyks?si=ww-AmbatB-U-_vZP",
 		"lessons": [
 			{
 				"id": 1,
