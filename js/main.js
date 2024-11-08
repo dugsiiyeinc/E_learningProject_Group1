@@ -74,6 +74,123 @@ enrolButton.addEventListener('click', (e)=>{
 
    
 })
+
+displaycoursedetail = () => {
+  let users = JSON.parse(localStorage.getItem("users"))|| []
+      let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
+      let foundeduser=users.find(user=>user.email===currentUser.email)
+
+  orderbtn.addEventListener("click", (e) => {
+    
+    if (!userdata) {
+      let selectedcourse = JSON.stringify(decodeddata);
+      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+        selectedcourse
+      )}`;
+      // Swal.fire({
+      //   title: "before order the course make login",
+     
+      //   confirmButtonText: "ok"
+      // });
+    }
+    
+    if (foundeduser) {
+
+      if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+        let selectedcourse = JSON.stringify(decodeddata);
+      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+        selectedcourse
+      )}`;
+
+
+        }else{
+          foundeduser.enrolledCourses.push(decodeddata)
+    
+
+          let storagecourses=JSON.parse(localStorage.getItem("courses"))
+          
+       
+
+        let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
+
+
+     foundeddourse.enrollmentCount ++
+     console.log(foundeddourse)
+
+
+     localStorage.setItem("courses" ,JSON.stringify(storagecourses))
+
+ 
+
+
+          localStorage.setItem("users", JSON.stringify(users))
+        let selectedcourse = JSON.stringify(decodeddata);
+      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+        selectedcourse
+      )}`;
+
+
+        }
+        
+        }else {
+      console.log("user not found")
+
+
+
+    }
+
+  
+    } )
+
+
+if(foundeduser){
+if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+          button.textContent ="continue learning"
+
+
+        }
+}else{
+return
+}
+ 
+
+        myaccount.addEventListener("click",()=>{
+          window.location.href="userAccount.html"
+        })
+        logout.addEventListener("click",()=>{
+          localStorage.removeItem("currentUser");
+
+
+          window.location.href="index.html"
+        })
+};
+displaycoursedetail();
+
+
+proceed.addEventListener('click', (e)=>{
+  e.preventDefault();
+
+  Swal.fire({
+    title: "You enrolled successfully",
+ 
+    confirmButtonText: "ok"
+
+  
+    
+  });
+  modalClose();
+setTimeout(()=>{
+  
+
+  let selectedcourse = JSON.stringify(decodeddata);
+  window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    selectedcourse
+  )}`;
+},3000);
+ 
+ 
+
+})
 // closeModal.addEventListener('click', ()=>{
 //     modal.style.display = 'none'
 // })

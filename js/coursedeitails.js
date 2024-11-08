@@ -92,11 +92,7 @@ let mainContainer = document.querySelector(".coursesdetail");
             window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
               selectedcourse
             )}`;
-            // Swal.fire({
-            //   title: "before order the course make login",
-           
-            //   confirmButtonText: "ok"
-            // });
+            
           }
           
           if (foundeduser) {
