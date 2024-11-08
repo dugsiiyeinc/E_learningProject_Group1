@@ -87,13 +87,13 @@ let mainContainer = document.querySelector(".coursesdetail");
 
         orderbtn.addEventListener("click", (e) => {
           
-          if (!userdata) {
-            let selectedcourse = JSON.stringify(decodeddata);
-            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-              selectedcourse
-            )}`;
+          // if (!userdata) {
+          //   let selectedcourse = JSON.stringify(decodeddata);
+          //   window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+          //     selectedcourse
+          //   )}`;
             
-          }
+          // }
           
           if (foundeduser) {
 
