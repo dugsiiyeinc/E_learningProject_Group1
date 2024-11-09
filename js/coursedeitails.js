@@ -12,7 +12,7 @@ let mainContainer = document.querySelector(".coursesdetail");
       let video = document.querySelector(".video");
       let orderbtn = document.querySelector(".orderbtn button");
       let courseImg = document.querySelector(".course-img");
-     
+      let courseList = document.querySelector(".course-list");
 
       let accountinfo = document.querySelector(".account-info");
       let account = document.querySelector(".account");
@@ -58,9 +58,18 @@ let mainContainer = document.querySelector(".coursesdetail");
       decodeddata.lessons.forEach((element) => {
         video.innerHTML += `<div class="title">
                 <i class="fa-solid fa-circle-play"></i>
-                <h5 >${element.content}  <p class="description">${element.title} </p></h5>
+                <h5 > <p class="description">${element.title} </p></h5>
               </div>`;
       });
+
+      decodeddata.lessons.forEach((element) => {
+        courseList.innerHTML += ` 
+        <div class="svg-icon"><svg class="tick" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+        <span>${element.content}</span>
+        </div>
+                `;
+      });
+
       let userdata = JSON.parse(localStorage.getItem("currentUser"));
 
       if (userdata) {
