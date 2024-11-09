@@ -384,6 +384,7 @@ footer > p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 5px;
   /* margin-bottom: 30px; */
   /* padding: 0 20px; */
   /* border-bottom: 1px solid #eee;  */
@@ -392,6 +393,9 @@ footer > p {
 }
 .right-description .card .content-detail .iconwithtext {
   font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 .right-description .card .content-detail .iconwithtext i {
   padding-right: 10px;
