@@ -121,6 +121,7 @@
   const orderCards = document.querySelector(".ordercards");
   const enrolledCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
 
+
   // Check if there are any courses
   if (enrolledCourses.length > 0) {
     enrolledCourses.forEach((course) => {
@@ -134,7 +135,7 @@
         <p>${course.description}</p>
         <span>Instructor: ${course.instructor}</span><br>
         <span>Duration: ${course.duration}</span><br>
-        <button class="storebtn" onclick="viewCourse('${course.title}')">View Course</button></div></div>
+        <button class="storebtn" onclick="viewCourse('${course.title}')">Watch Course</button></div></div>
       `;
       orderCards.appendChild(courseCard);
     });
@@ -143,11 +144,12 @@
   }
 });
 
-// Function to view a course (could link to course details or play a video, etc.)
 function viewCourse(courseTitle) {
-  alert(`Viewing details for ${courseTitle}`);
-  // Optional: Add redirection or more functionality here
+  // alert(`Viewing details for ${courseTitle}`);
+  window.location.href = 'coursdisplay.html'
+  
 }
+
 
       
     </script>
