@@ -199,12 +199,11 @@ function enrollCourse() {
     photo: decodeddata.photo,
   };
 
-  // Retrieve the list of enrolled courses from `localStorage`
+  
   let enrolledCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
 
-  // Check if the course is already enrolled
+
   if (!enrolledCourses.some((enrolled) => enrolled.id === course.id)) {
-    // Add the new course
     enrolledCourses.push(course);
     localStorage.setItem("enrolledCourses", JSON.stringify(enrolledCourses));
     Swal.fire("Enrolled!", `${course.title} has been added to your courses`, "success");
@@ -212,6 +211,7 @@ function enrollCourse() {
     Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
   }
 }
-
 // Add the enroll function to the button
-document.querySelector(".btn-enroll").addEventListener("click", enrollCourse);
+document.querySelector("#proceed").addEventListener("click", enrollCourse);
+
+

@@ -167,15 +167,15 @@ displaycoursedetail();
 proceed.addEventListener('click', (e)=>{
   e.preventDefault();
 
-  Swal.fire({
-    title: "You enrolled successfully",
+//   Swal.fire({
+//     title: "You enrolled successfully",
  
-    confirmButtonText: "ok"
+//     confirmButtonText: "ok"
 
   
     
-  });
-  modalClose();
+//   });
+//   modalClose();
 setTimeout(()=>{
   
 
@@ -321,22 +321,11 @@ if (foundeduser) {
 }
 
 
- // Select the proceed button
  const proceedButton = document.getElementById("proceed");
-
- // Add event listener to the proceed button
  proceedButton.addEventListener("click", (e) => {
-     e.preventDefault(); // Prevent default behavior
- 
-     // Store the selected course information in `localStorage`
-     let selectedCourse = JSON.stringify(decodeddata);  // Assuming `decodeddata` contains the course data
+     e.preventDefault(); 
+     let selectedCourse = JSON.stringify(decodeddata);   data
      let enrolledCourses = JSON.parse(localStorage.getItem("onlineUser")) || [];
      enrolledCourses.push(selectedCourse);  // Add the new course to the array
      localStorage.setItem("onlineUser", JSON.stringify(enrolledCourses));  // Save back to `localStorage`
- 
-     // // Show success message or redirect if needed
-     // alert("Course enrolled successfully!");
- 
-     // // Redirect to user account page (or stay on the same page if you prefer)
-     // window.location.href = "userAccount.html";
  });
