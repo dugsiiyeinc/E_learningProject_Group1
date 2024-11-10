@@ -157,7 +157,27 @@ a{
   top: 70px;
 }
 
-
+.ordercards{
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 30px;
+}
+.orderdetails h4{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #11e811;
+}
+.orderdetails h6{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+}
 
 .orderdetails{
   position: relative;
