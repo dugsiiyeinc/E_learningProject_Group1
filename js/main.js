@@ -23,7 +23,7 @@ const localPayment = document.getElementById('localPayment');
 const proceed = document.getElementById('proceed')
 
 userDash.addEventListener('click', ()=>{
-    window.location.href = 'userAccount.html';
+    window.location.href = 'StudentDashboard.html';
     
 })
 

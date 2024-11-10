@@ -133,7 +133,7 @@ displaycoursedetail()
   
     diplaygategories()
 
-let userdata = JSON.parse(localStorage.getItem('currentUser')) ;
+let userdata = JSON.parse(localStorage.getItem('OnlineUser')) ;
 
 if(userdata){
 let currentusername = document.querySelector(".currentusername")

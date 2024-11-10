@@ -186,3 +186,32 @@ let mainContainer = document.querySelector(".coursesdetail");
 
      
 
+// Function to enroll in a course
+function enrollCourse() {
+  // Ensure `decodeddata` contains the course details
+  const course = {
+    id: decodeddata.id,
+    title: decodeddata.title,
+    description: decodeddata.description,
+    instructor: decodeddata.instructor,
+    duration: `${lastdata} hours`,
+    trailer_video: decodeddata.trailer_video,
+    photo: decodeddata.photo,
+  };
+
+  // Retrieve the list of enrolled courses from `localStorage`
+  let enrolledCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+
+  // Check if the course is already enrolled
+  if (!enrolledCourses.some((enrolled) => enrolled.id === course.id)) {
+    // Add the new course
+    enrolledCourses.push(course);
+    localStorage.setItem("enrolledCourses", JSON.stringify(enrolledCourses));
+    Swal.fire("Enrolled!", `${course.title} has been added to your courses`, "success");
+  } else {
+    Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
+  }
+}
+
+// Add the enroll function to the button
+document.querySelector(".btn-enroll").addEventListener("click", enrollCourse);
