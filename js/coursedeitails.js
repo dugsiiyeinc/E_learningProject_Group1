@@ -207,6 +207,7 @@ function enrollCourse() {
     enrolledCourses.push(course);
     localStorage.setItem("enrolledCourses", JSON.stringify(enrolledCourses));
     Swal.fire("Enrolled!", `${course.title} has been added to your courses`, "success");
+    
   } else {
     Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
   }
