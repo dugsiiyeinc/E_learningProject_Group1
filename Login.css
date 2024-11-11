@@ -28,7 +28,7 @@
     /* background-color: rgba(0, 0, 0, 0.75); */
   
 /* border: 4px solid #bbbbbb; */
-    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
@@ -38,9 +38,10 @@
   }
 
   #form-title{
-    color: #1f1f1f;
-    background-color: #c0bdbd;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: #1e8111;
+    /* background-color: #c0bdbd; */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
+    box-shadow: inset 7.21px 7.21px 15px #D9DADE, inset -7.21px -7.21px 15px #70d970;
     padding: 10px;
     border-radius: 5px;
   }
@@ -57,7 +58,8 @@
     margin: 10px 0;
     background: #cdcbcb;
     border: 2px solid #f4f4f4;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 7.21px 7.21px 15px #D9DADE, inset -7.21px -7.21px 15px #FFFFFF;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
     color: #1f1f1f;
     border-radius: 5px;
     outline: none;
@@ -86,7 +88,7 @@
   }
   
   .auth-container a {
-    color: white;
+    color:  #1e8111;
     text-decoration: none;
   }
   

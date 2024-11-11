@@ -1284,7 +1284,7 @@ textarea {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1111;
+  z-index: 111;
   left: 0;
   top: 50px;
   width: 100%;
