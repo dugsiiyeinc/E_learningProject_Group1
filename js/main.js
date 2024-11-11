@@ -325,7 +325,7 @@ if (foundeduser) {
  proceedButton.addEventListener("click", (e) => {
      e.preventDefault(); 
      let selectedCourse = JSON.stringify(decodeddata);   data
-     let enrolledCourses = JSON.parse(localStorage.getItem("onlineUser")) || [];
+    //  let enrolledCourses = JSON.parse(localStorage.getItem("onlineUser")) || [];
      enrolledCourses.push(selectedCourse);  // Add the new course to the array
      localStorage.setItem("onlineUser", JSON.stringify(enrolledCourses));  // Save back to `localStorage`
  });

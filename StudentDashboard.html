@@ -31,6 +31,7 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <div class="btn">
+         
           <div id="user-dash">aki</div>
           <a href="login.html" id="signIn">Sign In</a>
           <a href="newUser.html" id="signUp">Sign Up</a>
@@ -66,7 +67,8 @@
         <ul>
           <li><a href="#">My Courses</a></li>
           <li><a href="#">My Progress</a></li>
-          <li><a href="#">My Account</a></li>
+          <!-- <h4 class="currentusername" ></h4>
+          <h5 class="myaccount"><i class="fa-solid fa-user "></i> my account</h5> -->
           <li><a href="#">Help</a></li>
         </ul>
       </div>
@@ -94,65 +96,71 @@
     <script src="js/main.js"></script>
     <script>
 
-      
-      // Toggle account menu visibility
-      document.getElementById("user-dash").addEventListener("click", function () {
-        document.querySelector(".account-info").classList.toggle("hide");
-      });
+let myaccount = document.querySelector(".myaccount");
+      myaccount.addEventListener("click",()=>{
+                window.location.href="StudentDashboard.html"
+              })
+    
 
-      // Check and display current user info
-      let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-      if (currentUser) {
-        document.getElementById("user-dash").innerText = currentUser.fullname;
-        document.getElementById("Logout").style.display = "block";
-        document.getElementById("signIn").style.display = "none";
-        document.getElementById("signUp").style.display = "none";
+      let userdata = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (userdata) {
+        let currentusername = document.querySelector(".currentusername")
+        currentusername.innerText = userdata.fullname
+        account.innerText = userdata.fullname.charAt(0);
+       
+      } else {hid
+       
+      
       }
 
-      // Handle logout action
-      document.getElementById("Logout").addEventListener("click", () => {
-        localStorage.removeItem("currentUser");
-        window.location.href = "index.html";
-      });
+      let users = JSON.parse(localStorage.getItem("users"))
+      let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
+      let foundeduser=users.find(user=>user.email===currentUser.email)
 
-
-
-      document.addEventListener("DOMContentLoaded", () => {
-  const orderCards = document.querySelector(".ordercards");
-  const enrolledCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
-
-
-  // Check if there are any courses
-  if (enrolledCourses.length > 0) {
-    enrolledCourses.forEach((course) => {
-      // Create a card for each course
-      const courseCard = document.createElement("div");
-      courseCard.classList.add("ordercard");
-      courseCard.innerHTML = `<div class="storeCourse">
+      foundeduser.enrolledCourses.forEach((course) => {
+        ordercards.innerHTML +=`  <div class="storeCourse">
         <img class = "storeImg"  src ="${course.photo}">
         <div class="store-details">
-        <h5 class="ordername">${course.title}</h5>
         <p>${course.description}</p>
         <span>Instructor: ${course.instructor}</span><br>
-        <span>Duration: ${course.duration}</span><br>
-        <button class="storebtn" onclick="viewCourse('${course.title}')">Watch Course</button></div></div>
-      `;
-      orderCards.appendChild(courseCard);
-    });
-  } else {
-    orderCards.innerHTML = "<p>No courses enrolled yet.</p>";
-  }
-});
+        <span>Duration: ${course.end_date}</span><br>
+         <div class="watchbtn"  ><button class="storebtn" data-courseid="${course.id}">watch Now</button></div>`
+      })
 
-function viewCourse(courseTitle) {
-  //  alert(`Viewing details for ${courseTitle}`);
-  // window.location.href = 'coursdisplay.html'
-  console.log(`${courseTitle}`)
-  
-}
+const watchbtn=document.querySelectorAll(".watchbtn")
+      watchbtn.forEach(element=>{
+        element.addEventListener("click",(event)=>{
+        let courseid= event.target.dataset.courseid
+    
+        let data=  courses.enrolledCourses.find(c => c.id == courseid)
+     
 
+        let selectedcourse = JSON.stringify(data);
+            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+              selectedcourse
+            )}`;
+   
 
       
+      })
+      })
+
+
+
+// function viewCourse(courseTitle) {
+//   let courseid= event.target.dataset.courseid
+    
+//     let data=  courses.enrolledCourses.find(c => c.id == courseid)
+//  console.log(data)
+
+//     let selectedcourse = JSON.stringify(data);
+//         window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+//           selectedcourse
+//         )}`;
+  
+// }
+  
     </script>
   </body>
 </html>
