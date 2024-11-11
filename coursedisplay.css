@@ -6,6 +6,8 @@
 body{
   font-family: "Poppins", serif;
   overflow-x: hidden;
+  
+  background-color: #f3f4f6;
 }
 
 
@@ -15,15 +17,22 @@ body{
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  
 }
 
 
 .video {
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   cursor: pointer;
   margin-bottom: 10px;
  
+}
+.video h5{
+  font-size: 16px;
+  font-weight: 400;
+  color: #09090b;
+  line-height: 24px;
 }
 
 .video:hover {
@@ -60,7 +69,7 @@ section {
   padding: 18px 15%;
 }
 main {
-  padding: 10px 5%;
+  /* padding: 10px 5%; */
 }
 .menu {
   position: relative;
@@ -224,18 +233,18 @@ footer > p {
 /* courses */
 
 .coursesdetail {
- 
+  
+  /* background-color: white; */
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 17px;
-  box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.4);
+  gap: 25px;
+  /* box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.4);
   -webkit-box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75);
-  -moz-box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75);
+  -moz-box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75); */
   padding: 20px;
 }
 .left-Description .image-container {
   position: relative;
-  
 }
 .left-Description .image-container img {
   width: 100%;
@@ -251,12 +260,12 @@ footer > p {
 }
 .title >i{
   margin-right: 10px;
-  font-size: 30px;
+  font-size: 25px;
   color: #11e811;
  
 }
 .description{
-  color: #11e811;
+  color: #6c757d;
 }
 .title .description{
   margin-left: 10px;
@@ -266,7 +275,9 @@ footer > p {
   font-size: 20px;
 }
 .right-description .card {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
+  width: 421px;
+  background-color: white;
   padding: 15px;
   border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -275,9 +286,9 @@ footer > p {
   -o-border-radius: 7px;
   max-height: 600px;
   overflow-y: scroll;
-  box-shadow: 0px 0px 8px -1px rgba(79,79,79,0.75);
+  /* box-shadow: 0px 0px 8px -1px rgba(79,79,79,0.75);
   -webkit-box-shadow: 0px 0px 8px -1px rgba(79,79,79,0.75);
-  -moz-box-shadow: 0px 0px 8px -1px rgba(79,79,79,0.75);
+  -moz-box-shadow: 0px 0px 8px -1px rgba(79,79,79,0.75); */
 }
 .image{
     display: flex;
