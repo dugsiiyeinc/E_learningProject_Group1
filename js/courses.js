@@ -135,24 +135,24 @@ displaycoursedetail()
 
 let userdata = JSON.parse(localStorage.getItem('OnlineUser')) ;
 
-if(userdata){
-let currentusername = document.querySelector(".currentusername")
-  currentusername.innerText = userdata.fullname
-  account.innerText = userdata.fullname.charAt(0);
-allbtn.forEach(element=>{
-element.classList.add("hide")
+// if(userdata){
+// let currentusername = document.querySelector(".currentusername")
+//   currentusername.innerText = userdata.fullname
+//   account.innerText = userdata.fullname.charAt(0);
+// allbtn.forEach(element=>{
+// element.classList.add("hide")
 
-account.classList.remove("hide")
-})
+// account.classList.remove("hide")
+// })
 
-}else{
-allbtn.forEach(element=>{
-element.classList.remove("hide")
+// }else{
+// allbtn.forEach(element=>{
+// element.classList.remove("hide")
 
-account.classList.add("hide")
-})
+// account.classList.add("hide")
+// })
 
-}
+// }
 
 account.addEventListener("click", function() {
   accountinfo.classList.toggle("hide")
@@ -163,20 +163,20 @@ account.addEventListener("click", function() {
 
       window.addEventListener('load', fetchData);
      
-      myaccount.addEventListener("click",()=>{
-          window.location.href="userAccount.html"
-        })
-        logout.addEventListener("click",()=>{
-          localStorage.removeItem("currentUser");
+//       myaccount.addEventListener("click",()=>{
+//           window.location.href="userAccount.html"
+//         })
+//         logout.addEventListener("click",()=>{
+//           localStorage.removeItem("currentUser");
 
 
-          window.location.href="index.html"
-        })
+//           window.location.href="index.html"
+//         })
 
-        let bars = document.querySelector(".bars i");
-let left = document.querySelector(".left");
-        bars.onclick=()=>{
-          bars.classList.toggle("fa-xmark")
-         left.classList.toggle("open")
-}
+//         let bars = document.querySelector(".bars i");
+// let left = document.querySelector(".left");
+//         bars.onclick=()=>{
+//           bars.classList.toggle("fa-xmark")
+//          left.classList.toggle("open")
+// }
 
