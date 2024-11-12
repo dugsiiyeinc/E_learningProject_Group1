@@ -8,26 +8,26 @@ let userdata = JSON.parse(localStorage.getItem("currentUser"));
 let logout = document.querySelector(".logout");
 let myaccount = document.querySelector(".myaccount");
 
-if (userdata) {
-  let currentusername = document.querySelector(".currentusername")
-  currentusername.innerText = userdata.fullname
-  account.innerText = userdata.fullname.charAt(0);
-  allbtn.forEach((element) => {
-    element.classList.add("hide");
+// if (userdata) {
+//   let currentusername = document.querySelector(".currentusername")
+//   currentusername.innerText = userdata.fullname
+//   account.innerText = userdata.fullname.charAt(0);
+//   allbtn.forEach((element) => {
+//     element.classList.add("hide");
 
-    account.classList.remove("hide");
-  });
-} else {
-  allbtn.forEach((element) => {
-    element.classList.remove("hide");
+//     account.classList.remove("hide");
+//   });
+// } else {
+//   allbtn.forEach((element) => {
+//     element.classList.remove("hide");
 
-    account.classList.add("hide");
-  });
-}
+//     account.classList.add("hide");
+//   });
+// }
 
-account.addEventListener("click", function () {
-  accountinfo.classList.toggle("hide");
-});
+// account.addEventListener("click", function () {
+//   accountinfo.classList.toggle("hide");
+// });
 
 const urldata = new URLSearchParams(window.location.search);
 

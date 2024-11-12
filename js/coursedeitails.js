@@ -40,9 +40,9 @@ let mainContainer = document.querySelector(".coursesdetail");
         return acc + val;
       });
 
-      account.addEventListener("click", function () {
-        accountinfo.classList.toggle("hide");
-      });
+      // account.addEventListener("click", function () {
+      //   accountinfo.classList.toggle("hide");
+      // });
       // let courseduration= parseInt(duration)
 
       // console.log(courseduration)
@@ -72,22 +72,22 @@ let mainContainer = document.querySelector(".coursesdetail");
 
       let userdata = JSON.parse(localStorage.getItem("currentUser"));
 
-      if (userdata) {
-        let currentusername = document.querySelector(".currentusername")
-        currentusername.innerText = userdata.fullname
-        account.innerText = userdata.fullname.charAt(0);
-        allbtn.forEach((element) => {
-          element.classList.add("hide");
+      // if (userdata) {
+      //   let currentusername = document.querySelector(".currentusername")
+      //   currentusername.innerText = userdata.fullname
+      //   account.innerText = userdata.fullname.charAt(0);
+      //   allbtn.forEach((element) => {
+      //     element.classList.add("hide");
 
-          account.classList.remove("hide");
-        });
-      } else {
-        allbtn.forEach((element) => {
-          element.classList.remove("hide");
+      //     account.classList.remove("hide");
+      //   });
+      // } else {
+      //   allbtn.forEach((element) => {
+      //     element.classList.remove("hide");
 
-          account.classList.add("hide");
-        });
-      }
+      //     account.classList.add("hide");
+      //   });
+      // }
 
       displaycoursedetail = () => {
         let users = JSON.parse(localStorage.getItem("users"))|| []
@@ -164,24 +164,24 @@ let mainContainer = document.querySelector(".coursesdetail");
      }
        
    
-              myaccount.addEventListener("click",()=>{
-                window.location.href="userAccount.html"
-              })
-              logout.addEventListener("click",()=>{
-                localStorage.removeItem("currentUser");
+      //         myaccount.addEventListener("click",()=>{
+      //           window.location.href="userAccount.html"
+      //         })
+      //         logout.addEventListener("click",()=>{
+      //           localStorage.removeItem("currentUser");
 
 
-                window.location.href="index.html"
-              })
-      };
+      //           window.location.href="index.html"
+      //         })
+      // };
       displaycoursedetail();
 
 
-      let bars = document.querySelector(".bars i");
-      let left = document.querySelector(".left");
-              bars.onclick=()=>{
-                bars.classList.toggle("fa-xmark")
-               left.classList.toggle("open")
+      // let bars = document.querySelector(".bars i");
+      // let left = document.querySelector(".left");
+      //         bars.onclick=()=>{
+      //           bars.classList.toggle("fa-xmark")
+      //          left.classList.toggle("open")
       }
 
      

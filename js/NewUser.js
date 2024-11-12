@@ -26,6 +26,19 @@ authForm.addEventListener('submit', (e)=>{
     };
 
 
+    let myData = {
+        username: username.value,
+        fullname: fullname.value,
+        email: validemail,
+        password: password.value,
+        confirmpassword: confirmpassword.value,
+        enrolledCourses: []
+      };
+
+      let data = [];
+      data = JSON.parse(localStorage.getItem("user")) || [];
+
+
     
 
     
