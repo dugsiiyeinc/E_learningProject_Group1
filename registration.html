@@ -200,20 +200,20 @@
       let userdata = JSON.parse(localStorage.getItem("currentUser"));
 
       if (userdata) {
-        let currentusername = document.querySelector(".currentusername");
+        let currentusername = document.querySelector("#user-dash");
         currentusername.innerText = userdata.username;
         // account.innerText = userdata.fullname.charAt(0);
-        allbtn.forEach((element) => {
-          element.classList.add("hide");
+      //   allbtn.forEach((element) => {
+      //     element.classList.add("hide");
 
-          account.classList.remove("hide");
-        });
-      } else {
-        allbtn.forEach((element) => {
-          element.classList.remove("hide");
+      //     account.classList.remove("hide");
+      //   });
+      // } else {
+      //   allbtn.forEach((element) => {
+      //     element.classList.remove("hide");
 
-          account.classList.add("hide");
-        });
+      //     account.classList.add("hide");
+      //   });
       }
       // account.addEventListener("click", function () {
       //   accountinfo.classList.toggle("hide");

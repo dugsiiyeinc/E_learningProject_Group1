@@ -19,16 +19,54 @@ document.body.addEventListener('click',
 const authForm = document.querySelector("#authForm");
 authForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    const user = {
-        username: username.value,
-        email: email.value,
-        password: password.value,
-    };
 
+    function isValidEmail(email) {
+      // Regular expression to match email format
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    let myData = {
+      // Check if the email matches the regular expression
+      return regex.test(email);
+    }
+    const emailval = email.value;
+    let validemail;
+    const isValid = isValidEmail(emailval);
+    validemail=emailval
+
+    if (
+      username.value == "" ||
+      email.value == "" ||
+      confirmPassword.value == "" ||
+      password.value == ""
+    ) {
+      Swal.fire({
+        title: "Please enter full informatin",
+        // icon: 'question',
+        // iconHtml: '؟',
+        confirmButtonText: "ok"
+      });
+
+ 
+    } 
+    else if(isValid !==true){
+      Swal.fire({
+          title: "Please enter correct email",
+          // icon: 'question',
+          // iconHtml: '؟',
+          confirmButtonText: "ok"
+        });
+    }
+    else if (password.value !== confirmPassword.value) {
+      Swal.fire({
+        title: "plz match passwords",
+        // icon: 'question',
+        // iconHtml: '؟',
+        confirmButtonText: "ok"
+      });
+
+   
+    } else {
+      let myData = {
         username: username.value,
-        fullname: fullname.value,
         email: validemail,
         password: password.value,
         confirmpassword: confirmpassword.value,
@@ -36,66 +74,56 @@ authForm.addEventListener('submit', (e)=>{
       };
 
       let data = [];
-      data = JSON.parse(localStorage.getItem("user")) || [];
+      data = JSON.parse(localStorage.getItem("users")) || [];
 
+      if (
+        data.some((data) => {
+          return data.email == email.value;
+        })
+      ) {
+        Swal.fire({
+          title: "duplicate data",
+          // icon: 'question',
+          // iconHtml: '؟',
+          confirmButtonText: "ok"
+        });
+      } else {
+        data.push(myData);
+        localStorage.setItem("users", JSON.stringify(data));
 
-    
+        window.location.href = "login.html";
+      }
+    }
+  });
+  span.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
 
-    
-  
-        const users = JSON.parse(localStorage.getItem("users")) || [];
+  let userdata = JSON.parse(localStorage.getItem("onlineUser"));
 
-        const existingUser = users.find(
-            (user)=> user.username == username.value && user.email == email.value
-        );
+  if (userdata) {
+    let currentusername = document.querySelector("#userDash");
+    currentusername.innerText = userdata.username;
+    // account.innerText = userdata.fullname.charAt(0);
+    // allbtn.forEach((element) => {
+    //   element.classList.add("hide");
 
-        if(existingUser){
-            alert(`User ${existingUser.username} Already exists`)
-            return
-        }
-        if(confirmPassword.value !== password.value){
-            alert("Password mismatch")
-            return
-        }
-    
+    //   account.classList.remove("hide");
+    // });
+  } else {
+    // allbtn.forEach((element) => {
+    //   element.classList.remove("hide");
 
-        users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
-        alert("Register Successfuly")
-        window.location.href='login.html'
-        switchAuthForm();
+    //   account.classList.add("hide");
+    // });
+  }
+//   account.addEventListener("click", function () {
+//     accountinfo.classList.toggle("hide");
+//   });
 
-    
-    
-})
-
-function switchAuthForm() {
-    signIn = !signIn;
-        if(signIn) {
-            
-            authButton.textContent = 'Sing In';
-            formTitle.textContent = 'Sing In';
-            username.style.display = "none";
-            confirmPassword.style.display = "none";
-            username.value = "";
-            confirmPassword.value = "";
-            email.value = '';
-            password.value = '';
-            authSwitch.innerHTML = 
-            ` New to LearnOnline?  
-            <a href="#" id="switchForm" style="color: yellow;">Register now</a>`
-                    
-        }else{
-            authButton.textContent = 'Sing Up';
-            formTitle.textContent = 'Sing Up';
-            username.style.display = "block";
-            confirmPassword.style.display = "block";
-            authSwitch.innerHTML = 
-            `Already have an account?  
-            <a href="#" id="switchForm" style="color: yellow;">Sing In</a>`
-
-
-
-
-        }
-}
+//   let bars = document.querySelector(".bars i");
+//   let left = document.querySelector(".left");
+//   bars.onclick = () => {
+//     bars.classList.toggle("fa-xmark");
+//     left.classList.toggle("open");
+//   };

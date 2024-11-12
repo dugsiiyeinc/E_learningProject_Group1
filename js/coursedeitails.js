@@ -89,130 +89,216 @@ let mainContainer = document.querySelector(".coursesdetail");
       //   });
       // }
 
-      displaycoursedetail = () => {
-        let users = JSON.parse(localStorage.getItem("users"))|| []
-            let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
-            let foundeduser=users.find(user=>user.email===currentUser.email)
+    //   displaycoursedetail = () => {
+    //     let users = JSON.parse(localStorage.getItem("users"))|| []
+    //         let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
+    //         let foundeduser=users.find(user=>user.email===currentUser.email)
 
-        orderbtn.addEventListener("click", (e) => {
+    //     orderbtn.addEventListener("click", (e) => {
           
-          // if (!userdata) {
-          //   let selectedcourse = JSON.stringify(decodeddata);
-          //   window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-          //     selectedcourse
-          //   )}`;
+    //       // if (!userdata) {
+    //       //   let selectedcourse = JSON.stringify(decodeddata);
+    //       //   window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    //       //     selectedcourse
+    //       //   )}`;
             
-          // }
+    //       // }
           
-          if (foundeduser) {
+    //       if (foundeduser) {
 
-            if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
-              let selectedcourse = JSON.stringify(decodeddata);
-            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-              selectedcourse
-            )}`;
+    //         if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+    //           let selectedcourse = JSON.stringify(decodeddata);
+    //         window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    //           selectedcourse
+    //         )}`;
 
 
-              }else{
-                foundeduser.enrolledCourses.push(decodeddata)
+    //           }else{
+    //             foundeduser.enrolledCourses.push(decodeddata)
           
 
-                let storagecourses=JSON.parse(localStorage.getItem("courses"))
+    //             let storagecourses=JSON.parse(localStorage.getItem("courses"))
                 
              
 
-              let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
+    //           let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
 
 
-           foundeddourse.enrollmentCount ++
-           console.log(foundeddourse)
+    //        foundeddourse.enrollmentCount ++
+    //        console.log(foundeddourse)
 
 
-           localStorage.setItem("courses" ,JSON.stringify(storagecourses))
+    //        localStorage.setItem("courses" ,JSON.stringify(storagecourses))
 
        
 
 
-                localStorage.setItem("users", JSON.stringify(users))
-              let selectedcourse = JSON.stringify(decodeddata);
-            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-              selectedcourse
-            )}`;
+    //             localStorage.setItem("users", JSON.stringify(users))
+    //           let selectedcourse = JSON.stringify(decodeddata);
+    //         window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+    //           selectedcourse
+    //         )}`;
 
 
-              }
+    //           }
               
-              }else {
-            console.log("user not found")
+    //           }else {
+    //         console.log("user not found")
 
 
 
-          }
+    //       }
 
         
-          } )
+    //       } )
       
 
-     if(foundeduser){
-      if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
-                button.textContent ="continue learning"
+    //  if(foundeduser){
+    //   if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+    //             button.textContent ="continue learning"
 
 
-              }
-     }else{
-      return
-     }
+    //           }
+    //  }else{
+    //   return
+    //  }
        
    
-      //         myaccount.addEventListener("click",()=>{
-      //           window.location.href="userAccount.html"
-      //         })
-      //         logout.addEventListener("click",()=>{
-      //           localStorage.removeItem("currentUser");
+    //   //         myaccount.addEventListener("click",()=>{
+    //   //           window.location.href="userAccount.html"
+    //   //         })
+    //   //         logout.addEventListener("click",()=>{
+    //   //           localStorage.removeItem("currentUser");
 
 
-      //           window.location.href="index.html"
-      //         })
-      // };
-      displaycoursedetail();
+    //   //           window.location.href="index.html"
+    //   //         })
+    //   // };
+    //   displaycoursedetail();
 
 
-      // let bars = document.querySelector(".bars i");
-      // let left = document.querySelector(".left");
-      //         bars.onclick=()=>{
-      //           bars.classList.toggle("fa-xmark")
-      //          left.classList.toggle("open")
-      }
+    //   // let bars = document.querySelector(".bars i");
+    //   // let left = document.querySelector(".left");
+    //   //         bars.onclick=()=>{
+    //   //           bars.classList.toggle("fa-xmark")
+    //   //          left.classList.toggle("open")
+    //   }
 
      
 
 // Function to enroll in a course
-function enrollCourse() {
-  // Ensure `decodeddata` contains the course details
-  const course = {
-    id: decodeddata.id,
-    title: decodeddata.title,
-    description: decodeddata.description,
-    instructor: decodeddata.instructor,
-    duration: `${lastdata} hours`,
-    trailer_video: decodeddata.trailer_video,
-    photo: decodeddata.photo,
-  };
+// function enrollCourse() {
+//   // Ensure `decodeddata` contains the course details
+//   const course = {
+//     id: decodeddata.id,
+//     title: decodeddata.title,
+//     description: decodeddata.description,
+//     instructor: decodeddata.instructor,
+//     duration: `${lastdata} hours`,
+//     trailer_video: decodeddata.trailer_video,
+//     photo: decodeddata.photo,
+//     lessons: decodeddata.lessons,
+
+//   };
 
   
-  let enrolledCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+
+  
+//   let enrolledCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
 
 
-  if (!enrolledCourses.some((enrolled) => enrolled.id === course.id)) {
-    enrolledCourses.push(course);
-    localStorage.setItem("enrolledCourses", JSON.stringify(enrolledCourses));
-    Swal.fire("Enrolled!", `${course.title} has been added to your courses`, "success");
+//   if (!enrolledCourses.some((enrolled) => enrolled.id === course.id)) {
+//     enrolledCourses.push(course);
+//     localStorage.setItem("enrolledCourses", JSON.stringify(enrolledCourses));
+//     Swal.fire("Enrolled!", `${course.title} has been added to your courses`, "success");
     
-  } else {
-    Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
-  }
+//   } else {
+//     Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
+//   }
+// }
+// // Add the enroll function to the button
+document.querySelector("#proceed").addEventListener("click", displaycoursedetail);
+
+
+displaycoursedetail = () => {
+  let users = JSON.parse(localStorage.getItem("users"))|| []
+      let currentUser = JSON.parse(localStorage.getItem("onlineUser")) || []
+      let foundeduser=users.find(user=>user.email===currentUser.email)
+
+  orderbtn.addEventListener("click", (e) => {
+    
+    if (!userdata) {
+      Swal.fire({
+        title: "before order the course make login",
+     
+        confirmButtonText: "ok"
+      });
+    }
+    
+    if (foundeduser) {
+
+      if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+        let selectedcourse = JSON.stringify(decodeddata);
+      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+        selectedcourse
+      )}`;
+
+
+        }else{
+          foundeduser.enrolledCourses.push(decodeddata)
+    
+
+          let storagecourses=JSON.parse(localStorage.getItem("courses"))
+          
+       
+
+        let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
+
+
+     foundeddourse.enrollmentCount ++
+     console.log(foundeddourse)
+     localStorage.setItem("courses" ,JSON.stringify(storagecourses))
+          localStorage.setItem("users", JSON.stringify(users))
+        let selectedcourse = JSON.stringify(decodeddata);
+      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+        selectedcourse
+      )}`;
+
+
+        }
+        
+        }else {
+      console.log("user not found")
+
+
+
+    }
+
+  
+    } )
+
+
+if(foundeduser){
+if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
+          button.textContent ="continue learning"
+
+
+        }
+}else{
+return
 }
-// Add the enroll function to the button
-document.querySelector("#proceed").addEventListener("click", enrollCourse);
+ 
+
+        myaccount.addEventListener("click",()=>{
+          window.location.href="StudentDashboard.html"
+        })
+        logout.addEventListener("click",()=>{
+          localStorage.removeItem("onlineUser");
+
+
+          window.location.href="index.html"
+        })
+};
+
 
 
