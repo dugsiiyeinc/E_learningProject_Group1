@@ -93,67 +93,51 @@
 
     <script src="js/main.js"></script>
     <script>
+  let ordercards = document.querySelector(".ordercards");
+ 
 
 
-      // Toggle account menu visibility
-      document.getElementById("user-dash").addEventListener("click", function () {
-        document.querySelector(".account-info").classList.toggle("hide");
-      });
+let users = JSON.parse(localStorage.getItem("users"))
 
-      // Check and display current user info
-      let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-      if (currentUser) {
-        document.getElementById("user-dash").innerText = currentUser.fullname;
-        document.getElementById("Logout").style.display = "block";
-        document.getElementById("signIn").style.display = "none";
-        document.getElementById("signUp").style.display = "none";
-      }
+      let onlineUser = JSON.parse(localStorage.getItem("onlineUser")) || []
 
-      // Handle logout action
-      document.getElementById("Logout").addEventListener("click", () => {
-        localStorage.removeItem("currentUser");
-        window.location.href = "index.html";
-      });
+      let foundeduser = users.find(user=>user.email === onlineUser.email)
+console.log("founded user: ",foundeduser)
+      foundeduser.enrolledCourses.forEach((course) => {
 
+        ordercards.innerHTML +=`  <div class="ordercard">
+                    <div class="ordername">${course.title}</div>
+                    <div class="ordercontent">
+                        <div class="imgwithname">
+                           <div class="img">  <img src="${course.photo}" alt=""></div>
+                            <p>${course.description}</p>
+                        </div>
+                        <div class="watchbtn"  ><button data-courseid="${course.id}">watch Now</button></div>
+                    </div>
+                </div>`
 
 
-      document.addEventListener("DOMContentLoaded", () => {
-  const orderCards = document.querySelector(".ordercards");
-  const enrolledCourses = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+      })
 
-  // Check if there are any courses
-  if (enrolledCourses.length > 0) {
-    enrolledCourses.forEach((course) => {
-      // Create a card for each course
-      const courseCard = document.createElement("div");
-      courseCard.classList.add("ordercard");
-      courseCard.innerHTML = `<div class="storeCourse">
-        <img class = "storeImg"  src ="${course.photo}">
-        <div class="store-details">
-        <h5 class="ordername">${course.title}</h5>
-        <p>${course.description}</p>
-        <span>Instructor: ${course.instructor}</span><br>
-        <span>Duration: ${course.duration}</span><br>
-        <button class="storebtn" onclick="viewCourse('${course.title}')">View Course</button></div></div>
+      const watchbtn=document.querySelectorAll(".watchbtn")
+      watchbtn.forEach(element=>{
+        element.addEventListener("click",(event)=>{
+        let courseid= event.target.dataset.courseid
+    
+        let data=  foundeduser.enrolledCourses.find(c => c.id == courseid)
      
-      `;
-      orderCards.appendChild(courseCard);
-    });
-  } else {
-    orderCards.innerHTML = "<p>No courses enrolled yet.</p>";
-  }
-});
 
-// Function to view a course (could link to course details or play a video, etc.)
-function viewCourse(courseTitle) {
-  alert(`Viewing details for ${courseTitle}`);
-  // Optional: Add redirection or more functionality here
-  // alert(`Viewing details for ${courseTitle}`);
-  window.location.href = 'coursdisplay.html'
-  
-}
+        let selectedcourse = JSON.stringify(data);
+            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
+              selectedcourse
+            )}`;
+   
 
+      
+      })
+      })
 
     </script>
+   
   </body>
 </html>
