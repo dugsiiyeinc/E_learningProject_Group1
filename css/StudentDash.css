@@ -951,46 +951,6 @@ width: 100%;
   text-align: center;
 }
 
-/* Profile Form Styling */
-#profileForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-#profileForm label {
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-  align-self: flex-start;
-}
-
-#profileForm input,
-#profileForm textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-#profileForm button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-#profileForm button:hover {
-  background-color: #45a049;
-}
-
 /* WhatsApp Contact Section Styling */
 .whatsapp-contact {
   display: flex;

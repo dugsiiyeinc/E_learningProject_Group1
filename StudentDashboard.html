@@ -174,8 +174,9 @@ if (myprofile_info) {
   enrolledCoursesList.innerHTML = ""; // Clear existing list
   foundedUser.enrolledCourses.forEach(course => {
     enrolledCoursesList.innerHTML += `
-    <li>  <strong>${course.title}</strong> - ${course.instructor}</li>
-    <li><strong>${course.start_date}</strong> - ${course.end_date}</li>
+    <li>  <strong>Course Name: </strong>${course.title}</li>
+       <li>  <strong>Course Description: </strong>${course.description}</li>
+    <li><strong>Instructor name: </strong>${course.instructor}</li>
     `;
   });
 }
