@@ -59,41 +59,172 @@ let onlineUser = JSON.parse(localStorage.getItem("onlineUser"));
 
 // Event listener to enroll user in the course when `orderbtn` is clicked
 orderbtn.addEventListener("click", (e) => {
+
+  if(enrolButton.textContent == "Enroll"){
+  
+    modal.style.display = 'block'
+
+  }
+  const proceedButton = document.getElementById("proceed");
+  proceedButton.addEventListener("click", (e) => {
     if (!onlineUser) {
-        Swal.fire({
-            title: "Before ordering the course, please log in",
-            confirmButtonText: "OK"
-        });
-    } else {
-        let foundUser = users.find(user => user.email === onlineUser.email);
+      Swal.fire({
+          title: "Before ordering the course, please log in",
+          confirmButtonText: "OK"
+      });
+  } else {
+      let foundUser = users.find(user => user.email === onlineUser.email);
 
-        if (foundUser) {
-            // Initialize `enrolledCourses` array if it doesn’t exist
-            foundUser.enrolledCourses = foundUser.enrolledCourses || [];
+      if (foundUser) {
+          // Initialize `enrolledCourses` array if it doesn’t exist
+          foundUser.enrolledCourses = foundUser.enrolledCourses || [];
 
-            // Check if the course is already enrolled by the user
-            if (!foundUser.enrolledCourses.some((enrolled) => enrolled.id === decodeddata.id)) {
-                foundUser.enrolledCourses.push(decodeddata);  // Add course to user's enrolled courses
-                localStorage.setItem("users", JSON.stringify(users));  // Update `users` in localStorage
-                Swal.fire("Enrolled!", `${decodeddata.title} has been added to your courses`, "success");
+          // Check if the course is already enrolled by the user
+          if (!foundUser.enrolledCourses.some((enrolled) => enrolled.id === decodeddata.id)) {
+              foundUser.enrolledCourses.push(decodeddata);  // Add course to user's enrolled courses
+              localStorage.setItem("users", JSON.stringify(users));  // Update `users` in localStorage
+              Swal.fire("Enrolled!", `${decodeddata.title} has been added to your courses`, "success");
 
-                // Redirect to course display page with the selected course details
+              // Redirect to course display page with the selected course details
+            setTimeout(()=>{
+              let selectedcourse = JSON.stringify(decodeddata);
+              window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
+            },3000)
+          } else {
+              Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
+
+              // Redirect to course display for an already enrolled course
+              setTimeout(() => {
                 let selectedcourse = JSON.stringify(decodeddata);
-                window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
-            } else {
-                Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
+              window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
+              }, 3000);
+          }
+      } else {
+          console.log("User not found");
+      }
+  }
+ 
+   
+     //  e.preventDefault(); 
+     //  let selectedCourse = JSON.stringify(decodeddata);   data
+     // //  let enrolledCourses = JSON.parse(localStorage.getItem("onlineUser")) || [];
+     //  enrolledCourses.push(selectedCourse);  // Add the new course to the array
+     //  localStorage.setItem("onlineUser", JSON.stringify(enrolledCourses));  // Save back to `localStorage`
+  });
 
-                // Redirect to course display for an already enrolled course
-                let selectedcourse = JSON.stringify(decodeddata);
-                window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
-            }
-        } else {
-            console.log("User not found");
-        }
-    }
+
+   
 });
 
 logout.addEventListener("click", () => {
     localStorage.removeItem("onlineUser");
     window.location.href = "index.html";
 });
+
+
+
+  if(enrolButton.textContent == "Enroll"){
+  
+    modal.style.display = 'block'
+
+  }
+  else{
+    e.preventDefault();
+    modalClose();
+        window.location.href='login.html'
+      
+  }
+
+
+
+  
+closeModal.addEventListener('click', modalClose);
+
+function modalClose(){
+  modal.style.display = 'none'
+}
+
+window.onclick = function(event){
+  if(event.target == modal){
+    modalClose()
+  }
+}
+
+Golis.addEventListener('click', ()=>{
+  
+  golisNumber.style.display = 'block'
+  hormoodNumber.style.display = 'none'
+  somtelNumber.style.display = 'none'
+  telesomeNumber.style.display = 'none'
+  creditCardNumber.style.display = 'none'
+  expMonth.style.display = 'none'
+  expYear.style.display = 'none'
+  cVv.style.display = 'none'
+  
+})
+Hormood.addEventListener('click', ()=>{
+  
+  golisNumber.style.display = 'none'
+  hormoodNumber.style.display = 'block'
+  somtelNumber.style.display = 'none'
+  telesomeNumber.style.display = 'none'
+  creditCardNumber.style.display = 'none'
+  expMonth.style.display = 'none'
+  expYear.style.display = 'none'
+  cVv.style.display = 'none'
+  
+})
+somtel.addEventListener('click', ()=>{
+  
+  golisNumber.style.display = 'none'
+  hormoodNumber.style.display = 'none'
+  somtelNumber.style.display = 'block'
+  telesomeNumber.style.display = 'none'
+  creditCardNumber.style.display = 'none'
+  expMonth.style.display = 'none'
+  expYear.style.display = 'none'
+  cVv.style.display = 'none'
+  
+})
+Telesom.addEventListener('click', ()=>{
+  
+  golisNumber.style.display = 'none'
+  hormoodNumber.style.display = 'none'
+  somtelNumber.style.display = 'none'
+  telesomeNumber.style.display = 'block'
+  creditCardNumber.style.display = 'none'
+  expMonth.style.display = 'none'
+  expYear.style.display = 'none'
+  cVv.style.display = 'none'
+  
+})
+cards.addEventListener('click', ()=>{
+  
+  golisNumber.style.display = 'none'
+  hormoodNumber.style.display = 'none'
+  somtelNumber.style.display = 'none'
+  telesomeNumber.style.display = 'none'
+  localPayment.style.display = 'none'
+  creditCardNumber.style.display = 'block'
+  expMonth.style.display = 'block'
+  expYear.style.display = 'block'
+  cVv.style.display = 'block'
+  
+
+  
+})
+
+
+if (foundeduser) {
+
+  
+    
+    }else {
+  console.log("user not found")
+
+
+
+}
+
+
+ 
