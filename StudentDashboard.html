@@ -79,12 +79,33 @@
           <h4>Student Profile</h4>
           <!-- Display User Info -->
           <div class="user-info">
+            <div class="user-valu-disp">
+               <p><strong>Full name:</strong> <span id="displayFullname">Loading...</span></p>
             <p><strong>Username:</strong> <span id="displayUsername">Loading...</span></p>
             <p><strong>Email:</strong> <span id="displayEmail">Loading...</span></p>
             <h5>Enrolled Courses:</h5>
-            <ul id="enrolledCoursesList">
+            
+           
+            </div>
+            <div class="table-student">
+              <table>
+              
+                <thead>
+              <tr>
+                <th>Course Name</th>
+                <th>Instructor</th>
+                <th>Enrolled Date</th>
+                
+              </tr>
+              </thead>
+              <tbody id="enrolledCoursesList">
+              
+              </tbody>
+              </table>
+            </div>
+           
               <!-- Courses will be dynamically added here -->
-            </ul>
+            
           </div>
          
         </div>
@@ -166,6 +187,7 @@
 
 if (myprofile_info) {
   // Display user information in "My Account" section
+  document.getElementById("displayFullname").textContent = myprofile_info.fullname;
   document.getElementById("displayUsername").textContent = myprofile_info.username;
   document.getElementById("displayEmail").textContent = myprofile_info.email;
 
@@ -173,10 +195,19 @@ if (myprofile_info) {
   let enrolledCoursesList = document.getElementById("enrolledCoursesList");
   enrolledCoursesList.innerHTML = ""; // Clear existing list
   foundedUser.enrolledCourses.forEach(course => {
+    // enrolledCoursesList.innerHTML += `
+    // <li>  <strong>Course Name: </strong>${course.title}</li>
+    //    <li>  <strong>Course Description: </strong>${course.description}</li>
+    // <li><strong>Instructor name: </strong>${course.instructor}</li>
+    // `;
     enrolledCoursesList.innerHTML += `
-    <li>  <strong>Course Name: </strong>${course.title}</li>
-       <li>  <strong>Course Description: </strong>${course.description}</li>
-    <li><strong>Instructor name: </strong>${course.instructor}</li>
+   
+    <tr>
+    <td>${course.title}</td>
+    <td>${course.instructor}</td>
+    <td>${course.start_date}</td>
+    </tr>
+    
     `;
   });
 }

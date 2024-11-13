@@ -199,6 +199,7 @@ img{
   position: relative;
   left: 0;
   top: 100px;
+
  
  
 }
@@ -396,13 +397,13 @@ img{
  }
 
   .dashDisplay{
-    position: absolute;
-
-    left:350px;
+      position: absolute;
+      
+      left: 350px;
       display: flex;
-   flex-direction: column;
-   gap: 70vh;
-   padding: 10px;
+      flex-direction: column;
+      gap: 70vh;
+      padding: 10px;
       width: 75%;
     
       
@@ -964,8 +965,43 @@ width: 100%;
 .user-info{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
+}
+.table-student{
+  width: 100%;
+}
+.user-info .user-valu-disp{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+table{
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+table,th,td{
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+
+}
+thead{
+  background-color: #11e811;
+}
+td,th{
+  text-align: start;
+  padding: 10px;
+}
+th{
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+tbody{
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
 }
 
 .whatsapp-contact p {
