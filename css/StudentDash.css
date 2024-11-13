@@ -407,6 +407,10 @@ img{
     
       
   }
+
+
+
+  
 .myCourses{
   position: absolute;
   left: 0;
@@ -918,3 +922,120 @@ width: 100%;
 
 }
   
+/* Styling for the My Account and Quick Help Sections */
+.orderdetails {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+/* Header Styling */
+.orderdetails h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #4CAF50;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Subheading */
+.orderdetails h6 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Profile Form Styling */
+#profileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#profileForm label {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+#profileForm input,
+#profileForm textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#profileForm button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#profileForm button:hover {
+  background-color: #45a049;
+}
+
+/* WhatsApp Contact Section Styling */
+.whatsapp-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.whatsapp-contact p {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.whatsapp-contact img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.whatsapp-contact img:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-contact a {
+  text-decoration: none;
+  color: #25d366; /* WhatsApp green */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.whatsapp-contact a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-contact img#whatsapp-qr {
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-contact img#whatsapp-qr:hover {
+  transform: scale(1.05);
+}

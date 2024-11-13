@@ -65,139 +65,92 @@
       <div class="dashboard">
         <ul>
           <li><a href="#myCourses" class="links">My Courses</a></li>
-          <li><a href="#myAcount" class="links"  id="myProfile">My Profile </a></li>
+          <li><a href="#myAccount" class="links" id="myProfile">My Profile</a></li>
           <li><a href="#help" class="links">Quick Help</a></li>
         </ul>
       </div>
       <div class="dashDisplay">
-        <div id="myCourses"  class="orderdetails">
+        <div id="myCourses" class="orderdetails">
           <h4>My Courses</h4>
           <h6>These are the courses you've enrolled in:</h6>
           <div class="ordercards"></div>
         </div>
-        <div id="myAcount" class="orderdetails">
+        <div id="myAccount" class="orderdetails" style="display: none;">
           <h4>Student Profile</h4>
-          <h6>Please fill out this bio form below:</h6>
-          
-          <div class="ordercards"></div>
+          <h6>Please fill out the bio form below:</h6>
+          <!-- Profile Form -->
+          <form id="profileForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" />
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+            <label for="bio">Bio:</label>
+            <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+            <button type="submit">Save Profile</button>
+          </form>
         </div>
-        <div id="help"  class="orderdetails">
-          <h4>Need any help </h4>
-          <h6>Please contact with us</h6>
-          
-          <div class="ordercards"></div>
+        <div id="help" class="orderdetails" style="display: none;">
+          <h4>Need any help?</h4>
+          <h6>Contact us for support</h6>
+          <p>If you need assistance, please reach out to us:</p>
+          <!-- WhatsApp Contact -->
+          <div class="whatsapp-contact">
+            <a href="https://wa.me/252613355008" target="_blank">
+              <img src="images/whatsapp-logo.png" alt="WhatsApp Logo" width="50" height="50" />
+            </a>
+            <p>Scan the QR code below to chat with us on WhatsApp:</p>
+            <a href="https://wa.me/252613355008" target="_blank">
+              <img src="images/whatsapp-qr.png" alt="WhatsApp QR Code" width="150" height="150" />
+            </a>
+          </div>
         </div>
       </div>
-
-      <section>
-        <h4>Student Profile</h4>
-          <h6>Please this bio form below</h6>
-          <div class="ordercards"></div>
-      </section>
-
-      <section id="help">
-        <h4>Need any help </h4>
-          <h6>Please con:</h6>
-          <div class="ordercards"></div>
-      </section>
-
     </div>
-
-
-
-
-<!-- 
-    <section>
-      <div class="orderdetails">
-        <h4>Enrolled Courses</h4>
-        <h6>A list of all the courses that you have enrolled in</h6>
-        <div class="ordercards"></div>
-      </div>
-    </section> -->
 
     <script src="js/main.js"></script>
     <script>
-  let ordercards = document.querySelector(".ordercards");
- 
+      const ordercards = document.querySelector(".ordercards");
 
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      let onlineUser = JSON.parse(localStorage.getItem("onlineUser")) || [];
+      let foundedUser = users.find(user => user.email === onlineUser.email);
 
-let users = JSON.parse(localStorage.getItem("users"))
+      if (foundedUser && foundedUser.enrolledCourses) {
+        foundedUser.enrolledCourses.forEach(course => {
+          ordercards.innerHTML += `<div class="ordercard">
+              <div class="storeimg"><img src="${course.photo}" alt=""></div>
+              <div class="ordercontent">
+                <div class="ordername">${course.title}
+                  <p>${course.instructor}</p>
+                  <p>${course.category}</p>
+                  <div class="watchbtn"><button id="storebtn" data-courseid="${course.id}">Watch Now</button></div>
+                </div>
+              </div>
+            </div>`;
+        });
+      }
 
-      let onlineUser = JSON.parse(localStorage.getItem("onlineUser")) || []
+      const watchbtn = document.querySelectorAll(".watchbtn");
+      watchbtn.forEach(element => {
+        element.addEventListener("click", event => {
+          let courseid = event.target.dataset.courseid;
+          let selectedCourse = JSON.stringify(
+            foundedUser.enrolledCourses.find(c => c.id == courseid)
+          );
+          window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedCourse)}`;
+        });
+      });
 
-      let foundeduser = users.find(user=>user.email === onlineUser.email)
-console.log("founded user: ",foundeduser)
-      foundeduser.enrolledCourses.forEach((course) => {
-
-        ordercards.innerHTML +=`  <div class="ordercard">
-                     <div class="storeimg">  <img src="${course.photo}" alt=""></div>
-                   
-                         <div class="ordercontent">
-                         
-                        <div class="storecontent">
-                          
-                       
-                         
-                            <div class="ordername">${course.title}
-                            <p>${course.instructor}</p>
-                            <p>${course.category}</p>
-                            <div class="watchbtn"  ><button id="storebtn" data-courseid="${course.id}">watch Now</button></div>
-                               </div>
-                        </div>
-                        
-                    </div>
-                </div>`
-
-
-      })
-
-      const watchbtn=document.querySelectorAll(".watchbtn")
-      watchbtn.forEach(element=>{
-        element.addEventListener("click",(event)=>{
-        let courseid= event.target.dataset.courseid
-    
-        let data=  foundeduser.enrolledCourses.find(c => c.id == courseid)
-     
-
-        let selectedcourse = JSON.stringify(data);
-            window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-              selectedcourse
-            )}`;
-   
-
-      
-      })
-      })
-
-
-
-  
-
-  //     const links = document.querySelectorAll('.links');
-  //     links.forEach(link => {
-  //       link.addEventListener('click',(e)=>{
-  //       const mylink = e.target.getAttribute('href');
-  //       const dashDisplay = document.querySelector(`${mylink}`);
-        
-  //       dashDisplay.style.display = 'block';
-
-
-  // // if (dashDisplay.style.display === 'none') {
-  // //   dashDisplay.style.display = 'block'; // Show if hidden
-    
-  // // } else {
-  // //   dashDisplay.style.display = 'block'; // Hide if visible
-  // // }
-
-
-        
-  //     })
-  //     })
-      
-
-     
-
+      const links = document.querySelectorAll(".links");
+      links.forEach(link => {
+        link.addEventListener("click", e => {
+          const targetSection = e.target.getAttribute("href").substring(1);
+          document.querySelectorAll(".orderdetails").forEach(section => {
+            section.style.display = "none";
+          });
+          document.getElementById(targetSection).style.display = "block";
+        });
+      });
     </script>
-   
   </body>
 </html>
