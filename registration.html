@@ -70,6 +70,10 @@
          
 
           <form>
+            <label>Full name</label>
+            <!-- <input type="text" class="fullname" placeholder="Enter full Name" required /> -->
+            <input type="text" id="fullname" placeholder="Enter Full Name" required />
+
             <label>User name</label>
             <!-- <input type="text" class="fullname" placeholder="Enter full Name" required /> -->
             <input type="text" id="username" placeholder="Enter user Name" required />
@@ -106,6 +110,7 @@
       let accountinfo = document.querySelector(".account-info");
       let account = document.querySelector(".account");
       let allbtn = document.querySelectorAll(".allbtn");
+      const fullName = document.querySelector("#fullname")
       const username = document.querySelector("#username");
       const span = document.querySelector(".span");
       const email = document.querySelector(".email");
@@ -129,6 +134,7 @@
         validemail=emailval
 
         if (
+          fullName.value == "" ||
           username.value == "" ||
           email.value == "" ||
           confirmpassword.value == "" ||
@@ -163,16 +169,17 @@
         } else {
           let myData = {
             // fullname: fullname.value,
+            fullname: fullName.value,
             username: username.value,
             email: validemail,
             password: password.value,
             confirmpassword: confirmpassword.value,
             enrolledCourses: []
           };
-
+          
           let data = [];
           data = JSON.parse(localStorage.getItem("users")) || [];
-
+          
           if (
             data.some((data) => {
               return data.email == email.value;
