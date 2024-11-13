@@ -186,6 +186,7 @@ img{
   font-size: 32px;
   font-weight: 700;
   color: #11e811;
+
 }
 .orderdetails h6{
   text-align: center;
@@ -396,15 +397,23 @@ img{
 
   .dashDisplay{
     position: absolute;
-    top: 0;
+
     left:350px;
       display: flex;
    flex-direction: column;
+   gap: 70vh;
    padding: 10px;
       width: 75%;
-      height: 100%;
+    
+      
   }
+.myCourses{
+  position: absolute;
+  left: 0;
+  padding: 0;
+  margin: 0;
 
+}
 
   
 .cour-best-seller {

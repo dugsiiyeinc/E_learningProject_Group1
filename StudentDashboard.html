@@ -64,19 +64,43 @@
     <div class="dashcontainer">
       <div class="dashboard">
         <ul>
-          <li><a href="#">My Courses</a></li>
-          <li><a href="#">My Progress</a></li>
-          <li><a href="#">My Account</a></li>
-          <li><a href="#">Help</a></li>
+          <li><a href="#myCourses" class="links">My Courses</a></li>
+          <li><a href="#myAcount" class="links"  id="myProfile">My Profile </a></li>
+          <li><a href="#help" class="links">Quick Help</a></li>
         </ul>
       </div>
       <div class="dashDisplay">
-        <div class="orderdetails">
+        <div id="myCourses"  class="orderdetails">
           <h4>My Courses</h4>
           <h6>These are the courses you've enrolled in:</h6>
           <div class="ordercards"></div>
         </div>
+        <div id="myAcount" class="orderdetails">
+          <h4>Student Profile</h4>
+          <h6>Please fill out this bio form below:</h6>
+          
+          <div class="ordercards"></div>
+        </div>
+        <div id="help"  class="orderdetails">
+          <h4>Need any help </h4>
+          <h6>Please contact with us</h6>
+          
+          <div class="ordercards"></div>
+        </div>
       </div>
+
+      <section>
+        <h4>Student Profile</h4>
+          <h6>Please this bio form below</h6>
+          <div class="ordercards"></div>
+      </section>
+
+      <section id="help">
+        <h4>Need any help </h4>
+          <h6>Please con:</h6>
+          <div class="ordercards"></div>
+      </section>
+
     </div>
 
 
@@ -144,6 +168,34 @@ console.log("founded user: ",foundeduser)
       
       })
       })
+
+
+
+  
+
+  //     const links = document.querySelectorAll('.links');
+  //     links.forEach(link => {
+  //       link.addEventListener('click',(e)=>{
+  //       const mylink = e.target.getAttribute('href');
+  //       const dashDisplay = document.querySelector(`${mylink}`);
+        
+  //       dashDisplay.style.display = 'block';
+
+
+  // // if (dashDisplay.style.display === 'none') {
+  // //   dashDisplay.style.display = 'block'; // Show if hidden
+    
+  // // } else {
+  // //   dashDisplay.style.display = 'block'; // Hide if visible
+  // // }
+
+
+        
+  //     })
+  //     })
+      
+
+     
 
     </script>
    
