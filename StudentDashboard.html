@@ -106,13 +106,21 @@ console.log("founded user: ",foundeduser)
       foundeduser.enrolledCourses.forEach((course) => {
 
         ordercards.innerHTML +=`  <div class="ordercard">
-                    <div class="ordername">${course.title}</div>
-                    <div class="ordercontent">
-                        <div class="imgwithname">
-                           <div class="img">  <img src="${course.photo}" alt=""></div>
-                            <p>${course.description}</p>
+                     <div class="storeimg">  <img src="${course.photo}" alt=""></div>
+                   
+                         <div class="ordercontent">
+                         
+                        <div class="storecontent">
+                          
+                       
+                         
+                            <div class="ordername">${course.title}
+                            <p>${course.instructor}</p>
+                            <p>${course.category}</p>
+                            <div class="watchbtn"  ><button id="storebtn" data-courseid="${course.id}">watch Now</button></div>
+                               </div>
                         </div>
-                        <div class="watchbtn"  ><button data-courseid="${course.id}">watch Now</button></div>
+                        
                     </div>
                 </div>`
 

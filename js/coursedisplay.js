@@ -1,34 +1,10 @@
-let accountinfo = document.querySelector(".account-info");
-let account = document.querySelector(".account");
-let allbtn = document.querySelectorAll(".allbtn");
+
+
 let card = document.querySelector(".card");
 let imagecontainer = document.querySelector(".playvideo");
 let courseName = document.querySelector(".courseName");
 let userdata = JSON.parse(localStorage.getItem("currentUser"));
 let logout = document.querySelector(".logout");
-let myaccount = document.querySelector(".myaccount");
-
-// if (userdata) {
-//   let currentusername = document.querySelector(".currentusername")
-//   currentusername.innerText = userdata.fullname
-//   account.innerText = userdata.fullname.charAt(0);
-//   allbtn.forEach((element) => {
-//     element.classList.add("hide");
-
-//     account.classList.remove("hide");
-//   });
-// } else {
-//   allbtn.forEach((element) => {
-//     element.classList.remove("hide");
-
-//     account.classList.add("hide");
-//   });
-// }
-
-// account.addEventListener("click", function () {
-//   accountinfo.classList.toggle("hide");
-// });
-
 const urldata = new URLSearchParams(window.location.search);
 
 let courses = urldata.get("selectedcourses");
