@@ -77,31 +77,36 @@
         </div>
         <div id="myAccount" class="orderdetails" style="display: none;">
           <h4>Student Profile</h4>
-          <h6>Please fill out the bio form below:</h6>
-          <!-- Profile Form -->
-          <form id="profileForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="Enter your username" />
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter your email" />
-            <label for="bio">Bio:</label>
-            <textarea id="bio" placeholder="Tell us about yourself"></textarea>
-            <button type="submit">Save Profile</button>
-          </form>
+          <!-- Display User Info -->
+          <div class="user-info">
+            <p><strong>Username:</strong> <span id="displayUsername">Loading...</span></p>
+            <p><strong>Email:</strong> <span id="displayEmail">Loading...</span></p>
+            <h5>Enrolled Courses:</h5>
+            <ul id="enrolledCoursesList">
+              <!-- Courses will be dynamically added here -->
+            </ul>
+          </div>
+         
         </div>
         <div id="help" class="orderdetails" style="display: none;">
           <h4>Need any help?</h4>
           <h6>Contact us for support</h6>
-          <p>If you need assistance, please reach out to us:</p>
+         
           <!-- WhatsApp Contact -->
           <div class="whatsapp-contact">
+            <div class="whatsapp-icon">
+              <p>If you need assistance, please reach out to us:</p>
             <a href="https://wa.me/252613355008" target="_blank">
-              <img src="images/whatsapp-logo.png" alt="WhatsApp Logo" width="50" height="50" />
+              <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/12/whatsapp-logo-with-green-background.jpg" alt="WhatsApp Logo"  />
+              
             </a>
+          </div>
+          <div class="whatsapp-qr">
             <p>Scan the QR code below to chat with us on WhatsApp:</p>
             <a href="https://wa.me/252613355008" target="_blank">
-              <img src="images/whatsapp-qr.png" alt="WhatsApp QR Code" width="150" height="150" />
+              <img src="https://preview.redd.it/3ipyc7vvofh61.png?width=392&format=png&auto=webp&s=5cd31d0bebfc7d899e80d074ac1f1900b3ccccef" alt="WhatsApp QR Code" width="150" height="150" />
             </a>
+          </div>
           </div>
         </div>
       </div>
@@ -151,6 +156,33 @@
           document.getElementById(targetSection).style.display = "block";
         });
       });
+
+
+      let myprofile_info = users.find(user => user.email === onlineUser.email);
+ const profileForm = document.querySelector('.profile-form');
+
+
+
+
+if (myprofile_info) {
+  // Display user information in "My Account" section
+  document.getElementById("displayUsername").textContent = myprofile_info.username;
+  document.getElementById("displayEmail").textContent = myprofile_info.email;
+
+  // Display enrolled courses
+  let enrolledCoursesList = document.getElementById("enrolledCoursesList");
+  enrolledCoursesList.innerHTML = ""; // Clear existing list
+  foundedUser.enrolledCourses.forEach(course => {
+    enrolledCoursesList.innerHTML += `
+    <li>  <strong>${course.title}</strong> - ${course.instructor}</li>
+    <li><strong>${course.start_date}</strong> - ${course.end_date}</li>
+    `;
+  });
+}
+
+
+
+
     </script>
   </body>
 </html>
