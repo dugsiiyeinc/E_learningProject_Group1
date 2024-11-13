@@ -106,7 +106,6 @@
       let accountinfo = document.querySelector(".account-info");
       let account = document.querySelector(".account");
       let allbtn = document.querySelectorAll(".allbtn");
-      const fullname = document.querySelector(".fullname");
       const username = document.querySelector("#username");
       const span = document.querySelector(".span");
       const email = document.querySelector(".email");
@@ -197,11 +196,11 @@
         window.location.href = "login.html";
       });
 
-      let userdata = JSON.parse(localStorage.getItem("currentUser"));
+      let userdata = JSON.parse(localStorage.getItem("onlineUser"));
 
-      if (userdata) {
-        let currentusername = document.querySelector("#user-dash");
-        currentusername.innerText = userdata.username;
+      // if (userdata) {
+      //   let currentusername = document.querySelector("#user-dash");
+      //   currentusername.innerText = userdata.username;
         // account.innerText = userdata.fullname.charAt(0);
       //   allbtn.forEach((element) => {
       //     element.classList.add("hide");
@@ -214,7 +213,7 @@
 
       //     account.classList.add("hide");
       //   });
-      }
+      // }
       // account.addEventListener("click", function () {
       //   accountinfo.classList.toggle("hide");
       // });

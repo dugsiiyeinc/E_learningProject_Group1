@@ -227,11 +227,6 @@ setTimeout(()=>{
 })
 
 
-// closeModal.addEventListener('click', ()=>{
-//     modal.style.display = 'none'
-// })
-
-
 closeModal.addEventListener('click', modalClose);
 
 function modalClose(){
