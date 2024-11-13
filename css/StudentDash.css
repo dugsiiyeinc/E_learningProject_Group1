@@ -994,6 +994,15 @@ width: 100%;
 /* WhatsApp Contact Section Styling */
 .whatsapp-contact {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+
+}
+
+.user-info{
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
@@ -1003,11 +1012,12 @@ width: 100%;
   font-size: 16px;
   color: #333;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .whatsapp-contact img {
-  width: 50px;
-  height: 50px;
+  width: 400px;
+  height: 300px;
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -1018,6 +1028,7 @@ width: 100%;
 }
 
 .whatsapp-contact a {
+  
   text-decoration: none;
   color: #25d366; /* WhatsApp green */
   font-size: 18px;
