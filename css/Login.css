@@ -10,6 +10,7 @@
   }
 
 
+
 .layout {
     display: flex;
     justify-content: center;
@@ -71,13 +72,14 @@
 
     width: 100%;
     padding: 10px;
-    background-color: #305647;
+    background-color: #1e8111;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border: none;
     color:white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 5px;
+    font-weight: bold;
   }
   
   .auth-container p {
@@ -86,14 +88,16 @@
   }
   
   .auth-container a {
-    color: white;
+   background-color: #1e8111;
     text-decoration: none;
+    color: rgb(194, 8, 8);
+    cursor: pointer;
+    font-weight: 600;
+
   }
   
   .auth-container a:hover {
     text-decoration: underline;
+    color: rgb(194, 8, 8);
   }
 
-#authSwitch{
-  color: #1f1f1f;
-}
