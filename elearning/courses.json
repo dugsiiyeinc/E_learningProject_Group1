@@ -9,50 +9,50 @@
 		"start_date": "2024-11-05",
 		"price": "30 DOLLARS",
 		"end_date": "2025-09-15",
-		"trailer_video":"https://youtu.be/qoSksQ4s_hg?si=RWIZ1H8ZU2uowNER",
-		"photo": "https://tse4.mm.bing.net/th?id=OIP.DN7ToydkJZEdVaJVK_NhvwHaHa&pid=Api&P=0&h=220",
+		"trailer_video":"images/vid-3.mp4",
+		"photo": "https://blog.winserver.ne.jp/wp-content/uploads/2024/02/JS%E3%81%A8%E3%81%AF.png",
 
 		"lessons": [
 			{
 				"id": 1,
 				"title": "JavaScript Tutorial For Beginners 01",
 				"duration": "1 hour",
-				"video": "https://youtu.be/qoSksQ4s_hg?si=RWIZ1H8ZU2uowNER",
+				"video": "images/vid-3.mp4",
 				"content": "In this lesson, you will learn about JavaScript Variables."
 			},
 			{
 				"id": 2,
 				"title": "JavaScript Tutorial For Beginners 02",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/VB7y0yxZjro?si=CBRTcr6iiDm8ZM3W",
+				"video": "images/vid-4.mp4",
 				"content": "This lesson covers JavaScript Data Types.."
 			},
 			{
 				"id": 3,
 				"title": "JavaScript Tutorial For Beginners 03",
 				"duration": "1 hour",
-				"video": "https://youtu.be/ranSYb-EhrU?si=UgIiFSFdnaYiJNK0",
+				"video": "images/vid-4.mp4",
 				"content": "In this lesson, you will learn about JavaScript Operators."
 			},
 			{
 				"id": 4,
 				"title": "JavaScript Tutorial For Beginners 04",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/GCcfKNswi4c?si=HTTvHBEUVFf8BmH0",
+				"video": "images/vid-5.mp4",
 				"content": "This lesson covers JavaScript If Statement."
 			},
 			{
 				"id": 5,
 				"title": "JavaScript Tutorial For Beginners 05",
 				"duration": "1 hour",
-				"video": "https://youtu.be/czlwRUeTCgw?si=QWM6vlvrde2T7jH9",
+				"video": "images/vid-6.mp4",
 				"content": "In this lesson, you will learn about JavaScript Switch.."
 			},
 			{
 				"id": 6,
 				"title": "JavaScript Tutorial For Beginners 06",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/JzZFccCEgGA?si=4PY-JRfi2sRlxdps",
+				"video": "images/vid-9.mp4",
 				"content": "This lesson covers JavaScript Loop.."
 			}
 		]
@@ -66,47 +66,48 @@
 		"instructor": "Eng Awil",
 		"enrollmentCount": 30,
 		"category": "web development",
-		"start_date": "2023-09-01",
+		"price": "79 DOLLARS",
+		"start_date": "2024-09-01",
 		"end_date": "2024-12-15",
-		"trailer_video":"https://youtu.be/gQojMIhELvM?si=7V9PJx_kMdbUHbdi",
+		"trailer_video":"images/vid-1.mp4",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "Responsive Design",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/TUD1AWZVgQ8",
+				"video": "images/vid-1.mp4",
 				"content": "This lesson covers responsive design techniques for building websites."
 			},
 			{
 				"id": 2,
 				"title": "Basic Databases and Data Schemas for a Website",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/dam0GPOAvVI",
+				"video": "images/vid-3.mp4",
 				"content": "This lesson covers the basic databases and data schemas for a website."
 			},
 			{
 				"id": 3,
 				"title": "Advanced features of HTML, CSS",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/XhqEuyWjbdo",
+				"video": "images/vid-2.mp4",
 				"content": "This lesson covers Advanced features of HTML, CSS."
 			},
 			{
 				"id": 4,
 				"title": "User Authentication and Security.",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/F-sFp_AvHc8",
+				"video": "images/vid-7.mp4",
 				"content": "This lesson covers User Authentication and Security."
 			},
 			{
 				"id": 5,
 				"title": "Deploying a website",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/NQP89ish9t8",
+				"video": "images/vid-8.mp4",
 				"content": "This lesson covers how to put a website online."
 			}
 		],
-		"photo": "https://www.web-development-institute.com/wp-content/uploads/2020/04/web-development-course-banner.jpg"
+		"photo": "https://happenings.lpu.in/wp-content/uploads/2024/05/Advanced-web-development.jpg"
 	},
 	{
 		"id": 3,
@@ -115,7 +116,8 @@
 		"instructor": "Emily Davis",
 		"enrollmentCount": 40,
 		"category": "software development",
-		"trailer_video":"https://www.youtube.com/embed/Muo0UdwESn4",
+		"price": "100 DOLLARS",
+		"trailer_video":"images/vid-9.mp4",
 		"start_date": "2023-08-15",
 		"end_date": "2023-10-30",
 		"lessons": [
@@ -123,39 +125,39 @@
 				"id": 1,
 				"title": "Arrays and Linked Lists",
 				"duration": "2.5 hours",
-				"video": "https://www.youtube.com/embed/Muo0UdwESn4",
+				"video": "images/vid-9.mp4",
 				"content": "Learn about arrays, linked lists, and their operations."
 			},
 			{
 				"id": 2,
 				"title": "Searching and Sorting",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/6LOwPhPDwVc",
+				"video": "images/vid-3.mp4",
 				"content": "Explore different searching and sorting algorithms."
 			},
 			{
 				"id": 3,
 				"title": "Binary Search Tree",
 				"duration": "2.5 hours",
-				"video": "https://www.youtube.com/embed/fAAZixBzIAI",
+				"video": "images/vid-7.mp4",
 				"content": "Learn about Binary Search Tree."
 			},
 			{
 				"id": 4,
 				"title": "Dynamic Programming ",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/oBt53YbR9Kk",
+				"video": "images/vid-8.mp4",
 				"content": "This lesson covers about dynamic programming ."
 			},
 			{
 				"id": 5,
 				"title": "Graph In Data Structure",
 				"duration": "2.5 hours",
-				"video": "https://www.youtube.com/embed/-VgHk7UMPP4",
+				"video": "images/vid-4.mp4",
 				"content": "Learn about Graph In Data Structure."
 			}
 		],
-		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSItNqYGXeEWPjbTTH0yw1c45baXQj2atUKEZnkR8bbO8VRJXwPIg1sghhRY65KLoD1ueY&usqp=CAU"
+		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyYZg55KhO3QihAUplmAZ7xKl2qW4r8ZEgg&s"
 	},
 	{
 		"id": 4,
@@ -164,7 +166,8 @@
 		"instructor": "Michael Johnson",
 		"enrollmentCount": 35,
 		"category": "Data science",
-		"trailer_video":"https://www.youtube.com/embed/tA42nHmmEKw",
+		"price": "50 DOLLARS",
+		"trailer_video":"images/vid-6.mp4",
 		"start_date": "2023-09-15",
 		"end_date": "2023-12-31",
 		"lessons": [
@@ -172,91 +175,92 @@
 				"id": 1,
 				"title": "Introduction to Python",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/tA42nHmmEKw",
+				"video": "images/vid-7.mp4",
 				"content": "Get started with Python programming language."
 			},
 			{
 				"id": 2,
 				"title": "Data Analysis with Pandas",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/xi0vhXFPegw",
+				"video": "images/vid-8.mp4",
 				"content": "Explore data analysis techniques using Pandas library."
 			},
 			{
 				"id": 3,
 				"title": "Introduction to Python",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/OuoyXiP8E5Y",
+				"video": "images/vid-9.mp4",
 				"content": "Get started with Python programming language."
 			},
 			{
 				"id": 4,
 				"title": "Classical Machine Learning",
 				"duration": "1 hours",
-				"video": "https://www.youtube.com/embed/N-l4wQY5kzM",
+				"video": "images/vid-2.mp4",
 				"content": "Classical Machine Learning."
 			},
 			{
 				"id": 5,
 				"title": "Data Storage and Big Data Frameworks",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/jKCj4BxGTi8",
+				"video": "images/vid-1.mp4",
 				"content": "Data storage and big data frameworks."
 			},
 			{
 				"id": 6,
 				"title": "Data Visualization",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/MiiANxRHSv4",
+				"video": "images/vid-2.mp4",
 				"content": "This Lesson covers Data visualizations."
 			}
 		],
-		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcMSVneJCKcxlHQ3PXHL1ig7LHvxRxUBchpQ&usqp=CAU"
+		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2FPzRAPZRP9s3WqiNE0iiilSDI7XgKPXquQ&s"
 	},
 	{
 		"id": 5,
-		"title": "Web Design Fundamentals",
+		"title": "Advanced Web design course",
 		"description": "Learn the fundamentals of web design and create stunning websites.",
 		"instructor": "Daniel Martinez",
 		"enrollmentCount": 25,
 		"start_date": "2023-10-01",
 		"category": "web development",
-		"trailer_video":"https://www.youtube.com/embed/yNDgFK2Jj1E",
+		"price": "35 DOLLARS",
+		"trailer_video":"images/vid-1.mp4",
 		"end_date": "2023-12-15",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "Understand the Key Concepts of Visual Design",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/yNDgFK2Jj1E",
+				"video": "images/vid-2.mp4",
 				"content": "Understand the key concepts of visual design."
 			},
 			{
 				"id": 2,
 				"title": "Know the Basics of HTML",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/qz0aGYrrlhU",
+				"video": "images/vid-3.mp4",
 				"content": "Explore Know the basics of HTML."
 			},
 			{
 				"id": 3,
 				"title": "Understand CSS",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/1Rs2ND1ryYc",
+				"video": "images/vid-4.mp4",
 				"content": "You will learn and understand the foundation of CSS."
 			},
 			{
 				"id": 4,
 				"title": "Understand the Basics of Creating Layouts",
 				"duration": "2 hours",
-				"video": "https://www.youtube.com/embed/MlsV3hu84as",
+				"video": "images/vid-4.mp4",
 				"content": "Understand the basics of creating layouts."
 			},
 			{
 				"id": 5,
 				"title": "Learn about Typography ",
 				"duration": "1.5 hours",
-				"video": "https://www.youtube.com/embed/yAuUDyUC-GM",
+				"video": "images/vid-5.mp4",
 				"content": "Learn about typography ."
 			}
 		],
@@ -264,38 +268,39 @@
 	},
 	{
 		"id": 6,
-		"title": "Mobile App Development",
+		"title": "Mobile App Development course",
 		"description": "Learn to develop mobile apps for iOS and Android platforms.",
 		"instructor": "Olivia Taylor",
 		"enrollmentCount": 30,
 		"start_date": "2023-08-01",
 		"category": "mobile app development",
-		"trailer_video":"https://youtu.be/NLvaOL6Cm48?si=vu8W8uQxmKR1uOjW",
+		"price": "65 DOLLARS",
+		"trailer_video":"images/vid-1.mp4",
 		"end_date": "2023-09-15",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "Introduction to Mobile App Development",
 				"duration": "2 hours",
-				"video": "https://youtu.be/NLvaOL6Cm48?si=vu8W8uQxmKR1uOjW",
+				"video": "images/vid-6.mp4",
 				"content": "Get started with mobile app development."
 			},
 			{
 				"id": 2,
 				"title": "Android Versions History",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/4itSY0xkOqw?si=9L9Ot6CsR4Zezvbk",
+				"video": "images/vid-7.mp4",
 				"content": "Learn to create intuitive user interfaces for mobile apps."
 			},
 			{
 				"id": 3,
 				"title": "Building User Interface",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/7A-RnYYNWUA?si=1GVesneknpq3hLGW",
+				"video": "images/vid-8.mp4",
 				"content": "Learn to create intuitive user interfaces for mobile apps."
 			}
 		],
-		"photo": "https://slaconsultantsgurgaon.in/wp_files/wp-content/uploads_gurgaon/2018/10/Mobile-Application-Training-Course-in-Gurgaon.png"
+		"photo": "https://thedigitaladda.com/wp-content/uploads/Best-Android-Mobile-App-Development-Course-Training-in-Jalandhar.png"
 	},
 	{
 		"id": 7,
@@ -304,82 +309,83 @@
 		"instructor": "Matthew Anderson",
 		"enrollmentCount": 45,
 		"start_date": "2023-09-01",
+		"price": "40 DOLLARS",
 		"category": "Data science",
-		"trailer_video":"https://youtu.be/fxmF4P_O_2c?si=EWyOlc3LMkQWCZ9a",
+		"trailer_video":"images/vid-9.mp4",
 		"end_date": "2023-12-15",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "Introduction to R",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/fxmF4P_O_2c?si=EWyOlc3LMkQWCZ9a",
+				"video": "images/vid-6.mp4",
 				"content": "Get started with the R programming language."
 			},
 			{
 				"id": 2,
 				"title": "Data analysis using R Part 1",
 				"duration": "2 hours",
-				"video": "https://youtu.be/yW6tdqBMwUg?si=c16ILvLGNx2Cqr2s",
+				"video": "images/vid-6.mp4",
 				"content": "Learn to manipulate and visualize data using R."
 			},
 			{
 				"id": 3,
 				"title": "Data analysis using R Part 2",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/fxmF4P_O_2c?si=EWyOlc3LMkQWCZ9a",
+				"video": "images/vid-4.mp4",
 				"content": "Get started with the R programming language."
 			},
 			{
 				"id": 4,
 				"title": "Data analysis using R Part 3",
 				"duration": "2 hours",
-				"video": "https://youtu.be/yW6tdqBMwUg?si=c16ILvLGNx2Cqr2s",
+				"video": "images/vid-2.mp4",
 				"content": "Learn to manipulate and visualize data using R."
 			},
 			{
 				"id": 5,
 				"title": "Data analysis using R Part 4",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/fxmF4P_O_2c?si=EWyOlc3LMkQWCZ9a",
+				"video": "images/vid-5.mp4",
 				"content": "Get started with the R programming language."
 			},
 			{
 				"id": 6,
 				"title": "Data analysis using R Part 5",
 				"duration": "2 hours",
-				"video": "https://youtu.be/yW6tdqBMwUg?si=c16ILvLGNx2Cqr2s",
+				"video": "images/vid-6.mp4",
 				"content": "Learn to manipulate and visualize data using R."
 			},
 			{
 				"id": 7,
 				"title": "Data analysis using R Part 6",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/fxmF4P_O_2c?si=EWyOlc3LMkQWCZ9a",
+				"video": "images/vid-7.mp4",
 				"content": "Get started with the R programming language."
 			},
 			{
 				"id": 8,
 				"title": "Data analysis using R Part 7",
 				"duration": "2 hours",
-				"video": "https://youtu.be/yW6tdqBMwUg?si=c16ILvLGNx2Cqr2s",
+				"video": "images/vid-8.mp4",
 				"content": "Learn to manipulate and visualize data using R."
 			},
 			{
 				"id": 9,
 				"title": "Data analysis using R Part 8",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/fxmF4P_O_2c?si=EWyOlc3LMkQWCZ9a",
+				"video": "images/vid-9.mp4",
 				"content": "Get started with the R programming language."
 			},
 			{
 				"id": 10,
 				"title": "Data analysis using R Part 9",
 				"duration": "2 hours",
-				"video": "https://youtu.be/yW6tdqBMwUg?si=c16ILvLGNx2Cqr2s",
+				"video": "images/vid-3.mp4",
 				"content": "Learn to manipulate and visualize data using R."
 			}
 		],
-		"photo": "https://i.ytimg.com/vi/I4NRCN9DPTI/maxresdefault.jpg"
+		"photo": "https://cdn.prod.website-files.com/654fd3ad88635290d9845b9e/65b2a431f01fb38f16d9d84c_6525256482c9e9a06c7a9d3c%252F65aac295b1dc90a5b0a321ab_shiny_time_series.webp"
 	},
 	{
 		"id": 8,
@@ -387,56 +393,57 @@
 		"description": "Learn user interface and user experience design principles.",
 		"instructor": "Ava Thomas",
 		"enrollmentCount": 20,
-		"start_date": "2023-10-15",
+		"start_date": "2024-10-15",
+		"price": "25 DOLLARS",
 		"end_date": "2023-12-31",
 		"category": "web development",
-		"trailer_video":"https://youtu.be/He-1O8Pa4SE?si=TqZG7oFoU4E_5gYY",
+		"trailer_video":"images/vid-8.mp4",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "User Research",
 				"duration": "2 hours",
-				"video": "https://youtu.be/He-1O8Pa4SE?si=TqZG7oFoU4E_5gYY",
+				"video": "images/vid-8.mp4",
 				"content": "Learn techniques for conducting user research."
 			},
 			{
 				"id": 2,
 				"title": "Wireframing and Prototyping",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/52Q8nifAaao?si=6nuAIMhfMinOdadC",
+				"video": "images/vid-4.mp4",
 				"content": "Create wireframes and interactive prototypes."
 			},
 			{
 				"id": 3,
 				"title": "Wireframing and Prototyping",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/Mg_hzygPb2c?si=KmXDvGUdgCxeHiyj",
+				"video": "images/vid-1.mp4",
 				"content": "Create wireframes and interactive prototypes."
 			},
 			{
 				"id": 4,
 				"title": "Wireframing and Prototyping",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/Mg_hzygPb2c?si=0hab8ADVuLvlAb7b",
+				"video": "images/vid-5.mp4",
 				"content": "Create wireframes and interactive prototypes."
 			},
 			{
 				"id": 5,
 				"title": "Wireframing and Prototyping",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/Mg_hzygPb2c?si=KmXDvGUdgCxeHiyj",
+				"video": "images/vid-7.mp4",
 				"content": "Create wireframes and interactive prototypes."
 			},
 			{
 				"id": 6,
 				"title": "Wireframing and Prototyping",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/Mg_hzygPb2c?si=0hab8ADVuLvlAb7b",
+				"video": "images/vid-1.mp4",
 				"content": "Create wireframes and interactive prototypes."
 			}
 
 		],
-		"photo": "https://www.uxtoast.com/thumbnail.png"
+		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYUrMibF7R9as_QQe8YcLKh2Y8_XtSBgI1Yg&s"
 	},
 	{
 		"id": 9,
@@ -444,63 +451,64 @@
 		"description": "Learn the Java programming language and build applications.",
 		"instructor": "David Johnson",
 		"enrollmentCount": 50,
-		"start_date": "2023-08-15",
+		"start_date": "2024-11-10",
+		"price": "20 DOLLARS",
 		"end_date": "2023-10-30",
 		"category": "software development",
-		"trailer_video":"https://youtu.be/r59xYe3Vyks?si=ww-AmbatB-U-_vZP",
+		"trailer_video":"images/vid-9.mp4",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "Introduction to Java",
 				"duration": "1.5 hours",
-				"video": "https://youtu.be/r59xYe3Vyks?si=ww-AmbatB-U-_vZP",
+				"video": "images/vid-9.mp4",
 				"content": "Get started with Java programming language."
 			},
 			{
 				"id": 2,
 				"title": "Object-Oriented Programming",
 				"duration": "2 hours",
-				"video": "https://youtu.be/gzlhm0jco0g?si=RFCVvIvjz4Xw2epl",
+				"video": "images/vid-8.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			},
 			{
 				"id": 3,
 				"title": "Object-Oriented Programming",
 				"duration": "2 hours",
-				"video": "https://youtu.be/gzlhm0jco0g?si=w1BXGa-7royQaA2h",
+				"video": "images/vid-7.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			},
 			{
 				"id": 4,
 				"title": "Object-Oriented Programming",
 				"duration": "2 hours",
-				"video": "https://youtu.be/4ekASokneGU?si=8GuBEW-JiTFN4ISW",
+				"video": "images/vid-6.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			},
 			{
 				"id": 5,
 				"title": "Object-Oriented Programming",
 				"duration": "2 hours",
-				"video": "https://youtu.be/gzlhm0jco0g?si=RFCVvIvjz4Xw2epl",
+				"video": "images/vid-5.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			},
 			{
 				"id": 6,
 				"title": "Object-Oriented Programming",
 				"duration": "2 hours",
-				"video": "https://youtu.be/gzlhm0jco0g?si=w1BXGa-7royQaA2h",
+				"video": "images/vid-4.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			},
 			{
 				"id": 7,
 				"title": "Object-Oriented Programming",
 				"duration": "2 hours",
-				"video": "https://youtu.be/4ekASokneGU?si=8GuBEW-JiTFN4ISW",
+				"video": "images/vid-2.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			}
 
 		],
-		"photo": "https://i.ytimg.com/vi/rlOfNsoHlMk/maxresdefault.jpg"
+		"photo": "https://media.licdn.com/dms/image/C5612AQFt0qN3u8vZBA/article-cover_image-shrink_600_2000/0/1520202021883?e=2147483647&v=beta&t=lVvc7jYh8iaqo23Sx1FxlGBtu7c9kdJpayanjM4HGIo"
 	}
 
 ]

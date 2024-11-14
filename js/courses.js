@@ -92,7 +92,7 @@ item.forEach(element => {
                 <i class="fa-solid fa-book"></i>    ${element.lessons.length} lessons
               </div>
               <div class="start-time">
-                <i class="fa-regular fa-clock"></i><span>Course price: ${element.price}</span>
+                <i class="fa-regular fa-clock"></i><span>Start Date: ${element.start_date}</span>
               </div>
             </div>
           </div>
