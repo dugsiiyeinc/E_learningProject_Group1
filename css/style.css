@@ -883,7 +883,7 @@ textarea {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   z-index: 10;
-  right: calc(50vw - 370px - 152px - 40px);
+  right: calc(44vw - 370px - 152px - 40px);
   top: 95px;
   color: #1f1f1f;
 }
