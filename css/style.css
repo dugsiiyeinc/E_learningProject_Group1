@@ -94,6 +94,7 @@ a {
   align-items: center;
   justify-content: space-around;
   width: 20%;
+  
 }
 
 #user-dash {
@@ -1558,6 +1559,9 @@ background-color: rgb(18, 18, 3);
   .btn {
 
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     padding: 5px;
     background-color: #1f1f1f;

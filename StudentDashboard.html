@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="css/StudentDash.css">
     <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -33,27 +34,28 @@
         <div class="btn">
           <div id="user-dash">aki</div>
           <a href="login.html" id="signIn">Sign In</a>
-          <a href="newUser.html" id="signUp">Sign Up</a>
+          <a href="registration.html" id="signUp">Sign Up</a>
           <a href="#" id="Logout" style="display: none;">Logout</a>
         </div>
       </nav>
       <div class="mobile-menu">
         <div class="logo">
           <a href="/index.html">
-            <img src="images/logoooooooooooooo.png" alt="Logo" />
+            <img src="images/leanOnline.png" alt="">
           </a>
         </div>
         <div class="menu-link" data-visible="false">
           <div class="menu">
-            <ul>
+            <ul class="navbar">
               <li><a href="index.html">Home</a></li>
               <li><a href="courses.html">Courses</a></li>
               <li><a href="aboutUs.html">About Us</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <div class="btn">
-              <a href="login.html" id="sign-in">Sign In</a>
-              <a href="registration.html" id="signUp">Sign Up</a>
+              <div id="user-dash">aki</div>
+              <a href="login.html" id="signIn">Sign In</a>
+              <a href="newUser.html" id="signUp">Sign Up</a>
               <a href="#" id="Logout" style="display: none;">Logout</a>
             </div>
           </div>
@@ -134,12 +136,16 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
     <script>
       const ordercards = document.querySelector(".ordercards");
+      const userdash = document.querySelector(".user-dash");
 
       let users = JSON.parse(localStorage.getItem("users")) || [];
       let onlineUser = JSON.parse(localStorage.getItem("onlineUser")) || [];
       let foundedUser = users.find(user => user.email === onlineUser.email);
+
+      
 
       if (foundedUser && foundedUser.enrolledCourses) {
         foundedUser.enrolledCourses.forEach(course => {
