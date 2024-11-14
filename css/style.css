@@ -1502,11 +1502,13 @@ textarea {
     gap: 0.625rem;
     align-items: center;
     justify-content: center;
-    background-color: #11e811;
+    background-color: rgb(240, 237, 237);
   }
 
 
   .menu {
+    display: flex;
+    flex-direction: column;
     height: 100;
     width: 100%;
 
@@ -1528,7 +1530,8 @@ textarea {
     font-weight: bold;
     width: 100%;
     border-bottom: 1px solid rgba(65, 64, 64, 0.3);
-    background: linear-gradient(to bottom, transparent, #11e811);
+    background-color: white;
+    /* background: linear-gradient(to bottom, transparent, #11e811); */
     text-align: center;
   }
 

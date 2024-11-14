@@ -13,6 +13,7 @@ let orderbtn = document.querySelector(".orderbtn button");
 let courseImg = document.querySelector(".course-img");
 let courseList = document.querySelector(".course-list");
 
+
 const urldata = new URLSearchParams(window.location.search);
 let courses = urldata.get("selectedcourses");
 let decodeddata = JSON.parse(decodeURIComponent(courses));
