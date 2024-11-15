@@ -182,14 +182,14 @@ img{
   margin-top: 30px;
 }
 .orderdetails h4{
-  text-align: center;
+  /* text-align: center; */
   font-size: 32px;
   font-weight: 700;
   color: #11e811;
 
 }
 .orderdetails h6{
-  text-align: center;
+  /* text-align: center; */
   font-size: 18px;
   font-weight: 400;
   color: #333;
@@ -411,14 +411,7 @@ img{
 
 
 
-  
-.myCourses{
-  position: absolute;
-  left: 0;
-  padding: 0;
-  margin: 0;
 
-}
 
   
 .cour-best-seller {
@@ -575,11 +568,12 @@ img{
 
 /* Header Styling */
 .orderdetails h4 {
+  width: 100%;
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
   font-weight: bold;
-  text-align: center;
+  /* text-align: center; */
   border-bottom: 2px solid #4CAF50;
   display: inline-block;
   padding-bottom: 5px;
@@ -814,7 +808,7 @@ background-color: rgb(18, 18, 3);
   }
 
   .menu ul li:hover {
-    background-color: #4b4545;
+    background-color: #11e811;
     color: #e64a19 !important;
 
 
