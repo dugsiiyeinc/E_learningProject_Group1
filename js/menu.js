@@ -27,26 +27,10 @@ hamburger.addEventListener("click", function (event) {
         icons[1].setAttribute('data-visible', "true");
        
        
-        setIndex();
+        
         
     }
-    const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
-
-    if(onlineUser){
-       
-        const signIn = document.getElementById('signIn');
-const signUp = document.getElementById('signUp');
-const userDash = document.getElementById('user-dash');
-const Logout = document.getElementById('Logout');
-        userDash.textContent = onlineUser.username
-      console.log(userDash.textContent);
-      console.log(signIn.textContent);
-    //   signIn.style.display = "none"
-    //   signUp.style.display = "none"
-      userDash.style.display = "block"
-      Logout.style.display = "block"
-      enrolButton.textContent = "Enroll"
-    }
+   
 });
 
 

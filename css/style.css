@@ -97,7 +97,7 @@ a {
   
 }
 
-#user-dash {
+.user-dash {
   display: none;
   color: white;
   font-size: 16px;
@@ -106,7 +106,7 @@ a {
 
 }
 
-#signIn {
+.signIn {
   color: white;
   text-decoration: none;
   font-size: 16px;
@@ -117,12 +117,12 @@ a {
   cursor: pointer;
 }
 
-#signIn:hover {
+.signIn:hover {
   color: #11e811;
   font-weight: bold;
 }
 
-#signUp {
+.signUp {
   text-decoration: none;
   color: #1f1f1f;
   font-size: 16px;
@@ -134,7 +134,7 @@ a {
   cursor: pointer;
 }
 
-#Logout {
+.Logout {
   text-decoration: none;
   color: #1f1f1f;
   font-size: 16px;
@@ -147,7 +147,7 @@ a {
 }
 
 
-#signUp:hover {
+.signUp:hover {
   background-color: #75ee75;
 }
 
@@ -1564,7 +1564,7 @@ textarea {
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
    }
 
-  #user-dash {
+  .user-dash {
     text-decoration: none;
     color: #1f1f1f;
     font-weight: bold;
@@ -1577,7 +1577,7 @@ textarea {
     cursor: pointer;
   }
 
-  #signIn {
+  .signIn {
     color: black;
     text-decoration: none;
     font-size: 16px;
@@ -1588,7 +1588,7 @@ textarea {
     cursor: pointer;
   }
 /* 
-  #signIn {
+  .signIn {
 
 
     text-decoration: none;
@@ -1602,12 +1602,12 @@ textarea {
     cursor: pointer;
   } */
 
-  #signIn:hover {
+  .signIn:hover {
     color: #11e811;
     font-weight: bold;
   }
 
-  #signUp {
+  .signUp {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -2195,7 +2195,7 @@ font-size: 16px;
 
   }
 
-  #Logout {
+  .Logout {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
