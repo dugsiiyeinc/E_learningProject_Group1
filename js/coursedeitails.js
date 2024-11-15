@@ -67,10 +67,34 @@ orderbtn.addEventListener("click", (e) => {
 
   }
   const proceedButton = document.getElementById("proceed");
+
+
   proceedButton.addEventListener("click", (e) => {
+
+    // const isFormValid = checkFormFields();
+
+    // if (isFormValid) {
+       
+
+
+
+
+      
+    // } else {
+    //     Swal.fire({
+    //         title: "Please fill out all required fields before proceeding.",
+    //         icon: "warning",
+    //         confirmButtonText: "OK"
+    //     });
+    // }
+
+
+
+
+
     if (!onlineUser) {
       Swal.fire({
-          title: "Before ordering the course, please log in",
+          title: "please log in",
           confirmButtonText: "OK"
       });
   } else {
@@ -227,5 +251,15 @@ if (foundeduser) {
 
 }
 
+
+
+
+function checkFormFields() {
+  return (
+      creditCardNumber.value.trim() !== "" &&
+      expMonth.value.trim() !== "" &&
+      expYear.value.trim() !== ""
+  );
+}
 
  

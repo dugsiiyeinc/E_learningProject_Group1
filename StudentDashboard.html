@@ -53,7 +53,8 @@
               <li><a href="contact.html">ContactUs</a></li>
             </ul>
             <div class="btn">
-              <a href="login.html" id="sign-in">Sign In</a>
+              <div id="user-dash">aki</div>
+              <a href="login.html" id="signIn">Sign In</a>
               <a href="registration.html" id="signUp">Sign Up</a>
               <a href="#" id="Logout" style="display: none;">Logout</a>
             </div>
@@ -138,7 +139,7 @@
     <script src="js/menu.js"></script>
     <script>
       const ordercards = document.querySelector(".ordercards");
-      const userdash = document.querySelector(".user-dash");
+      const userdash = document.querySelector("#user-dash");
 
       let users = JSON.parse(localStorage.getItem("users")) || [];
       let onlineUser = JSON.parse(localStorage.getItem("onlineUser")) || [];
@@ -175,6 +176,7 @@
       const links = document.querySelectorAll(".links");
       links.forEach(link => {
         link.addEventListener("click", e => {
+          e.preventDefault();
           const targetSection = e.target.getAttribute("href").substring(1);
           document.querySelectorAll(".orderdetails").forEach(section => {
             section.style.display = "none";
