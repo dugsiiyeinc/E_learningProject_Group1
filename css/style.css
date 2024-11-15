@@ -2443,6 +2443,11 @@ ul li a {
   padding: 20px;
   font-weight: bold;
 }
+.logo img {
+  font-size: 1rem;
+  width: 200px;
+  margin-top: -30px;
+}
   
   .desktop-menu {
     width: 100%;
