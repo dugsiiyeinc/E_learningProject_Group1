@@ -231,9 +231,15 @@ img{
 }
 
 .storeImg{
-  width: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+.ordercard img{
+  width: 300px;
   height: 200px;
 }
+
 
   /* -------------------------------------- */
   
@@ -1118,6 +1124,7 @@ flex-direction: column;
 .ordercards{
  
   width: 85%;
+
   margin: 0 auto;
   display: flex;
   flex-direction: column;
