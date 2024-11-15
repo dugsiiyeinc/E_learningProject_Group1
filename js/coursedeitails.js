@@ -67,10 +67,19 @@ orderbtn.addEventListener("click", (e) => {
 
   }
   const proceedButton = document.getElementById("proceed");
+
+
   proceedButton.addEventListener("click", (e) => {
+     e.preventDefault();
+    
+     const isFormValid = checkFormFields();
+   console.log(creditCardNumber.value);
+   if (isFormValid) {
+       
+  
     if (!onlineUser) {
       Swal.fire({
-          title: "Before ordering the course, please log in",
+          title: "please log in",
           confirmButtonText: "OK"
       });
   } else {
@@ -104,6 +113,22 @@ orderbtn.addEventListener("click", (e) => {
           console.log("User not found");
       }
   }
+
+
+
+      
+    } else {
+        Swal.fire({
+            title: "Please fill out all required fields before proceeding.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+    }
+
+
+
+
+
  
    
      //  e.preventDefault(); 
@@ -124,17 +149,6 @@ logout.addEventListener("click", () => {
 
 
 
-  if(enrolButton.textContent == "Enroll"){
-  
-    modal.style.display = 'block'
-
-  }
-  else{
-    e.preventDefault();
-    modalClose();
-        window.location.href='login.html'
-      
-  }
 
 
 
@@ -182,6 +196,17 @@ if (foundeduser) {
 
 
 }
+
+
+function checkFormFields() {
+
+  return (
+      creditCardNumber.value !== "" &&
+      expMonth.value!== "" &&
+      expYear.value!== ""
+  );
+}
+
 
 
  

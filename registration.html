@@ -12,66 +12,75 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="registration.css" />
+    <!-- <link rel="stylesheet" href="registration.css" /> -->
     <link rel="stylesheet" href="css/StudentDash.css">
     <link rel="stylesheet" href="css/Login.css">
   </head>
   <body>
     <header>
+
+      <!-- Humburger -->
       <div class="hamburger">
-        <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
-        <i class="fa-solid fa-xmark" data-visible="false"></i>
-      </div>
-      <nav class="desktop-menu">
-        <div class="logo">
-          <img src="images/logoooooooooooooo.png" alt="Logo" />
-        </div>
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="btn">
-          <div id="user-dash">aki</div>
-          <a href="login.html" id="signIn">Sign In</a>
-          <a href="registration.html" id="signUp">Sign Up</a>
-          <a href="#" id="Logout" style="display: none;">Logout</a>
-        </div>
-      </nav>
-      <div class="mobile-menu">
-        <div class="logo">
-          <a href="/index.html">
-            <img src="images/logoooooooooooooo.png" alt="Logo" />
-          </a>
-        </div>
-        <div class="menu-link" data-visible="false">
-          <div class="menu">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="aboutUs.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="btn">
-              <a href="login.html" id="sign-in">Sign In</a>
-              <a href="registration.html" id="signUp">Sign Up</a>
-              <a href="#" id="Logout" style="display: none;">Logout</a>
-            </div>
+       <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+         <i class="fa-solid fa-xmark" data-visible="false"></i>
+     </div>
+  <nav  class="desktop-menu">
+     <div class="logo">
+       <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+       <img src="images/logoooooooooooooo.png" alt="Logo" />
+     </div>
+     <ul class="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="aboutUs.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+     </ul>
+  
+     <div class="btn">
+       <div class="user-dash">aki</div>
+       <a href="login.html"  class="signIn">Sign In</a>
+       <a href="registration.html" class="signUp" >Sign Up</a>
+       <a href="#" class="Logout" style="display: none;">Logout</a>
+     </div>
+  
+   </nav>
+  
+   <div class="mobile-menu">
+     <div class="logo">
+       <a href="index.html">
+         <img src="images/leanOnline.png" alt="">
+       </a>
+     </div>
+  
+       
+       <!-- right menu -->
+       <div class="menu-link" data-visible="false">
+         <div class="menu">
+           <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="courses.html">Courses</a></li>
+             <li><a href="aboutUs.html">AboutUs</a></li>
+             <li><a href="contact.html">ContactUs</a></li>
+           </ul>
+  
+           <div class="btn">
+            <div class="user-dash">aki</div>
+            <a href="login.html"  class="signIn">Sign In</a>
+            <a href="registration.html" class="signUp" >Sign Up</a>
+            <a href="#" class="Logout" style="display: none;">Logout</a>
           </div>
-        </div>
-      </div>
-    </header>
+    
+   </div>
+   </div>
+  </div>
+   </header>
    
     <section>
-      <div class="container">
-       
-        <div class="signUP">
-         
-
-          <form>
+      <div class="auth-container">
+        <h1 id="form-title">Registration Form</h1>
+          <form id="authForm">
            
-            <h1 style="text-align: center; margin-bottom: 30px; color: #1e8111; font-weight: 900;">Registration Form</h1>
+           
             <!-- <label>Full name</label> -->
             
             <!-- <input type="text" class="fullname" placeholder="Enter full Name" required /> -->
@@ -98,9 +107,13 @@
               placeholder="confirm password"
             />
             <button class="submit" type="submit">Submit</button>
-            <p>I have an account <span class="span">sign in</span></p>
+           
           </form>
-        </div>
+          <p id="authSwitch">
+            I have an account?  <a href="login.html">sign in</a>
+          </p>
+          
+      
       </div>
     </section>
 
@@ -237,4 +250,6 @@
     </script>
     <!-- <script src="js/NewUser.js"></script> -->
   </body>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
 </html>

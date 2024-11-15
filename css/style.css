@@ -97,31 +97,32 @@ a {
   
 }
 
-#user-dash {
+.user-dash {
   display: none;
   color: white;
   font-size: 16px;
-  font-weight: 32px;
+  font-weight: bold;
   cursor: pointer;
 
 }
 
-#signIn {
+.signIn {
   color: white;
   text-decoration: none;
   font-size: 16px;
   padding: 10px 30px;
   border: none;
   border-radius: 10px;
+
   cursor: pointer;
 }
 
-#signIn:hover {
+.signIn:hover {
   color: #11e811;
   font-weight: bold;
 }
 
-#signUp {
+.signUp {
   text-decoration: none;
   color: #1f1f1f;
   font-size: 16px;
@@ -133,7 +134,7 @@ a {
   cursor: pointer;
 }
 
-#Logout {
+.Logout {
   text-decoration: none;
   color: #1f1f1f;
   font-size: 16px;
@@ -146,7 +147,7 @@ a {
 }
 
 
-#signUp:hover {
+.signUp:hover {
   background-color: #75ee75;
 }
 
@@ -1516,60 +1517,54 @@ textarea {
     background-color: #000000;
   }
 
-  .menu ul {
-    /* width: 100%;
-  
-background-color: rgb(18, 18, 3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* gap: 1rem; */
-  }
-
   .menu ul li {
-   left:0;
-   right: 0;
-    list-style-type: none;
-    padding: 0.5375rem 8.5rem;
-    font-weight: bold;
-    width: 100%;
-    border-bottom: 1px solid rgba(249, 248, 248, 0.3);
-    background-color: #1f1f1f;
-    /* background: linear-gradient(to bottom, transparent, #11e811); */
-    text-align: center;
-  }
+    left:0;
+    right: 0;
+     list-style-type: none;
+     padding: 0.5375rem 8.5rem;
+     font-weight: bold;
+     width: 100%;
+     border-bottom: 1px solid rgba(249, 248, 248, 0.3);
+     background-color: white;
+     /* background: linear-gradient(to bottom, transparent, #11e811); */
+     text-align: center;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+   }
+ 
+   .menu ul li:hover {
+     background-color: #11e811;
+     color: #e64a19 !important;
+ 
+ 
+   }
+ 
+   .menu ul li a {
+     text-align: center;
+     color: #1f1f1f;
+   }
+ 
+   /* .menu li a:hover {
+     color: #e64a19;
+   } */
+ 
+   .btn {
+ 
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     width: 100%;
+     padding: 10px;
+     font-weight: bold;
+     width: 100%;
+     border-bottom: 1px solid rgba(249, 248, 248, 0.3);
+     background-color: white;
+     /* background: linear-gradient(to bottom, transparent, #11e811); */
+     text-align: center;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+   }
 
-  .menu ul li:hover {
-    background-color: #4b4545;
-    color: #e64a19 !important;
-
-
-  }
-
-  .menu ul li a {
-    text-align: center;
-    color: white;
-  }
-
-  /* .menu li a:hover {
-    color: #e64a19;
-  } */
-
-  .btn {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    padding: 5px;
-    background-color: #1f1f1f;
-/* 
-    background: linear-gradient(to bottom, transparent, #1f1); */
-  }
-
-  #user-dash {
+  .user-dash {
     text-decoration: none;
     color: #1f1f1f;
     font-weight: bold;
@@ -1582,11 +1577,22 @@ background-color: rgb(18, 18, 3);
     cursor: pointer;
   }
 
-  #sign-in {
+  .signIn {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+  
+    cursor: pointer;
+  }
+/* 
+  .signIn {
 
 
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 30px;
@@ -1594,14 +1600,14 @@ background-color: rgb(18, 18, 3);
     border: none;
     border-radius: 10px;
     cursor: pointer;
-  }
+  } */
 
-  #signIn:hover {
+  .signIn:hover {
     color: #11e811;
     font-weight: bold;
   }
 
-  #signUp {
+  .signUp {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -2189,7 +2195,7 @@ font-size: 16px;
 
   }
 
-  #Logout {
+  .Logout {
     text-decoration: none;
     color: #fff;
     font-size: 16px;

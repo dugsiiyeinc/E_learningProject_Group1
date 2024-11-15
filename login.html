@@ -3,57 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auth - Login & Register</title>
-    <link rel="stylesheet" href="css/Login.css" />
+    <title>E-learning website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <link rel="stylesheet" href="registration.css" /> -->
     <link rel="stylesheet" href="css/StudentDash.css">
+    <link rel="stylesheet" href="css/Login.css">
+    
+    
   </head>
   <body>
-
     <header>
+
+      <!-- Humburger -->
       <div class="hamburger">
-        <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
-        <i class="fa-solid fa-xmark" data-visible="false"></i>
-      </div>
-      <nav class="desktop-menu">
-        <div class="logo">
-          <img src="images/logoooooooooooooo.png" alt="Logo" />
-        </div>
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="btn">
-          <div id="user-dash">aki</div>
-          <a href="login.html" id="signIn">Sign In</a>
-          <a href="registration.html" id="signUp">Sign Up</a>
-          <a href="#" id="Logout" style="display: none;">Logout</a>
-        </div>
-      </nav>
-      <div class="mobile-menu">
-        <div class="logo">
-          <a href="/index.html">
-            <img src="images/logoooooooooooooo.png" alt="Logo" />
-          </a>
-        </div>
-        <div class="menu-link" data-visible="false">
-          <div class="menu">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="aboutUs.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="btn">
-              <a href="login.html" id="sign-in">Sign In</a>
-              <a href="newUser.html" id="signUp">Sign Up</a>
-              <a href="#" id="Logout" style="display: none;">Logout</a>
-            </div>
+       <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+         <i class="fa-solid fa-xmark" data-visible="false"></i>
+     </div>
+  <nav  class="desktop-menu">
+     <div class="logo">
+       <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+       <img src="images/logoooooooooooooo.png" alt="Logo" />
+     </div>
+     <ul class="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="aboutUs.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+     </ul>
+  
+     <div class="btn">
+       <div class="user-dash">aki</div>
+       <a href="login.html"  class="signIn">Sign In</a>
+       <a href="registration.html" class="signUp" >Sign Up</a>
+       <a href="#" class="Logout" style="display: none;">Logout</a>
+     </div>
+  
+   </nav>
+  
+   <div class="mobile-menu">
+     <div class="logo">
+       <a href="index.html">
+         <img src="images/leanOnline.png" alt="">
+       </a>
+     </div>
+  
+       
+       <!-- right menu -->
+       <div class="menu-link" data-visible="false">
+         <div class="menu">
+           <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="courses.html">Courses</a></li>
+             <li><a href="aboutUs.html">AboutUs</a></li>
+             <li><a href="contact.html">ContactUs</a></li>
+           </ul>
+  
+           <div class="btn">
+            <div class="user-dash">aki</div>
+            <a href="login.html"  class="signIn">Sign In</a>
+            <a href="registration.html" class="signUp" >Sign Up</a>
+            <a href="#" class="Logout" style="display: none;">Logout</a>
           </div>
-        </div>
-      </div>
-    </header>
+    
+   </div>
+   </div>
+  </div>
+   </header>
+
     
       <div class="auth-container">
         <h1 id="form-title">Sign In</h1>
@@ -86,5 +109,7 @@
     
 
   <script src="js/login-1.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
   </body>
 </html>

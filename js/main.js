@@ -1,7 +1,9 @@
-const signIn = document.getElementById('signIn');
-const signUp = document.getElementById('signUp');
-const userDash = document.getElementById('user-dash');
-const Logout = document.getElementById('Logout');
+
+const signIn = document.querySelectorAll('.signIn');
+const signUp = document.querySelectorAll('.signUp');
+const usersDash = document.querySelectorAll('.user-dash');
+const Logout = document.querySelectorAll('.Logout');
+
 const modal = document.querySelector(".modal")
 const enrolButton = document.querySelector(".btn-enroll")
 const closeModal = document.getElementById('close-model')
@@ -22,39 +24,67 @@ const selectCards = document.getElementById('selectCards');
 const localPayment = document.getElementById('localPayment');
 const proceed = document.getElementById('proceed')
 
-userDash.addEventListener('click', ()=>{
-    window.location.href = 'StudentDashboard.html';
+usersDash.forEach(userDash =>{
+   
+  userDash.addEventListener('click', (e)=>{
     
+    e.preventDefault();
+      window.location.href = 'StudentDashboard.html';
+      
+  })
 })
 
-Logout.addEventListener('click', ()=>{
-    localStorage.removeItem("onlineUser");
-    window.location.href = "login.html"
-  
-    
-})
 
+Logout.forEach(logOutBtn =>{
+
+  logOutBtn.addEventListener('click', ()=>{
+      localStorage.removeItem("onlineUser");
+      window.location.href = "login.html"
+    
+      
+  })
+})
+setIndex()
 function setIndex(){
   const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
   if(onlineUser){
-    userDash.textContent = onlineUser.username
-    signIn.style.display = "none"
-    signUp.style.display = "none"
-    userDash.style.display = "block"
-    Logout.style.display = "block"
+    const signIn = document.querySelectorAll('.signIn');
+const signUp = document.querySelectorAll('.signUp');
+const usersDash = document.querySelectorAll('.user-dash');
+const Logout = document.querySelectorAll('.Logout');
+
+
+    usersDash.forEach(userDash => {
+      userDash.textContent = onlineUser.username;
+      userDash.style.display = "block";
+    });
+    usersDash[0].textContent = onlineUser.username
+    usersDash[1].textContent = onlineUser.username
+    signIn[0].style.display = "none"
+    signIn[1].style.display = "none"
+    signUp[0].style.display = "none"
+    signUp[1].style.display = "none"
+    usersDash[0].style.display = "block"
+    usersDash[1].style.display = "block"
+    Logout[0].style.display = "block"
+    Logout[1].style.display = "block"
     enrolButton.textContent = "Enroll"
   }
-  else{
-
-  }
+ 
   
   
 }
-setIndex();
 
+// setIndex();
 
 function enrollBtn(){
   
+}
+
+closeModal.addEventListener('click', modalClose);
+
+function modalClose(){
+  modal.style.display = 'none'
 }
 
 enrolButton.addEventListener('click', (e)=>{
@@ -75,156 +105,10 @@ enrolButton.addEventListener('click', (e)=>{
    
 })
 
-displaycoursedetail = () => {
-  let users = JSON.parse(localStorage.getItem("users"))|| []
-      let currentUser = JSON.parse(localStorage.getItem("currentUser")) || []
-      let foundeduser=users.find(user=>user.email===currentUser.email)
-
-  orderbtn.addEventListener("click", (e) => {
-    
-    if (!userdata) {
-      
-      // Swal.fire({
-      //   title: "before order the course make login",
-     
-      //   confirmButtonText: "ok"
-      // });
-    }
-    
-    if (foundeduser) {
-
-      if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
-        let selectedcourse = JSON.stringify(decodeddata);
-      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-        selectedcourse
-      )}`;
-
-
-        }else{
-          foundeduser.enrolledCourses.push(decodeddata)
-    
-
-          let storagecourses=JSON.parse(localStorage.getItem("courses"))
-          
-       
-
-        let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
-
-
-     foundeddourse.enrollmentCount ++
-     console.log(foundeddourse)
-
-
-     localStorage.setItem("courses" ,JSON.stringify(storagecourses))
-
- 
-
-
-          localStorage.setItem("users", JSON.stringify(users))
-        let selectedcourse = JSON.stringify(decodeddata);
-      window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-        selectedcourse
-      )}`;
-
-
-        }
-        
-        }else {
-      console.log("user not found")
-
-
-
-    }
-
-  
-    } )
-
-
-if(foundeduser){
-if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
-          button.textContent ="continue learning"
-
-
-        }
-}else{
-return
-}
- 
-
-        myaccount.addEventListener("click",()=>{
-          window.location.href="userAccount.html"
-        })
-        logout.addEventListener("click",()=>{
-          localStorage.removeItem("currentUser");
-
-
-          window.location.href="index.html"
-        })
-};
-displaycoursedetail();
-
-
-proceed.addEventListener('click', (e)=>{
-  e.preventDefault();
-
-//   Swal.fire({
-//     title: "You enrolled successfully",
- 
-//     confirmButtonText: "ok"
-
-  
-    
-//   });
-//   modalClose();
-setTimeout(()=>{
-  
-
-  let selectedcourse = JSON.stringify(decodeddata);
-  window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-    selectedcourse
-  )}`;
-},3000);
-
-
-  if(foundeduser.enrolledCourses.some(enrolled=>enrolled.id===decodeddata.id)){
-    let selectedcourse = JSON.stringify(decodeddata);
-  window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-    selectedcourse
-  )}`;
-
-
-    }else{
-      foundeduser.enrolledCourses.push(decodeddata)
-
-
-      let storagecourses=JSON.parse(localStorage.getItem("courses"))
-      
-   
-
-    let foundeddourse=  storagecourses.find(c=>c.id===decodeddata.id)
-
-
- foundeddourse.enrollmentCount ++
- console.log(foundeddourse)
-
-
- localStorage.setItem("courses" ,JSON.stringify(storagecourses))
 
 
 
 
-      localStorage.setItem("users", JSON.stringify(users))
-    let selectedcourse = JSON.stringify(decodeddata);
-  window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(
-    selectedcourse
-  )}`;
-
-
-    }
-
-
-
-})
 
 
 Golis.addEventListener('click', ()=>{

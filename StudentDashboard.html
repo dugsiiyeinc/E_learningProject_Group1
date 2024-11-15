@@ -13,55 +13,66 @@
     />
     <link rel="stylesheet" href="css/StudentDash.css">
     <link rel="stylesheet" href="course.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
     <header>
+
+      <!-- Humburger -->
       <div class="hamburger">
-        <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
-        <i class="fa-solid fa-xmark" data-visible="false"></i>
-      </div>
-      <nav class="desktop-menu">
-        <div class="logo">
-          <img src="images/logoooooooooooooo.png" alt="Logo" />
-        </div>
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="btn">
-          <div id="user-dash">aki</div>
-          <a href="login.html" id="signIn">Sign In</a>
-          <a href="registration.html" id="signUp">Sign Up</a>
-          <a href="#" id="Logout" style="display: none;">Logout</a>
-        </div>
-      </nav>
-      <div class="mobile-menu">
-        <div class="logo">
-          <a href="/index.html">
-            <img src="images/leanOnline.png" alt="">
-          </a>
-        </div>
-        <div class="menu-link" data-visible="false">
-          <div class="menu">
-            <ul class="navbar">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="aboutUs.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="btn">
-              <div id="user-dash">aki</div>
-              <a href="login.html" id="signIn">Sign In</a>
-              <a href="newUser.html" id="signUp">Sign Up</a>
-              <a href="#" id="Logout" style="display: none;">Logout</a>
-            </div>
+       <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
+         <i class="fa-solid fa-xmark" data-visible="false"></i>
+     </div>
+  <nav  class="desktop-menu">
+     <div class="logo">
+       <!-- <h1>LEARN <em class="logo-Online">ONLINE</em></h1> -->
+       <img src="images/logoooooooooooooo.png" alt="Logo" />
+     </div>
+     <ul class="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="aboutUs.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+     </ul>
+  
+     <div class="btn">
+       <div class="user-dash">aki</div>
+       <a href="login.html"  class="signIn">Sign In</a>
+       <a href="registration.html" class="signUp" >Sign Up</a>
+       <a href="#" class="Logout" style="display: none;">Logout</a>
+     </div>
+  
+   </nav>
+  
+   <div class="mobile-menu">
+     <div class="logo">
+       <a href="index.html">
+        <img src="images/logoooooooooooooo.png" alt="Logo" />
+       </a>
+     </div>
+  
+       
+       <!-- right menu -->
+       <div class="menu-link" data-visible="false">
+         <div class="menu">
+           <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="courses.html">Courses</a></li>
+             <li><a href="aboutUs.html">AboutUs</a></li>
+             <li><a href="contact.html">ContactUs</a></li>
+           </ul>
+  
+           <div class="btn">
+            <div class="user-dash">aki</div>
+            <a href="login.html"  class="signIn">Sign In</a>
+            <a href="registration.html" class="signUp" >Sign Up</a>
+            <a href="#" class="Logout" style="display: none;">Logout</a>
           </div>
-        </div>
-      </div>
-    </header>
+    
+   </div>
+   </div>
+  </div>
+   </header>
 
     <div class="dashcontainer">
       <div class="dashboard">
@@ -139,7 +150,7 @@
     <script src="js/menu.js"></script>
     <script>
       const ordercards = document.querySelector(".ordercards");
-      const userdash = document.querySelector(".user-dash");
+      const userdash = document.querySelector("#user-dash");
 
       let users = JSON.parse(localStorage.getItem("users")) || [];
       let onlineUser = JSON.parse(localStorage.getItem("onlineUser")) || [];
@@ -176,6 +187,7 @@
       const links = document.querySelectorAll(".links");
       links.forEach(link => {
         link.addEventListener("click", e => {
+          e.preventDefault();
           const targetSection = e.target.getAttribute("href").substring(1);
           document.querySelectorAll(".orderdetails").forEach(section => {
             section.style.display = "none";
