@@ -153,17 +153,7 @@ logout.addEventListener("click", () => {
 
 
   
-closeModal.addEventListener('click', modalClose);
 
-function modalClose(){
-  modal.style.display = 'none'
-}
-
-window.onclick = function(event){
-  if(event.target == modal){
-    modalClose()
-  }
-}
 
 
 
