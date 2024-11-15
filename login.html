@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auth - Login & Register</title>
-    <link rel="stylesheet" href="css/Login.css" />
+    <title>E-learning website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <link rel="stylesheet" href="registration.css" /> -->
     <link rel="stylesheet" href="css/StudentDash.css">
+    <link rel="stylesheet" href="css/Login.css">
+    
+    
   </head>
   <body>
-
     <header>
       <div class="hamburger">
         <i class="fa-solid fa-bars-staggered" data-visible="true"></i>
@@ -21,8 +31,8 @@
         <ul class="navbar">
           <li><a href="index.html">Home</a></li>
           <li><a href="courses.html">Courses</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="aboutUs.html">AboutUs</a></li>
+          <li><a href="contact.html">ContactUs</a></li>
         </ul>
         <div class="btn">
           <div id="user-dash">aki</div>
@@ -42,18 +52,19 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="courses.html">Courses</a></li>
-              <li><a href="aboutUs.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="aboutUs.html">AboutUs</a></li>
+              <li><a href="contact.html">ContactUs</a></li>
             </ul>
             <div class="btn">
               <a href="login.html" id="sign-in">Sign In</a>
-              <a href="newUser.html" id="signUp">Sign Up</a>
+              <a href="registration.html" id="signUp">Sign Up</a>
               <a href="#" id="Logout" style="display: none;">Logout</a>
             </div>
           </div>
         </div>
       </div>
     </header>
+
     
       <div class="auth-container">
         <h1 id="form-title">Sign In</h1>
@@ -86,5 +97,7 @@
     
 
   <script src="js/login-1.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
   </body>
 </html>

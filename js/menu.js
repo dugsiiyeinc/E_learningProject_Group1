@@ -24,7 +24,7 @@ hamburger.addEventListener("click", function (event) {
         icons[0].setAttribute('data-visible', "false");
         icons[1].setAttribute('data-visible', "true");
         const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
-        console.log("Mobile user",localStorage.getItem("onlineUser"));
+       
         if(onlineUser){
             signIn.textContent = onlineUser.username
           console.log(userDash.textContent);
