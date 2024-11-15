@@ -153,55 +153,12 @@ logout.addEventListener("click", () => {
 
 
   
-closeModal.addEventListener('click', modalClose);
-
-function modalClose(){
-  modal.style.display = 'none'
-}
-
-window.onclick = function(event){
-  if(event.target == modal){
-    modalClose()
-  }
-}
 
 
-Hormood.addEventListener('click', ()=>{
-  
-  golisNumber.style.display = 'none'
-  hormoodNumber.style.display = 'block'
-  somtelNumber.style.display = 'none'
-  telesomeNumber.style.display = 'none'
-  creditCardNumber.style.display = 'none'
-  expMonth.style.display = 'none'
-  expYear.style.display = 'none'
-  cVv.style.display = 'none'
-  
-})
-somtel.addEventListener('click', ()=>{
-  
-  golisNumber.style.display = 'none'
-  hormoodNumber.style.display = 'none'
-  somtelNumber.style.display = 'block'
-  telesomeNumber.style.display = 'none'
-  creditCardNumber.style.display = 'none'
-  expMonth.style.display = 'none'
-  expYear.style.display = 'none'
-  cVv.style.display = 'none'
-  
-})
-Telesom.addEventListener('click', ()=>{
-  
-  golisNumber.style.display = 'none'
-  hormoodNumber.style.display = 'none'
-  somtelNumber.style.display = 'none'
-  telesomeNumber.style.display = 'block'
-  creditCardNumber.style.display = 'none'
-  expMonth.style.display = 'none'
-  expYear.style.display = 'none'
-  cVv.style.display = 'none'
-  
-})
+
+
+
+
 cards.addEventListener('click', ()=>{
   
   golisNumber.style.display = 'none'
