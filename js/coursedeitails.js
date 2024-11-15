@@ -165,18 +165,7 @@ window.onclick = function(event){
   }
 }
 
-Golis.addEventListener('click', ()=>{
-  
-  golisNumber.style.display = 'block'
-  hormoodNumber.style.display = 'none'
-  somtelNumber.style.display = 'none'
-  telesomeNumber.style.display = 'none'
-  creditCardNumber.style.display = 'none'
-  expMonth.style.display = 'none'
-  expYear.style.display = 'none'
-  cVv.style.display = 'none'
-  
-})
+
 Hormood.addEventListener('click', ()=>{
   
   golisNumber.style.display = 'none'
