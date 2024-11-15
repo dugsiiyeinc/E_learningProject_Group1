@@ -1,3 +1,5 @@
+
+
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".menu-link");
 const icons = document.querySelectorAll("i");
@@ -26,7 +28,11 @@ hamburger.addEventListener("click", function (event) {
         const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
        
         if(onlineUser){
-            signIn.textContent = onlineUser.username
+            const signIn = document.getElementById('signIn');
+const signUp = document.getElementById('signUp');
+const userDash = document.getElementById('user-dash');
+const Logout = document.getElementById('Logout');
+            userDash.textContent = onlineUser.username
           console.log(userDash.textContent);
           signIn.style.display = "none"
           signUp.style.display = "none"
