@@ -275,3 +275,18 @@ Telesom.addEventListener('click', ()=>{
   cVv.style.display = 'none'
   
 })
+cards.addEventListener('click', ()=>{
+  
+  golisNumber.style.display = 'none'
+  hormoodNumber.style.display = 'none'
+  somtelNumber.style.display = 'none'
+  telesomeNumber.style.display = 'none'
+  localPayment.style.display = 'none'
+  creditCardNumber.style.display = 'block'
+  expMonth.style.display = 'block'
+  expYear.style.display = 'block'
+  cVv.style.display = 'block'
+  
+
+  
+})
