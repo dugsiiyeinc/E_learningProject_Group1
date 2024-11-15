@@ -254,12 +254,5 @@ if (foundeduser) {
 
 
 
-function checkFormFields() {
-  return (
-      creditCardNumber.value.trim() !== "" &&
-      expMonth.value.trim() !== "" &&
-      expYear.value.trim() !== ""
-  );
-}
 
  

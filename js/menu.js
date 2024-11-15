@@ -25,24 +25,32 @@ hamburger.addEventListener("click", function (event) {
         mobileMenu.setAttribute('data-visible', "true");
         icons[0].setAttribute('data-visible', "false");
         icons[1].setAttribute('data-visible', "true");
-        const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
        
-        if(onlineUser){
-            const signIn = document.getElementById('signIn');
+       
+        setIndex();
+        
+    }
+    const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
+
+    if(onlineUser){
+       
+        const signIn = document.getElementById('signIn');
 const signUp = document.getElementById('signUp');
 const userDash = document.getElementById('user-dash');
 const Logout = document.getElementById('Logout');
-            userDash.textContent = onlineUser.username
-          console.log(userDash.textContent);
-          signIn.style.display = "none"
-          signUp.style.display = "none"
-          userDash.style.display = "block"
-          Logout.style.display = "block"
-          enrolButton.textContent = "Enroll"
-        }
-        
+        userDash.textContent = onlineUser.username
+      console.log(userDash.textContent);
+      console.log(signIn.textContent);
+    //   signIn.style.display = "none"
+    //   signUp.style.display = "none"
+      userDash.style.display = "block"
+      Logout.style.display = "block"
+      enrolButton.textContent = "Enroll"
     }
 });
+
+
+
 
 
 
