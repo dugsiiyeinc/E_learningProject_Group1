@@ -239,3 +239,15 @@ Golis.addEventListener('click', ()=>{
   cVv.style.display = 'none'
   
 })
+Hormood.addEventListener('click', ()=>{
+  
+  golisNumber.style.display = 'none'
+  hormoodNumber.style.display = 'block'
+  somtelNumber.style.display = 'none'
+  telesomeNumber.style.display = 'none'
+  creditCardNumber.style.display = 'none'
+  expMonth.style.display = 'none'
+  expYear.style.display = 'none'
+  cVv.style.display = 'none'
+  
+})
