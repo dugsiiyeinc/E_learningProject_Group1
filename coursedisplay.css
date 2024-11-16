@@ -550,4 +550,9 @@ h4,h5{
   .right-description .card h1{
     font-size: 1.5rem;
   }
+  main{
+    
+    position: relative;
+    top: -150px;
+  }
 }
