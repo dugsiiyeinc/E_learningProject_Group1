@@ -2590,7 +2590,11 @@ ul li a:hover {
         width: 99%;
         
       }
-
+      .signIn{
+        padding: 10px 40px;
+        font-size: 0.5rem;
+        
+      }
       
 }
 
