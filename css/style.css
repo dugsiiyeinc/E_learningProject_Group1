@@ -2565,8 +2565,20 @@ ul li a {
       .contactUs{
         width: 100%;
       }
+      .c-b-payment{
+        position: absolute;
+        top: 40%;
+        right: calc(95vw - 370px - 152px - 40px);
+        width: 450px;
+      }
+
+      .coursesdetail{
+        margin-top: 50%;
+        width: 99%;
+        
+      }
+
       
-     
 }
 
 
