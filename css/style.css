@@ -2428,6 +2428,20 @@ font-size: 16px;
     padding: 0 10px;
     cursor: pointer;
   }
+  .modal-content{
+    width: 90%;
+    height: 100%;
+  }
+  .modal {
+    display: none;
+    position: a;
+    z-index: 111;
+    left: 0;
+    top: -100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
 }
 
 
