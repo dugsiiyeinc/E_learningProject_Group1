@@ -2453,6 +2453,9 @@ ul li a {
   padding: 20px;
   font-weight: bold;
 }
+ul li a:hover {
+  font-size: 0.8rem;
+}
 .btn {
   display: flex;
   align-items: center;
@@ -2468,6 +2471,8 @@ ul li a {
 }
 .user-dash{
   font-size: 0.8rem;
+  margin: 10px;
+
 }
   
   .desktop-menu {
