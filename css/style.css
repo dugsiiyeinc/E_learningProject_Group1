@@ -2474,6 +2474,14 @@ ul li a:hover {
   margin: 10px;
 
 }
+.footer{
+  padding: 0%;
+}
+.footer-contents{
+  
+  width: 100%;
+  margin: 0;
+}
   
   .desktop-menu {
     width: 100%;
