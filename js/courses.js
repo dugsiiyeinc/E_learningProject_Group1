@@ -76,7 +76,7 @@ displaycourses=(item)=>{
 item.forEach(element => {
   // console.log(element)
   coursedisplay.innerHTML+=`
-  <div class="card-course">
+  <div class="card-course cardss-course">
           <div class="image-container">
           
             <img src="${element.photo}"  class="img" data-courseid="${element.id}"/>
