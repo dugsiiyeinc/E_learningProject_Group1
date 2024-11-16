@@ -2555,6 +2555,16 @@ ul li a {
       background-color: white;
       color: #333;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);}
+
+      .getIntouch{
+        display: flex;
+        flex-direction: column;
+        width: 753.25px;
+        
+      }
+      .contactUs{
+        width: 100%;
+      }
       
      
 }
