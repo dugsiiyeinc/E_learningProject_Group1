@@ -66,57 +66,129 @@ orderbtn.addEventListener("click", (e) => {
     modal.style.display = 'block'
 
   }
-  const proceedButton = document.getElementById("proceed");
 
 
-  proceedButton.addEventListener("click", (e) => {
-     e.preventDefault();
-    
-     const isFormValid = checkFormFields();
-   console.log(creditCardNumber.value);
-   if (isFormValid) {
-       
-  
-    if (!onlineUser) {
-      Swal.fire({
-          title: "please log in",
-          confirmButtonText: "OK"
-      });
-  } else {
-      let foundUser = users.find(user => user.email === onlineUser.email);
-
-      if (foundUser) {
-          // Initialize `enrolledCourses` array if it doesn’t exist
-          foundUser.enrolledCourses = foundUser.enrolledCourses || [];
-
-          // Check if the course is already enrolled by the user
-          if (!foundUser.enrolledCourses.some((enrolled) => enrolled.id === decodeddata.id)) {
-              foundUser.enrolledCourses.push(decodeddata);  // Add course to user's enrolled courses
-              localStorage.setItem("users", JSON.stringify(users));  // Update `users` in localStorage
-              Swal.fire("Enrolled!", `${decodeddata.title} has been added to your courses`, "success");
-
-              // Redirect to course display page with the selected course details
-            setTimeout(()=>{
-              let selectedcourse = JSON.stringify(decodeddata);
-              window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
-            },3000)
-          } else {
-              Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
-
-              // Redirect to course display for an already enrolled course
-              setTimeout(() => {
-                let selectedcourse = JSON.stringify(decodeddata);
-              window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
-              }, 3000);
-          }
-      } else {
-          console.log("User not found");
-      }
-  }
+})
 
 
+const proceedButton = document.getElementById("proceed");
 
-      
+proceedButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Modal field validation
+    const fullNameInput = document.querySelector('input[placeholder="Abdulahi Awil"]');
+    const emailInput = document.querySelector('input[placeholder="example@example.com"]');
+    const stateInput = document.querySelector('input[placeholder="Puntland"]');
+    const cityInput = document.querySelector('input[placeholder="Garowe"]');
+    const countryInput = document.querySelector('input[placeholder="Somalia"]');
+    const zipCodeInput = document.querySelector('input[placeholder="+252"]');
+
+    if (!fullNameInput.value.trim()) {
+        Swal.fire({
+            title: "Missing Field",
+            text: "Please fill in your Full Name.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+        fullNameInput.focus();
+        return;
+    }
+
+    if (!emailInput.value.trim()) {
+        Swal.fire({
+            title: "Missing Field",
+            text: "Please fill in your Email.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+        emailInput.focus();
+        return;
+    }
+
+    if (!stateInput.value.trim()) {
+        Swal.fire({
+            title: "Missing Field",
+            text: "Please fill in your State.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+        stateInput.focus();
+        return;
+    }
+
+    if (!cityInput.value.trim()) {
+        Swal.fire({
+            title: "Missing Field",
+            text: "Please fill in your City.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+        cityInput.focus();
+        return;
+    }
+
+    if (!countryInput.value.trim()) {
+        Swal.fire({
+            title: "Missing Field",
+            text: "Please fill in your Country.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+        countryInput.focus();
+        return;
+    }
+
+    if (!zipCodeInput.value.trim()) {
+        Swal.fire({
+            title: "Missing Field",
+            text: "Please fill in your Zip Code.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+        zipCodeInput.focus();
+        return;
+    }
+
+    // Check form fields (specific to credit card details)
+    const isFormValid = checkFormFields();
+    if (isFormValid) {
+        if (!onlineUser) {
+            Swal.fire({
+                title: "Please log in",
+                confirmButtonText: "OK"
+            });
+        } else {
+            let foundUser = users.find(user => user.email === onlineUser.email);
+
+            if (foundUser) {
+                // Initialize `enrolledCourses` array if it doesn’t exist
+                foundUser.enrolledCourses = foundUser.enrolledCourses || [];
+
+                // Check if the course is already enrolled by the user
+                if (!foundUser.enrolledCourses.some((enrolled) => enrolled.id === decodeddata.id)) {
+                    foundUser.enrolledCourses.push(decodeddata);  // Add course to user's enrolled courses
+                    localStorage.setItem("users", JSON.stringify(users));  // Update `users` in localStorage
+                    Swal.fire("Enrolled!", `${decodeddata.title} has been added to your courses`, "success");
+
+                    // Redirect to course display page with the selected course details
+                    setTimeout(() => {
+                        let selectedcourse = JSON.stringify(decodeddata);
+                        window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
+                    }, 3000);
+                } else {
+                    Swal.fire("Already Enrolled", "You are already enrolled in this course.", "info");
+
+                    // Redirect to course display for an already enrolled course
+                    setTimeout(() => {
+                        let selectedcourse = JSON.stringify(decodeddata);
+                        window.location.href = `coursdisplay.html?selectedcourses=${encodeURIComponent(selectedcourse)}`;
+                    }, 3000);
+                }
+            } else {
+                console.log("User not found");
+            }
+        }
     } else {
         Swal.fire({
             title: "Please fill out all required fields before proceeding.",
@@ -124,23 +196,20 @@ orderbtn.addEventListener("click", (e) => {
             confirmButtonText: "OK"
         });
     }
-
-
-
-
-
- 
-   
-     //  e.preventDefault(); 
-     //  let selectedCourse = JSON.stringify(decodeddata);   data
-     // //  let enrolledCourses = JSON.parse(localStorage.getItem("onlineUser")) || [];
-     //  enrolledCourses.push(selectedCourse);  // Add the new course to the array
-     //  localStorage.setItem("onlineUser", JSON.stringify(enrolledCourses));  // Save back to `localStorage`
-  });
-
-
-   
 });
+
+function checkFormFields() {
+    return (
+        creditCardNumber.value !== "" &&
+        expMonth.value !== "" &&
+        expYear.value !== ""
+    );
+}
+
+
+
+   
+
 
 logout.addEventListener("click", () => {
     localStorage.removeItem("onlineUser");
@@ -187,15 +256,6 @@ if (foundeduser) {
 
 }
 
-
-function checkFormFields() {
-
-  return (
-      creditCardNumber.value !== "" &&
-      expMonth.value!== "" &&
-      expYear.value!== ""
-  );
-}
 
 
 
