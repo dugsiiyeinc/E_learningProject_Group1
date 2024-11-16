@@ -2539,13 +2539,15 @@ ul li a {
       display: grid;
       grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
       gap: 16px;
+      align-items: center;
+      justify-content: center;
       margin-top: 20px;
       padding-bottom: 30px;
       width: 100%;
-      padding: 1px;
+      padding: 20px;
     }
     .cardss-course {
-      width: 300px;
+      width: 350px;
       height: 450.86px;
       /* height: 45%; */
       border-radius: 10px;
@@ -2553,9 +2555,7 @@ ul li a {
       background-color: white;
       color: #333;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);}
-      .card-course .image-container{
-        width: 70%;
-      }
+      
      
 }
 
