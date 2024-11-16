@@ -2519,6 +2519,14 @@ ul li a {
     .tit-cou p{
       font-size: 14px;
     }
+    .box-adv svg{
+      top: -10px;
+      left: 128px;
+      right: 155px;
+      width: 35px;
+      height: 35px;
+    }
+
   
   
 }
