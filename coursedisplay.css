@@ -518,3 +518,36 @@ h4,h5{
     gap: 17px;
   }
 }
+
+@media screen and (min-width: 769px) and (max-width:1200px){
+
+  .coursesdetail {
+  
+    /* background-color: white; */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    /* box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.4);
+    -webkit-box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75);
+    -moz-box-shadow: 0px 3px 8px 2px rgba(122,122,122,0.75); */
+    padding: 10px;
+    
+    
+  }
+  frame{
+    width: 100%;
+    height: 300px;
+  }
+  .right-description .card {
+    
+    width: 250px;
+    padding: 0%;
+  }
+  .image-containe iframe{
+    width: 50%;
+    height: 50%;
+  }
+  .right-description .card h1{
+    font-size: 1.5rem;
+  }
+}
