@@ -488,6 +488,25 @@ h4,h5{
   section {
     padding: 18px 3%;
   }
+  .video-container{
+    position: relative;
+    top: 300px;
+ margin-bottom: 350px;
+  }
+
+  footer{
+    width: 100%;
+    position: absolute;
+    top: 400vh;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+
+  .footer-contents{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
 }
 
 
