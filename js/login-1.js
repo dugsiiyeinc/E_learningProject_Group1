@@ -25,43 +25,52 @@ authForm.addEventListener('submit', (e)=>{
         password: password.value,
     };
 
-    if(signIn){
+    try {
+
+        if(signIn){
         
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-
-        const existingUser = users.find(
-            (user)=> user.email == email.value && user.password == password.value
-        );
-
-        if(existingUser){
-            localStorage.setItem("onlineUser", JSON.stringify(existingUser));
-            window.location.href='index.html'
-        }else{
-            alert("Invalid username and password")
-            return
-        }
-    }else{
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-
-        const existingUser = users.find(
-            (user)=> user.username == username.value && user.email == email.value
-        );
-
-        if(existingUser){
-            alert(`User ${existingUser.username} Already exists`)
-            return
-        }
-        if(confirmPassword.value !== password.value){
-            alert("Password mismatch")
-            return
-        }
+            const users = JSON.parse(localStorage.getItem("users")) || [];
     
-
-        users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
-        alert("Register Successfuly")
-        switchAuthForm();
+            const existingUser = users.find(
+                (user)=> user.email == email.value && user.password == password.value
+            );
+    
+            if(existingUser){
+                localStorage.setItem("onlineUser", JSON.stringify(existingUser));
+                window.location.href='index.html'
+            }else{
+                alert("Invalid username and password")
+                return
+            }
+        }else{
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+    
+            const existingUser = users.find(
+                (user)=> user.username == username.value && user.email == email.value
+            );
+    
+            if(existingUser){
+                alert(`User ${existingUser.username} Already exists`)
+                return
+            }
+            if(confirmPassword.value !== password.value){
+                alert("Password mismatch")
+                return
+            }
+        
+    
+            users.push(user);
+            localStorage.setItem('users', JSON.stringify(users));
+            alert("Register Successfuly")
+            switchAuthForm();
+        }
+        
+    } catch (error) {
+        console.error(error,"Something went wrong")
+        
     }
+
+  
     
     
 })

@@ -2424,6 +2424,7 @@ font-size: 16px;
     cursor: pointer;
   }
   .modal-content{
+    position: sticky;
     width: 90%;
     height: 100%;
   }

@@ -46,30 +46,36 @@ Logout.forEach(logOutBtn =>{
 })
 setIndex()
 function setIndex(){
-  const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
-  if(onlineUser){
-    const signIn = document.querySelectorAll('.signIn');
-const signUp = document.querySelectorAll('.signUp');
-const usersDash = document.querySelectorAll('.user-dash');
-const Logout = document.querySelectorAll('.Logout');
-
-
-    usersDash.forEach(userDash => {
-      userDash.textContent = onlineUser.username;
-      userDash.style.display = "block";
-    });
-    usersDash[0].textContent = onlineUser.username
-    usersDash[1].textContent = onlineUser.username
-    signIn[0].style.display = "none"
-    signIn[1].style.display = "none"
-    signUp[0].style.display = "none"
-    signUp[1].style.display = "none"
-    usersDash[0].style.display = "block"
-    usersDash[1].style.display = "block"
-    Logout[0].style.display = "block"
-    Logout[1].style.display = "block"
-    enrolButton.textContent = "Enroll"
+  try {
+    const onlineUser = JSON.parse(localStorage.getItem("onlineUser"))
+    if(onlineUser){
+      const signIn = document.querySelectorAll('.signIn');
+  const signUp = document.querySelectorAll('.signUp');
+  const usersDash = document.querySelectorAll('.user-dash');
+  const Logout = document.querySelectorAll('.Logout');
+  
+  
+      usersDash.forEach(userDash => {
+        userDash.textContent = onlineUser.username;
+        userDash.style.display = "block";
+      });
+      usersDash[0].textContent = onlineUser.username
+      usersDash[1].textContent = onlineUser.username
+      signIn[0].style.display = "none"
+      signIn[1].style.display = "none"
+      signUp[0].style.display = "none"
+      signUp[1].style.display = "none"
+      usersDash[0].style.display = "block"
+      usersDash[1].style.display = "block"
+      Logout[0].style.display = "block"
+      Logout[1].style.display = "block"
+      enrolButton.textContent = "Enroll"
+    }
+    
+  } catch (error) {
+    console.error(Error, "Something went wrong")
   }
+ 
  
   
   
@@ -88,17 +94,23 @@ function modalClose(){
 }
 
 enrolButton.addEventListener('click', (e)=>{
-  if(enrolButton.textContent == "Enroll"){
+  try {
+    if(enrolButton.textContent == "Enroll"){
   
-    modal.style.display = 'block'
-
+      modal.style.display = 'block'
+  
+    }
+    else{
+      e.preventDefault();
+      modalClose();
+          window.location.href='login.html'
+        
+    }
+    
+  } catch (error) {
+    console.error("Error", "Something went wrong")
   }
-  else{
-    e.preventDefault();
-    modalClose();
-        window.location.href='login.html'
-      
-  }
+ 
 
 
 
