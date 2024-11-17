@@ -25,7 +25,7 @@ authForm.addEventListener('submit', (e)=>{
         password: password.value,
     };
 
-    try {
+    
 
         if(signIn){
         
@@ -65,10 +65,7 @@ authForm.addEventListener('submit', (e)=>{
             switchAuthForm();
         }
         
-    } catch (error) {
-        console.error(error,"Something went wrong")
-        
-    }
+  
 
   
     
