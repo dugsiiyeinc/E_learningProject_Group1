@@ -9,27 +9,34 @@ hamburger.addEventListener("click", function (event) {
     // console.log('event :', event)
     const isVisible = mobileMenu.getAttribute('data-visible');
 
-    if (isVisible == "true") {
+    try {
+        if (isVisible == "true") {
 
-        // qari hiding
-        mobileMenu.setAttribute('data-visible', "false");
-        icons[0].setAttribute('data-visible', "true");
-        icons[1].setAttribute('data-visible', "false");
+            // qari hiding
+            mobileMenu.setAttribute('data-visible', "false");
+            icons[0].setAttribute('data-visible', "true");
+            icons[1].setAttribute('data-visible', "false");
+        
+           
     
-       
-
+            
+    
+        } else {
+            // soo bandhig showing
+            mobileMenu.setAttribute('data-visible', "true");
+            icons[0].setAttribute('data-visible', "false");
+            icons[1].setAttribute('data-visible', "true");
+           
+           
+            
+            
+        }
         
-
-    } else {
-        // soo bandhig showing
-        mobileMenu.setAttribute('data-visible', "true");
-        icons[0].setAttribute('data-visible', "false");
-        icons[1].setAttribute('data-visible', "true");
-       
-       
-        
-        
+    } catch (error) {
+        console.error(error,"Something went wrong");
     }
+
+  
    
 });
 
