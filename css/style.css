@@ -1689,6 +1689,10 @@ font-size: 16px;
 
   .remove-modal-mobile{
     display: none;
+    
+  }
+  .inputBox{
+    width: 100%;
   }
 
 
