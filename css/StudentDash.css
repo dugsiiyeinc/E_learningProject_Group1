@@ -235,134 +235,6 @@ a{
   height: 200px;
 }
 
-
-  /* -------------------------------------- */
-  
-  /* header {
-   
-    background-color: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 90px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-
-    
-  }
-  
-  .header-container{
-    width: 80%;
-    margin: 0 auto;
-    background-color: #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 70px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    
-  }
-  
-  .navbar {
-    display: flex;
-  }
-  
-  ul li {
-    list-style: none;
-  }
-  
-  ul li a {
-    color: #1f1f1f;
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 20px;
-    font-weight: bold;
-  }
-  
-  ul li a:hover {
-    color: #414040;
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 20px;
-  }
-  
-  .logo {
-    position: relative;
-    top: 55px;
-  }
-  
-  .logo img {
-    font-size: 2rem;
-    width: 200px;
-  }
-  
-  .logo-Online {
-    color: white;
-  }
-  
-  a{
-    text-decoration: none;
-  }
-  
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 20%;
-  }
-  .Logout {
-    text-decoration: none;
-    color: #1f1f1f;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 30px;
-    background-color: #11e811;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  .signIn {
-    color: #1f1f1f;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  .signIn:hover {
-    color: #11e811;
-    font-weight: bold;
-  }
-  
-  .signUp {
-    text-decoration: none;
-    color: #1f1f1f;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 30px;
-    background-color: #11e811;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  .signUp:hover {
-    background-color: #61ea61;
-  } */
-
-
-
 .dashboard{
     position: fixed;
     top:91px;
@@ -1140,17 +1012,52 @@ flex-direction: column;
   flex-direction: column;
 }
 
+.whatsapp-contact img{
+  width: 100%;
+  margin: 0 auto;
+
+}
 
 }
 
 @media screen and (min-width: 769px) and (max-width:1200px){
-
-  .dashcontainer{
-    width: 100%;
+  .dashDisplay{
+    position: absolute;
+   
+    left: 200px;
     display: flex;
-    flex-direction: column;
-    background-color: #11e811;
-  }
+   flex-wrap: wrap;
+    gap: 30vh;
+    padding: 10px;
+    width: 90%;
+  
+    
+}
+
+.ordercards{
+ 
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.whatsapp-contact{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-student{
+  width: 80%;
+
+}
+ 
 
 }
 
