@@ -67,3 +67,5 @@ List and explain the tools and technologies you used in the project.
 - **Dynamic Content**: Describe how your project manipulates the DOM using JavaScript.
 - **API Integration**: Detail the APIs used and their role in solving the problem.
 - **Local Storage**: Describe how you use local or session storage.
+
+
