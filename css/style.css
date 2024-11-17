@@ -70,15 +70,17 @@ ul li a:hover {
   padding: 20px;
 }
 
-.logo {
+.logo{
   position: relative;
-  top: 80px;
-
+ top: 0px;
+ height: 100%;
+ max-width: 300px;
 }
 
-.logo img {
-  font-size: 2rem;
-  width: 280px;
+
+.logo img{
+
+  height: 100%;
 }
 
 .logo-Online {
@@ -1481,16 +1483,19 @@ textarea {
     z-index: 10;
   }
 
-  .logo {
-    position: absolute;
-    top: 0;
+  .logo{
 
-
+    position: relative;
+   top: -10px;
+   height: 70px;
+   max-width: 100px;
   }
-
-  .logo img {
-    font-size: 2rem;
-    max-width: 200px;
+  
+  
+  .logo img{
+  
+    height: 70px;
+    max-width: 100px;
   }
 
   .menu-link {
@@ -2478,11 +2483,7 @@ ul li a:hover {
   margin: 30px;
   
 }
-.logo img {
-  font-size: 1rem;
-  width: 200px;
-  margin-top: -30px;
-}
+
 .user-dash{
   font-size: 0.8rem;
   margin: 10px;
@@ -2607,7 +2608,18 @@ ul li a:hover {
       .modal-content{
         margin: 25% auto;
       } 
+      .logo{
+        position: relative;
+       top: 0px;
+       height: 100%;
+       max-width: 300px;
+      }
       
+      
+      .logo img{
+      
+        height: 100%;
+      }
 }
 
 
