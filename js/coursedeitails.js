@@ -77,7 +77,7 @@ proceedButton.addEventListener("click", (e) => {
     e.preventDefault();
 
     // Modal field validation
-    const fullNameInput = document.querySelector('input[placeholder="Abdulahi Awil"]');
+    const fullNameInput = document.querySelector('input[placeholder="Full name"]');
     const emailInput = document.querySelector('input[placeholder="example@example.com"]');
     const stateInput = document.querySelector('input[placeholder="Puntland"]');
     const cityInput = document.querySelector('input[placeholder="Garowe"]');

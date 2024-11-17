@@ -1685,6 +1685,11 @@ padding: 5px;
 font-size: 16px;
   }
 
+  /* Romve modal inputs aanan loo bahnayn */
+
+  .remove-modal-mobile{
+    display: none;
+  }
 
 
   /* Box addvaticement */
