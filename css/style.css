@@ -1689,12 +1689,16 @@ font-size: 16px;
 
   /* Box addvaticement */
   .boxes-advtise {
-    display: flex;
+    
+    
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    align-items: center; */
+    width: 300px;
+    gap: 30px;
+    margin: 0;
+    /* flex-wrap: wrap; */
 
   }
 
@@ -1745,7 +1749,8 @@ font-size: 16px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 300px;
+    align-items: center;
+    width: 339.62px;
     margin: 0 auto;
     height: 260px;
     margin: 0 auto;
