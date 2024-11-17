@@ -337,19 +337,11 @@ a {
   padding: 20px;
 }
 
-/* .cour-best-seller {
-  padding: 20px;
-  width: 1280px;
-  height: 1205px;
-  margin: 100px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-} */
 
 .tit-cou {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -357,6 +349,7 @@ a {
   text-align: center;
   margin-top: 100px;
   gap: 20px;
+
 }
 
 .tit-cou h4 {
