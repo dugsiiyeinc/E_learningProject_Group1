@@ -273,8 +273,9 @@ h4,h5{
   
   }
   .coursesdetail {
- 
-    top: 0;
+    
+    position: relative;
+    top: 300px;
     display: flex;
     flex-direction: column;
     gap: 25px;
