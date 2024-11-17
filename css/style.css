@@ -337,19 +337,11 @@ a {
   padding: 20px;
 }
 
-/* .cour-best-seller {
-  padding: 20px;
-  width: 1280px;
-  height: 1205px;
-  margin: 100px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-} */
 
 .tit-cou {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -357,6 +349,7 @@ a {
   text-align: center;
   margin-top: 100px;
   gap: 20px;
+
 }
 
 .tit-cou h4 {
@@ -1667,7 +1660,7 @@ textarea {
 
 
   .cour-best-seller {
-    background-color: #007bff;
+   
     width: 90%;
     margin: 0 auto;
     height: 100%;
@@ -2477,9 +2470,10 @@ ul li a:hover {
 .btn {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 20%;
+  justify-content: space-between;
+  width: 25%;
   margin: 30px;
+ 
   
 }
 
@@ -2659,7 +2653,6 @@ ul li a:hover {
 .expand-btn {
   padding: 8px 10px;
   border: none;
-  background-color: #007bff;
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
