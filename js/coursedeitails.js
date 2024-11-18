@@ -81,8 +81,8 @@ proceedButton.addEventListener("click", (e) => {
     const emailInput = document.querySelector('input[placeholder="Email"]');
     const stateInput = document.querySelector('input[placeholder="State"]');
     const cityInput = document.querySelector('input[placeholder="City"]');
-    const countryInput = document.querySelector('input[placeholder="Somalia"]');
-    const zipCodeInput = document.querySelector('input[placeholder="+252"]');
+    const countryInput = document.querySelector('input[placeholder="Country"]');
+    const zipCodeInput = document.querySelector('input[placeholder= "252"]');
 
     if (!fullNameInput.value.trim()) {
         Swal.fire({
