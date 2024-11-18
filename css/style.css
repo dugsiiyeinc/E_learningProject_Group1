@@ -2561,6 +2561,33 @@ text-decoration: none;
     position: absolute;
     right: 15%;
   }
+  .coursedisplay-1{
+
+    /* background-color: #007bff; */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: #007bff; */
+      align-items: center;
+      justify-content: center;
+  }
+  .cardss-course {
+    width: 294px;
+    height: 450.86px;
+    flex-wrap: wrap;
+    /* height: 45%; */
+    border-radius: 10px;
+    border: none;
+    background-color: #11e811;
+    color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  .card-course .image-container{
+    width: 284px;
+  }
 
 }
 
