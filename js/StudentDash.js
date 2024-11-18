@@ -49,8 +49,9 @@ const ordercards = document.querySelector(".ordercards");
       let myprofile_info = users.find(user => user.email === onlineUser.email);
  const profileForm = document.querySelector('.profile-form');
 
+// const now = new Date();
 
-
+// ${now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear()}
 
 if (myprofile_info) {
   // Display user information in "My Account" section
@@ -68,6 +69,8 @@ if (myprofile_info) {
     // <li><strong>Instructor name: </strong>${course.instructor}</li>
     // `;
     enrolledCoursesList.innerHTML += `
+
+
    
     <tr>
     <td>${course.title}</td>
