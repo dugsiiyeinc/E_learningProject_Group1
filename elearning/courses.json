@@ -69,13 +69,13 @@
 		"price": "79 DOLLARS",
 		"start_date": "2024-09-01",
 		"end_date": "2024-12-15",
-		"trailer_video":"images/vid-1.mp4",
+		"trailer_video":"images/1080.mp4",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "Responsive Design",
 				"duration": "2 hours",
-				"video": "images/vid-1.mp4",
+				"video": "images/1080.mp4",
 				"content": "This lesson covers responsive design techniques for building websites."
 			},
 			{
