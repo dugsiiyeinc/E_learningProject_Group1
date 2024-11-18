@@ -77,7 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
             coursePriceInput.value = `$${decodeddata.price}`;
             modal.style.display = "block";
         } else {
-            Swal.fire("Error", "User or course data is missing.", "error");
+            Swal.fire("Error", "please login you before you enroll the course.", "error");
+
+            setTimeout(()=>{
+                  window.location.href="login.html"
+            }, 3000)
+          
+            
         }
     }
 
