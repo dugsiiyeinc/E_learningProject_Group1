@@ -5,8 +5,8 @@ The E-Learning Platform is a web-based solution designed to help students access
 
 ## Team Members
 
-Mohamed Bashir Ali
-Abdullahi Abdirashid Osman
+- Mohamed Bashir Ali
+- Abdullahi Abdirashid Osman
 
 ## Problem Statement
 
