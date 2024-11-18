@@ -1713,18 +1713,21 @@ font-size: 16px;
 
 
 
-  .tit-cou {
+  .tit-cou-1 {
+    
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
     gap: 20px;
-    padding: 30px;
+    /* padding: 30px; */
   }
 
-  .tit-cou h4 {
+  .tit-cou-1 h4 {
     font-size: 16px;
     font-weight: 600;
     line-height: 32px;
@@ -1738,9 +1741,9 @@ font-size: 16px;
     flex-direction: column;
   }
 
-  .tit-cou h1 {
+  .tit-cou-1 h1 {
     font-size: 32px;
-
+    width: 100%;
     font-weight: 40px;
     font-weight: 800;
   }
