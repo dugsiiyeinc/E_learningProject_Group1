@@ -2540,6 +2540,29 @@ text-decoration: none;
 
 }
 
+@media screen and (min-width: 768px) and (max-width:1024px){
+
+  .btn {
+    position: relative;
+    /* background-color: #007bff; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* width: 20%; */
+    margin-left: 30px;
+  }
+  .user-dash{
+    position: absolute;
+    left: 0;
+  }
+  .Logout{
+    position: absolute;
+    right: 15%;
+  }
+
+}
 
 @media screen and (min-width: 768px) and (max-width:1200px){
 
