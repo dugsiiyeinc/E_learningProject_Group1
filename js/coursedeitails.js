@@ -12,7 +12,10 @@ let video = document.querySelector(".video");
 let orderbtn = document.querySelector(".orderbtn button");
 let courseImg = document.querySelector(".course-img");
 let courseList = document.querySelector(".course-list");
-
+// let currentDate = new Date()
+// let year = currentDate.getFullYear()
+// let month = currentDate.getMonth()
+// let day = currentDate.getDate()
 
 const urldata = new URLSearchParams(window.location.search);
 let courses = urldata.get("selectedcourses");
