@@ -2546,7 +2546,7 @@ text-decoration: none;
     position: relative;
     /* background-color: #007bff; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
     align-items: center;
     /* justify-content: space-between; */
@@ -2560,6 +2560,15 @@ text-decoration: none;
   .Logout{
     position: absolute;
     right: 15%;
+  }
+  .signUp{
+    
+    position: absolute;
+    right: 10%;
+  }
+  .signIn{
+    position: absolute;
+    left: 0;
   }
   .coursedisplay-1{
 
