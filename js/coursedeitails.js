@@ -78,9 +78,9 @@ proceedButton.addEventListener("click", (e) => {
 
     // Modal field validation
     const fullNameInput = document.querySelector('input[placeholder="Full name"]');
-    const emailInput = document.querySelector('input[placeholder="example@example.com"]');
-    const stateInput = document.querySelector('input[placeholder="Puntland"]');
-    const cityInput = document.querySelector('input[placeholder="Garowe"]');
+    const emailInput = document.querySelector('input[placeholder="Email"]');
+    const stateInput = document.querySelector('input[placeholder="State"]');
+    const cityInput = document.querySelector('input[placeholder="City"]');
     const countryInput = document.querySelector('input[placeholder="Somalia"]');
     const zipCodeInput = document.querySelector('input[placeholder="+252"]');
 
@@ -106,6 +106,17 @@ proceedButton.addEventListener("click", (e) => {
         return;
     }
 
+    if (!cityInput.value.trim()) {
+        Swal.fire({
+            title: "Missing Field",
+            text: "Please fill in your City.",
+            icon: "warning",
+            confirmButtonText: "OK"
+        });
+        cityInput.focus();
+        return;
+    }
+
     if (!stateInput.value.trim()) {
         Swal.fire({
             title: "Missing Field",
@@ -117,16 +128,7 @@ proceedButton.addEventListener("click", (e) => {
         return;
     }
 
-    if (!cityInput.value.trim()) {
-        Swal.fire({
-            title: "Missing Field",
-            text: "Please fill in your City.",
-            icon: "warning",
-            confirmButtonText: "OK"
-        });
-        cityInput.focus();
-        return;
-    }
+  
 
     if (!countryInput.value.trim()) {
         Swal.fire({
