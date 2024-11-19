@@ -22,10 +22,10 @@
 			},
 			{
 				"id": 2,
-				"title": "JavaScript Tutorial For Beginners 02",
+				"title": "What JavaScript",
 				"duration": "1.5 hours",
-				"video": "images/vid-4.mp4",
-				"content": "This lesson covers JavaScript Data Types.."
+				"video": "videos/2      What JavaScript.mp4",
+				"content": "What JavaScript"
 			},
 			{
 				"id": 3,
