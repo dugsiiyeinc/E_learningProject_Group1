@@ -15,9 +15,9 @@
 		"lessons": [
 			{
 				"id": 1,
-				"title": "JavaScript Tutorial For Beginners 01",
-				"duration": "1 hour",
-				"video": "images/vid-3.mp4",
+				"title": "Intrduction",
+				"duration": "0:00:28",
+				"video": "videos/1 Welcome.mp4",
 				"content": "In this lesson, you will learn about JavaScript Variables."
 			},
 			{
