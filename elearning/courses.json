@@ -23,23 +23,23 @@
 			{
 				"id": 2,
 				"title": "What JavaScript",
-				"duration": "1.5 hours",
+				"duration": "0:4:40",
 				"video": "videos/2      What JavaScript.mp4",
 				"content": "What JavaScript"
 			},
 			{
 				"id": 3,
-				"title": "JavaScript Tutorial For Beginners 03",
-				"duration": "1 hour",
-				"video": "images/vid-4.mp4",
-				"content": "In this lesson, you will learn about JavaScript Operators."
+				"title": "SettingDevelopment",
+				"duration": "0:03:15",
+				"video": "videos/3 SettingDevelopment.mp4",
+				"content": "SettingDevelopment."
 			},
 			{
 				"id": 4,
-				"title": "JavaScript Tutorial For Beginners 04",
-				"duration": "1.5 hours",
-				"video": "images/vid-5.mp4",
-				"content": "This lesson covers JavaScript If Statement."
+				"title": "JavaScript browsers",
+				"duration": "0:03:47",
+				"video": "videos/4 JavaScript browsers.mp4",
+				"content": "avaScript browsers."
 			},
 			{
 				"id": 5,
