@@ -73,10 +73,10 @@
 		"lessons": [
 			{
 				"id": 1,
-				"title": "Responsive Design",
-				"duration": "2 hours",
-				"video": "images/1080.mp4",
-				"content": "This lesson covers responsive design techniques for building websites."
+				"title": "Intrduction",
+				"duration": "36 sec",
+				"video": "images/Who this.mp4",
+				"content": "Who This Course For is."
 			},
 			{
 				"id": 2,
