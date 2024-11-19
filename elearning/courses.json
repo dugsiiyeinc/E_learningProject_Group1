@@ -95,16 +95,23 @@
 			{
 				"id": 4,
 				"title": "Inspecting HTTP and Security.",
-				"duration": "1.5 hours",
+				"duration": "0:04:51",
 				"video": "images/Inspecting HTTP.mp4",
 				"content": "Inspecting HTTP and Security."
 			},
 			{
 				"id": 5,
-				"title": "Deploying a website",
-				"duration": "1.5 hours",
-				"video": "images/vid-8.mp4",
-				"content": "This lesson covers how to put a website online."
+				"title": "Formating code",
+				"duration": "0:04:15",
+				"video": "images/formating code.mp4",
+				"content": "Formating code and Extentions."
+			},
+			{
+				"id": 5,
+				"title": "Formating code",
+				"duration": "0:04:15",
+				"video": "images/formating code.mp4",
+				"content": "Formating code and Extentions."
 			}
 		],
 		"photo": "https://happenings.lpu.in/wp-content/uploads/2024/05/Advanced-web-development.jpg"
