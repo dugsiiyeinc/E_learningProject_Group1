@@ -110,8 +110,15 @@
 				"id": 5,
 				"title": "Languages and tools",
 				"duration": "0:04:15",
-				"video": "images/formating code.mp4",
+				"video": "images/Languages and tools.mp4",
 				"content": "Languages and tools."
+			},
+			{
+				"id": 5,
+				"title": "Validating web page",
+				"duration": "0:04:15",
+				"video": "images/Validating web page.mp4",
+				"content": "Validating web page."
 			}
 		],
 		"photo": "https://happenings.lpu.in/wp-content/uploads/2024/05/Advanced-web-development.jpg"
