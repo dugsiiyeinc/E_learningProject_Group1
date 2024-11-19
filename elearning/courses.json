@@ -94,10 +94,10 @@
 			},
 			{
 				"id": 4,
-				"title": "User Authentication and Security.",
+				"title": "Inspecting HTTP and Security.",
 				"duration": "1.5 hours",
-				"video": "images/vid-7.mp4",
-				"content": "This lesson covers User Authentication and Security."
+				"video": "images/Inspecting HTTP.mp4",
+				"content": "Inspecting HTTP and Security."
 			},
 			{
 				"id": 5,
