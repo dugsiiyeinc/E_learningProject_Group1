@@ -230,58 +230,9 @@
 		],
 		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2FPzRAPZRP9s3WqiNE0iiilSDI7XgKPXquQ&s"
 	},
+
 	{
 		"id": 5,
-		"title": "Advanced Web design course",
-		"description": "Learn the fundamentals of web design and create stunning websites.",
-		"instructor": "Daniel Martinez",
-		"enrollmentCount": 25,
-		"start_date": "2023-10-01",
-		"category": "web development",
-		"price": "35 DOLLARS",
-		"trailer_video":"images/vid-1.mp4",
-		"end_date": "2023-12-15",
-		"lessons": [
-			{
-				"id": 1,
-				"title": "Understand the Key Concepts of Visual Design",
-				"duration": "1.5 hours",
-				"video": "images/vid-2.mp4",
-				"content": "Understand the key concepts of visual design."
-			},
-			{
-				"id": 2,
-				"title": "Know the Basics of HTML",
-				"duration": "2 hours",
-				"video": "images/vid-3.mp4",
-				"content": "Explore Know the basics of HTML."
-			},
-			{
-				"id": 3,
-				"title": "Understand CSS",
-				"duration": "1.5 hours",
-				"video": "images/vid-4.mp4",
-				"content": "You will learn and understand the foundation of CSS."
-			},
-			{
-				"id": 4,
-				"title": "Understand the Basics of Creating Layouts",
-				"duration": "2 hours",
-				"video": "images/vid-4.mp4",
-				"content": "Understand the basics of creating layouts."
-			},
-			{
-				"id": 5,
-				"title": "Learn about Typography ",
-				"duration": "1.5 hours",
-				"video": "images/vid-5.mp4",
-				"content": "Learn about typography ."
-			}
-		],
-		"photo": "https://image.slidesharecdn.com/webdesignfundamentals-141119173538-conversion-gate01/75/web-design-fundamentals-1-2048.jpg?cb=1669307554"
-	},
-	{
-		"id": 6,
 		"title": "Mobile App Development course",
 		"description": "Learn to develop mobile apps for iOS and Android platforms.",
 		"instructor": "Olivia Taylor",
@@ -316,213 +267,51 @@
 		],
 		"photo": "https://thedigitaladda.com/wp-content/uploads/Best-Android-Mobile-App-Development-Course-Training-in-Jalandhar.png"
 	},
-	{
-		"id": 7,
-		"title": "Data Analysis with R",
-		"description": "Master data analysis using the R programming language.",
-		"instructor": "Matthew Anderson",
-		"enrollmentCount": 45,
-		"start_date": "2023-09-01",
-		"price": "40 DOLLARS",
-		"category": "Data science",
-		"trailer_video":"images/vid-9.mp4",
-		"end_date": "2023-12-15",
-		"lessons": [
-			{
-				"id": 1,
-				"title": "Introduction to R",
-				"duration": "1.5 hours",
-				"video": "images/vid-6.mp4",
-				"content": "Get started with the R programming language."
-			},
-			{
-				"id": 2,
-				"title": "Data analysis using R Part 1",
-				"duration": "2 hours",
-				"video": "images/vid-6.mp4",
-				"content": "Learn to manipulate and visualize data using R."
-			},
-			{
-				"id": 3,
-				"title": "Data analysis using R Part 2",
-				"duration": "1.5 hours",
-				"video": "images/vid-4.mp4",
-				"content": "Get started with the R programming language."
-			},
-			{
-				"id": 4,
-				"title": "Data analysis using R Part 3",
-				"duration": "2 hours",
-				"video": "images/vid-2.mp4",
-				"content": "Learn to manipulate and visualize data using R."
-			},
-			{
-				"id": 5,
-				"title": "Data analysis using R Part 4",
-				"duration": "1.5 hours",
-				"video": "images/vid-5.mp4",
-				"content": "Get started with the R programming language."
-			},
-			{
-				"id": 6,
-				"title": "Data analysis using R Part 5",
-				"duration": "2 hours",
-				"video": "images/vid-6.mp4",
-				"content": "Learn to manipulate and visualize data using R."
-			},
-			{
-				"id": 7,
-				"title": "Data analysis using R Part 6",
-				"duration": "1.5 hours",
-				"video": "images/vid-7.mp4",
-				"content": "Get started with the R programming language."
-			},
-			{
-				"id": 8,
-				"title": "Data analysis using R Part 7",
-				"duration": "2 hours",
-				"video": "images/vid-8.mp4",
-				"content": "Learn to manipulate and visualize data using R."
-			},
-			{
-				"id": 9,
-				"title": "Data analysis using R Part 8",
-				"duration": "1.5 hours",
-				"video": "images/vid-9.mp4",
-				"content": "Get started with the R programming language."
-			},
-			{
-				"id": 10,
-				"title": "Data analysis using R Part 9",
-				"duration": "2 hours",
-				"video": "images/vid-3.mp4",
-				"content": "Learn to manipulate and visualize data using R."
-			}
-		],
-		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiAd8Y6xcwnPwNZwNaQcFaoXIOdu7u_bSomA&s"
-	},
-	{
-		"id": 8,
-		"title": "UI/UX Design",
-		"description": "Learn user interface and user experience design principles.",
-		"instructor": "Ava Thomas",
-		"enrollmentCount": 20,
-		"start_date": "2024-10-15",
-		"price": "25 DOLLARS",
-		"end_date": "2023-12-31",
-		"category": "web development",
-		"trailer_video":"images/vid-8.mp4",
-		"lessons": [
-			{
-				"id": 1,
-				"title": "User Research",
-				"duration": "2 hours",
-				"video": "images/vid-8.mp4",
-				"content": "Learn techniques for conducting user research."
-			},
-			{
-				"id": 2,
-				"title": "Wireframing and Prototyping",
-				"duration": "1.5 hours",
-				"video": "images/vid-4.mp4",
-				"content": "Create wireframes and interactive prototypes."
-			},
-			{
-				"id": 3,
-				"title": "Wireframing and Prototyping",
-				"duration": "1.5 hours",
-				"video": "images/vid-1.mp4",
-				"content": "Create wireframes and interactive prototypes."
-			},
-			{
-				"id": 4,
-				"title": "Wireframing and Prototyping",
-				"duration": "1.5 hours",
-				"video": "images/vid-5.mp4",
-				"content": "Create wireframes and interactive prototypes."
-			},
-			{
-				"id": 5,
-				"title": "Wireframing and Prototyping",
-				"duration": "1.5 hours",
-				"video": "images/vid-7.mp4",
-				"content": "Create wireframes and interactive prototypes."
-			},
-			{
-				"id": 6,
-				"title": "Wireframing and Prototyping",
-				"duration": "1.5 hours",
-				"video": "images/vid-1.mp4",
-				"content": "Create wireframes and interactive prototypes."
-			}
 
-		],
-		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYUrMibF7R9as_QQe8YcLKh2Y8_XtSBgI1Yg&s"
-	},
+
 	{
-		"id": 9,
-		"title": "Java Programming",
-		"description": "Learn the Java programming language and build applications.",
-		"instructor": "David Johnson",
+		"id": 6,
+		"title": "Masterin JavaScript Unit Testing",
+		"description": "You learn by Mastering JavaScript Unit Testing.",
+		"instructor": "Mosh Hamedani",
 		"enrollmentCount": 50,
 		"start_date": "2024-11-10",
-		"price": "20 DOLLARS",
+		"price": "50 DOLLARS",
 		"end_date": "2023-10-30",
 		"category": "software development",
-		"trailer_video":"images/vid-9.mp4",
+		"trailer_video":"videos/1js u.mp4",
 		"lessons": [
 			{
 				"id": 1,
-				"title": "Introduction to Java",
-				"duration": "1.5 hours",
-				"video": "images/vid-9.mp4",
-				"content": "Get started with Java programming language."
+				"title": "Introduction",
+				"duration": "0:01:28",
+				"video": "videos/1js u.mp4",
+				"content": "Get started with JavaScript programming language."
 			},
 			{
 				"id": 2,
-				"title": "Object-Oriented Programming",
-				"duration": "2 hours",
-				"video": "images/vid-8.mp4",
-				"content": "Learn object-oriented programming concepts in Java."
+				"title": "Prerequisites",
+				"duration": "0:00:43",
+				"video": "videos/2js u.mp4",
+				"content": "Get started with JavaScript programming language."
 			},
 			{
 				"id": 3,
-				"title": "Object-Oriented Programming",
-				"duration": "2 hours",
-				"video": "images/vid-7.mp4",
+				"title": "Course Structure",
+				"duration": "0:02:13",
+				"video": "videos/3js u.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			},
 			{
 				"id": 4,
-				"title": "Object-Oriented Programming",
-				"duration": "2 hours",
-				"video": "images/vid-6.mp4",
-				"content": "Learn object-oriented programming concepts in Java."
-			},
-			{
-				"id": 5,
-				"title": "Object-Oriented Programming",
-				"duration": "2 hours",
-				"video": "images/vid-5.mp4",
-				"content": "Learn object-oriented programming concepts in Java."
-			},
-			{
-				"id": 6,
-				"title": "Object-Oriented Programming",
-				"duration": "2 hours",
-				"video": "images/vid-4.mp4",
-				"content": "Learn object-oriented programming concepts in Java."
-			},
-			{
-				"id": 7,
-				"title": "Object-Oriented Programming",
-				"duration": "2 hours",
-				"video": "images/vid-2.mp4",
+				"title": "How to take this course",
+				"duration": "0:00:43",
+				"video": "videos/4js u.mp4",
 				"content": "Learn object-oriented programming concepts in Java."
 			}
-
+			
 		],
-		"photo": "https://media.licdn.com/dms/image/C5612AQFt0qN3u8vZBA/article-cover_image-shrink_600_2000/0/1520202021883?e=2147483647&v=beta&t=lVvc7jYh8iaqo23Sx1FxlGBtu7c9kdJpayanjM4HGIo"
+		"photo": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/GTzfyhsDSue884t4t7gm"
 	}
 
 ]
