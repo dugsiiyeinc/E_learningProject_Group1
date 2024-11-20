@@ -18,7 +18,7 @@
 				"title": "Intrduction",
 				"duration": "0:00:28",
 				"video": "videos/1 Welcome.mp4",
-				"content": "In this lesson, you will learn about JavaScript Variables."
+				"content": "Intrduction"
 			},
 			{
 				"id": 2,
@@ -39,7 +39,7 @@
 				"title": "JavaScript browsers",
 				"duration": "0:03:47",
 				"video": "videos/4 JavaScript browsers.mp4",
-				"content": "avaScript browsers."
+				"content": "JavaScript browsers."
 			},
 			{
 				"id": 5,
@@ -90,7 +90,7 @@
 				"title": "How to web works",
 				"duration": "0:04:51",
 				"video": "images/How to web works.mp4",
-				"content": "How to web works Advanced features of HTML, CSS."
+				"content": "How to web works"
 			},
 			{
 				"id": 4,
@@ -104,7 +104,7 @@
 				"title": "Formating code",
 				"duration": "0:04:15",
 				"video": "images/formating code.mp4",
-				"content": "Formating code and Extentions."
+				"content": "Formating code."
 			},
 			{
 				"id": 5,
@@ -154,21 +154,21 @@
 				"title": "What is Git?",
 				"duration": "0:02:31",
 				"video": "videos/3Git.mp4",
-				"content": "GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects."
+				"content": "What is Git"
 			},
 			{
 				"id": 4,
 				"title": "Using Git",
 				"duration": "0:02:31",
 				"video": "videos/4 Git.mp4",
-				"content": "GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects."
+				"content": "Using Git."
 			},
 			{
 				"id": 5,
 				"title": "Installing Git?",
 				"duration": "0:01:31",
 				"video": "videos/4 Git.mp4",
-				"content": "GitHub is where people build software."
+				"content": "Installing Git."
 			}
 		],
 		"photo": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/tsmP4fdkSmKaiez6t2jl"
@@ -190,21 +190,21 @@
 				"title": "Introduction to Python",
 				"duration": "0:00:50",
 				"video": "videos/1 Python.mp4",
-				"content": "Get started with Python programming language."
+				"content": "Introduction to Python"
 			},
 			{
 				"id": 2,
 				"title": "Prerequisites",
 				"duration":  "0:00:54",
 				"video": "videos/2 Python.mp4",
-				"content": "Explore data analysis techniques using Pandas library."
+				"content": "Prerequisites"
 			},
 			{
 				"id": 3,
 				"title": "Course Materials",
 				"duration": "0:01:00",
 				"video":"videos/3 Python.mp4",
-				"content": "Get started with Python programming language."
+				"content": "Course Materials"
 			},
 			{
 				"id": 4,
