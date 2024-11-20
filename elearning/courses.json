@@ -286,28 +286,28 @@
 				"title": "Introduction",
 				"duration": "0:01:28",
 				"video": "videos/1js u.mp4",
-				"content": "Get started with JavaScript programming language."
+				"content": "Introduction"
 			},
 			{
 				"id": 2,
 				"title": "Prerequisites",
 				"duration": "0:00:43",
 				"video": "videos/2js u.mp4",
-				"content": "Get started with JavaScript programming language."
+				"content": "Prerequisites."
 			},
 			{
 				"id": 3,
 				"title": "Course Structure",
 				"duration": "0:02:13",
 				"video": "videos/3js u.mp4",
-				"content": "Learn object-oriented programming concepts in Java."
+				"content": "Course Structure"
 			},
 			{
 				"id": 4,
 				"title": "How to take this course",
 				"duration": "0:00:43",
 				"video": "videos/4js u.mp4",
-				"content": "Learn object-oriented programming concepts in Java."
+				"content": "How to take this course"
 			}
 			
 		],
