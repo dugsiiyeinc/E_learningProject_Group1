@@ -181,37 +181,37 @@
 		"enrollmentCount": 35,
 		"category": "Data science",
 		"price": "50 DOLLARS",
-		"trailer_video":"images/vid-6.mp4",
+		"trailer_video":"videos/1 Python.mp4",
 		"start_date": "2023-09-15",
 		"end_date": "2023-12-31",
 		"lessons": [
 			{
 				"id": 1,
 				"title": "Introduction to Python",
-				"duration": "1.5 hours",
-				"video": "images/vid-7.mp4",
+				"duration": "0:00:50",
+				"video": "videos/1 Python.mp4",
 				"content": "Get started with Python programming language."
 			},
 			{
 				"id": 2,
-				"title": "Data Analysis with Pandas",
-				"duration": "2 hours",
-				"video": "images/vid-8.mp4",
+				"title": "Prerequisites",
+				"duration":  "0:00:54",
+				"video": "videos/2 Python.mp4",
 				"content": "Explore data analysis techniques using Pandas library."
 			},
 			{
 				"id": 3,
-				"title": "Introduction to Python",
-				"duration": "1.5 hours",
-				"video": "images/vid-9.mp4",
+				"title": "Course Materials",
+				"duration": "0:01:00",
+				"video":"videos/3 Python.mp4",
 				"content": "Get started with Python programming language."
 			},
 			{
 				"id": 4,
-				"title": "Classical Machine Learning",
-				"duration": "1 hours",
-				"video": "images/vid-2.mp4",
-				"content": "Classical Machine Learning."
+				"title": "How to take this course",
+				"duration": "0:01:00",
+				"video": "videos/3 Python.mp4",
+				"content": "How to take this course."
 			},
 			{
 				"id": 5,
