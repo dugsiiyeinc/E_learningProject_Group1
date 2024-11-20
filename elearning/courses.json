@@ -125,53 +125,53 @@
 	},
 	{
 		"id": 3,
-		"title": "Data Structures and Algorithms",
-		"description": "Master data structures and algorithms for efficient programming.",
-		"instructor": "Emily Davis",
+		"title": "The Ultimate Git Course",
+		"description": "Master The Ultimate Git Course.",
+		"instructor": "Mosh Hamedani",
 		"enrollmentCount": 40,
 		"category": "software development",
-		"price": "100 DOLLARS",
-		"trailer_video":"images/vid-9.mp4",
+		"price": "20 DOLLARS",
+		"trailer_video":"videos/1 Git.mp4",
 		"start_date": "2023-08-15",
 		"end_date": "2023-10-30",
 		"lessons": [
 			{
 				"id": 1,
-				"title": "Arrays and Linked Lists",
-				"duration": "2.5 hours",
-				"video": "images/vid-9.mp4",
-				"content": "Learn about arrays, linked lists, and their operations."
+				"title": "Introduction",
+				"duration": "0:00:51",
+				"video": "videos/1 Git.mp4",
+				"content": "introduction."
 			},
 			{
 				"id": 2,
-				"title": "Searching and Sorting",
+				"title": "How to take this course",
 				"duration": "2 hours",
-				"video": "images/vid-3.mp4",
-				"content": "Explore different searching and sorting algorithms."
+				"video":"videos/2Git.mp4",
+				"content": "How to take this course"
 			},
 			{
 				"id": 3,
-				"title": "Binary Search Tree",
-				"duration": "2.5 hours",
-				"video": "images/vid-7.mp4",
-				"content": "Learn about Binary Search Tree."
+				"title": "What is Git?",
+				"duration": "0:02:31",
+				"video": "videos/3Git.mp4",
+				"content": "GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects."
 			},
 			{
 				"id": 4,
-				"title": "Dynamic Programming ",
-				"duration": "2 hours",
-				"video": "images/vid-8.mp4",
-				"content": "This lesson covers about dynamic programming ."
+				"title": "Using Git",
+				"duration": "0:02:31",
+				"video": "videos/4 Git.mp4",
+				"content": "GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects."
 			},
 			{
 				"id": 5,
-				"title": "Graph In Data Structure",
-				"duration": "2.5 hours",
-				"video": "images/vid-4.mp4",
-				"content": "Learn about Graph In Data Structure."
+				"title": "Installing Git?",
+				"duration": "0:01:31",
+				"video": "videos/4 Git.mp4",
+				"content": "GitHub is where people build software."
 			}
 		],
-		"photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyYZg55KhO3QihAUplmAZ7xKl2qW4r8ZEgg&s"
+		"photo": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/tsmP4fdkSmKaiez6t2jl"
 	},
 	{
 		"id": 4,
