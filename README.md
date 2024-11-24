@@ -28,3 +28,21 @@ API Integration: Fetches course-related data dynamically to enhance the user exp
 Dynamic Content: The platform uses JavaScript to manipulate the DOM, enabling users to navigate seamlessly between courses and dashboards without refreshing the page.
 API Integration: Incorporates APIs to fetch and display course data dynamically, ensuring that users always see the latest content.
 Local Storage: Implements local storage to save enrolled courses and user progress, providing a persistent and personalized experience even after closing the browser.
+
+
+## Home page
+
+![alt text](image.png)
+
+## courses page
+
+![alt text](image-1.png)
+
+## About us page 
+
+![alt text](image-2.png)
+
+## Contact us page
+
+![alt text](image-3.png)
+![alt text](image-4.png)
