@@ -47,3 +47,49 @@ Local Storage: Implements local storage to save enrolled courses and user progre
 ![alt text](image-5.png)
 ![alt text](image-6.png)
 ![alt text](image-7.png)
+
+
+## User registeration page 
+
+![alt text](image-8.png)
+
+## Login 
+
+![alt text](image-9.png)
+
+## Course details 
+
+![alt text](image-10.png)
+
+
+## Payment Modal 
+
+![alt text](image-11.png)
+
+## Watching courses 
+
+![alt text](image-15.png)
+
+## Mycourses 
+
+![alt text](image-12.png)
+
+
+## My Profile 
+
+![alt text](image-13.png)
+
+## Quick help
+
+![alt text](image-14.png)
+
+
+## Tablet view
+
+![alt text](image-16.png)
+
+## Mobile view 
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
