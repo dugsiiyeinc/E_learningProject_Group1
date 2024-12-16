@@ -29,16 +29,18 @@ header {
 }
 
 .desktop-menu {
+
   width: 100%;
+   padding-inline: 9%; 
   background-color: #000000;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 90px;
   position: fixed;
-  right: 0;
+
   top: 0;
-  left: 0;
+
   z-index: 100;
 
 }
@@ -48,6 +50,7 @@ header {
 }
 
 .navbar {
+
   display: flex;
 }
 
@@ -95,7 +98,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 20%;
+width: 20%;
+
   
 }
 
@@ -251,10 +255,10 @@ a {
 
 .sect-languages {
   margin: 0 auto;
-  width: 1250px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  /* gap: 20px; */
+   gap: 20px; 
   /* background-color: #a8a6a6; */
 }
 
@@ -312,7 +316,7 @@ a {
 
 
 .sec-2 {
-  /* width: 100%; */
+   width: 100%; 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
@@ -320,7 +324,7 @@ a {
 
 .icons {
   /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-  width: 295px;
+  width: 100%;
   height: 160px;
   display: flex;
   flex-direction: column;
@@ -509,6 +513,7 @@ a {
 
 .advatisment {
   height: 900px;
+  width: 100%;
 }
 
 #about {
@@ -1604,12 +1609,11 @@ textarea {
 
   .signUp {
     text-decoration: none;
-    color: #fff;
+    color: #1f1f1f;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 30px;
-
-    background: linear-gradient(to bottom, #11e811, black);
+    background-color: #11e811;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -2539,17 +2543,33 @@ text-decoration: none;
 
 }
 
-@media screen and (min-width: 768px) and (max-width:1024px){
+/* @media screen and (min-width: 768px) and (max-width:1200px){
+
+  
+ 
+
+} */
+
+@media screen and (min-width: 768px) and (max-width:1200px){
+
+
+  .hero {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
 
   .btn {
     position: relative;
+  
     /* background-color: #007bff; */
     display: flex;
     justify-content: space-around;
     gap: 10px;
     align-items: center;
     /* justify-content: space-between; */
-    /* width: 20%; */
+    width: 20%;
     margin-left: 30px;
   }
   .user-dash{
@@ -2569,11 +2589,16 @@ text-decoration: none;
     position: absolute;
     left: 0;
   }
- 
 
-}
 
-@media screen and (min-width: 768px) and (max-width:1200px){
+
+
+
+
+
+
+
+
 
    .desktop-menu{
     display: flex;
@@ -2582,7 +2607,8 @@ text-decoration: none;
    }
   .navbar {
     display: flex;
-    width: 90%;
+    width: 100%;
+    
     align-items: center;
     justify-content: center;
     
@@ -2632,7 +2658,7 @@ text-decoration: none;
   }
   
 
-  .hero{
+  /* .hero{
     height: 50vh;
   }
   .hero img{
@@ -2640,7 +2666,7 @@ text-decoration: none;
   }
   .over-hero{
     height: 50vh;
-  }
+  } */
   
 ul li a {
   width: 100%;
@@ -2659,7 +2685,7 @@ ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 20%;
 font-size: 10px;
 
  
@@ -2689,9 +2715,9 @@ font-size: 10px;
     align-items: center;
     height: 90px;
     position: fixed;
-    right: 0;
+    padding-inline: 0;
     top: 0;
-    left: 0;
+  
     z-index: 100;
   
   }
@@ -2746,6 +2772,8 @@ font-size: 10px;
       margin-top: 100px;
       gap: 20px;
     }
+
+   
     .coursedisplay {
       position: relative;
       left: 0;
@@ -2810,6 +2838,30 @@ font-size: 10px;
       
         height: 100%;
       }
+
+     
+      .icons{
+        height: 100%;
+      }
+
+.sectLanguages{
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+.sect-languages{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+      
 }
 
 
