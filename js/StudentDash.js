@@ -74,7 +74,7 @@ if (myprofile_info) {
    
     <tr>
     <td>${course.title}</td>
-    <td>${course.start_date}</td>
+    <td>${course.instructor}</td>
     <td>${course.price}</td>
     </tr>
     
